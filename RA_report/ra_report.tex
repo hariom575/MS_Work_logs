@@ -1219,19 +1219,60 @@ Actual Phone Usage (Digital Well-being) & Self-reported actual usage often align
 \item Added models and API to upload file to server for user study analysis part.
 \item Added Android side changes to upload log file to server every 12 hours and clear the log file once upload is successful.
 \end{enumerate}
-\section{Feb 23 2026 to Mar 01 2026}
+\section{Feb 23 2026 to Mar 26 2026}
 {\bf No. of Hours: 5}
+\subsection{List of Task Completed}
+\begin{enumerate}
+    \item Read libraries code available online for solving usage stats related bugs.
+    \item Read How other launchers handle HomeScreen and AppDrawer.
+\end{enumerate}
 \subsection{To Do}
 \begin{enumerate}
     \item Focus on making the app more stable.
     \item Test every feature thoroughly and try to come up with possible fixes.
     \item Correct the phone usage,unlock count and app usage count calculation logic.
     \item Use android usestate API functions do not calculate usage in the app.
-    \item Customize timer settings to have multiple timer durations.
+    % \item Customize timer settings to have multiple timer durations.
     \item Learn about firebase and it's setup.
     \item Remove exact alarm permission and use firebase instead.
     \item Change the permission flow don't ask to much permission on on-boarding as user as generally scared to grant so many permission in the beginning.
     \item Fix graph layout: Make it a proper dashboard like famous apps like: Digital well-Being, StayFree or use secure Digital wellbeing APIs from our App if any .
 \end{enumerate}
+\section{Feb 23 2026 (last meeting) to Mar 26 2026}
+{\bf No. of Hours: 16}
+\subsection{List of Task Completed}
+\begin{enumerate}
+    \item Fixed unlock count API returning inconsistent value of Unlock count.
+    \begin{enumerate}
+        \item \textbf{Earlier Logic: } Count \# of \textbf{KEYGAURD\_SHOWN} event in the passed interval, it was also counting some key gaurd shown events in which user have not unlocked the phone but just pressed the power button and this event got triggered.
+        \item \textbf{Current Logic: } Count \# of \textbf{KEYGAURD\_HIDDEN} event, counting this event can give accurate result as \textbf{KEYGAURD\_HIDDEN} event is fired after the user is done with unlocking and key gaurd is about to disappear.
+        \item Fixed: JoDo App was crashing when the Device boots up, because on boot the whole app process is recreated by android.
+        \begin{enumerate}
+            \item \textbf{Earlier: } Load data from Room Database which is stored in Hard Disk .
+            \item \textbf{Now: } Created two shared prefs(Act as cache),which are very light weight and reading them will take less time as compared to quering the DB entries. Though shared prefs persist data across process lifecycle, it is saved in Hard-disk it is loaded in main memory during runtime which makes it to access faster as compared to room db.
+            \item \textbf{Room DB and SharePrefs Cache: } On every background worker run, data is saved in Room db and copied to SharedPref cache, and when UI observe the Live data, Repository can get data from either cache or DB.
+            \item The above process follows the \textbf{MVVM} architecture: \textbf{Model} \textbf{View} \textbf{ViewModel}, and with the help of view model UI state can be reused,survive config changes and process restart after being killed by Android OS.
+            \item With the help of the the Repository we can have multiple data storage and Repo can give which ever data is available to ViewModel and from ViewModel to View(UI), in this UI can be loaded fast on process restart.
+            \item \textbf{Fixed Bug: } Home screen Was crashing Due to \textbf{Integer Overflow} as usage time value in Millisecond can be very high and can cross Integer limit and result in App Crash (From progress bar logic Home-screen)
+            \item Studied about Firebase and it's integration in Android Application.
+            \item Found out that Firebase is also not very time bound, it has almost similar delay as WorkManager.
+            \item As JoDo app is currently got accepted by play store( \href{https://play.google.com/store/apps/details?id=in.ac.iitb.cse.jodo&pcampaignid=web_share}{link}),  so I am not planing to integrate Firebase as Exact alarm is working fine and on time.
+           
+            
+        \end{enumerate}
+    \end{enumerate}
 \end{enumerate}
+\subsection{To Do}
+\begin{enumerate}
+    \item Change permission flow as user are getting scared because of \# of permissions are too much (Pilot study feedback)
+    \item Do not ask so much permission in the beginning.
+    \item Delay the \textbf{Default Home Screen permission} to later, after the user come back to the app ask home screen permission, because \textbf{Home Screen} is something which changes the whole mobile phone interaction interface, asking in the begining may result in user loss.
+    \item Delay the Pause App Activity permission to atleast one day after Installation.
+    \item In the begining only ask : \textbf{Usage stats, overlay on app, Battery optimization and Notification} permission.
+    \item Make Lock screen optional, ask user a permission to act as LockScreen.
+     \item Add Age Restriction of above 16 or 18 (will decide according to current standards).
+     \item Give Drop Down for gender selection.
+\end{enumerate}
+\end{enumerate}
+
 \end{document}
