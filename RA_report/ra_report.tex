@@ -1250,6 +1250,7 @@ Actual Phone Usage (Digital Well-being) & Self-reported actual usage often align
         \begin{enumerate}
             \item \textbf{Earlier: } Load data from Room Database which is stored in Hard Disk .
             \item \textbf{Now: } Created two shared prefs(Act as cache),which are very light weight and reading them will take less time as compared to quering the DB entries. Though shared prefs persist data across process lifecycle, it is saved in Hard-disk it is loaded in main memory during runtime which makes it to access faster as compared to room db.
+             \end{enumerate}
             \item \textbf{Room DB and SharePrefs Cache: } On every background worker run, data is saved in Room db and copied to SharedPref cache, and when UI observe the Live data, Repository can get data from either cache or DB.
             \item The above process follows the \textbf{MVVM} architecture: \textbf{Model} \textbf{View} \textbf{ViewModel}, and with the help of view model UI state can be reused,survive config changes and process restart after being killed by Android OS.
             \item With the help of the the Repository we can have multiple data storage and Repo can give which ever data is available to ViewModel and from ViewModel to View(UI), in this UI can be loaded fast on process restart.
@@ -1259,7 +1260,7 @@ Actual Phone Usage (Digital Well-being) & Self-reported actual usage often align
             \item As JoDo app is currently got accepted by play store( \href{https://play.google.com/store/apps/details?id=in.ac.iitb.cse.jodo&pcampaignid=web_share}{link}),  so I am not planing to integrate Firebase as Exact alarm is working fine and on time.
            
             
-        \end{enumerate}
+       
     \end{enumerate}
 \end{enumerate}
 \subsection{To Do}
