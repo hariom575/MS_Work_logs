@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.3.2)  2 MAR 2026 13:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.3.2)  4 MAR 2026 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -434,9 +434,6 @@ LaTeX Warning: Label `fig:enter-label' multiply defined.
 
 LaTeX Warning: Label `fig:ui_prototype' multiply defined.
 
-
-LaTeX Warning: Label `fig:ui_prototype' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -643,19 +640,19 @@ LaTeX Warning: Citation `whitlock2019screen' on page 6 undefined on input line
 111.
 
 [6]
-<feature_graphic.png, id=300, 1541.76pt x 1027.84pt>
+<feature_graphic.png, id=295, 1541.76pt x 1027.84pt>
 File: feature_graphic.png Graphic file (type png)
 <use feature_graphic.png>
 Package pdftex.def Info: feature_graphic.png  used on input line 159.
 (pdftex.def)             Requested size: 226.48395pt x 150.98558pt.
  [7 <./feature_graphic.png (PNG copy)>]
-<popup.jpeg, id=318, 964.60374pt x 782.925pt>
+<popup.jpeg, id=313, 964.60374pt x 782.925pt>
 File: popup.jpeg Graphic file (type jpg)
 <use popup.jpeg>
 Package pdftex.def Info: popup.jpeg  used on input line 190.
 (pdftex.def)             Requested size: 226.48395pt x 183.82014pt.
  [8]
-<timer.jpeg, id=341, 441.65pt x 435.6275pt>
+<timer.jpeg, id=336, 441.65pt x 435.6275pt>
 File: timer.jpeg Graphic file (type jpg)
 <use timer.jpeg>
 Package pdftex.def Info: timer.jpeg  used on input line 199.
@@ -665,41 +662,56 @@ Package pdftex.def Info: timer.jpeg  used on input line 199.
 l.203     \itme
                 User don't like the UI design for side menu bar.
 ? 
-<side_menu.jpeg, id=342, 722.7pt x 1606.0pt>
+<side_menu.jpeg, id=337, 722.7pt x 1606.0pt>
 File: side_menu.jpeg Graphic file (type jpg)
 <use side_menu.jpeg>
 Package pdftex.def Info: side_menu.jpeg  used on input line 207.
 (pdftex.def)             Requested size: 226.48395pt x 503.2951pt.
 [9 <./popup.jpeg> <./timer.jpeg>] [10 <./side_menu.jpeg>] [11] [12] [13]
 [14]
-<JoDo new UI design/HomeScreen.png, id=404, 382.42876pt x 749.80125pt>
+<JoDo new UI design/HomeScreen.png, id=400, 382.42876pt x 749.80125pt>
 File: JoDo new UI design/HomeScreen.png Graphic file (type png)
 <use JoDo new UI design/HomeScreen.png>
 Package pdftex.def Info: JoDo new UI design/HomeScreen.png  used on input line 
-416.
-(pdftex.def)             Requested size: 203.83583pt x 399.64665pt.
-<JoDo new UI design/App_drawer.png, id=406, 382.42876pt x 749.80125pt>
+419.
+(pdftex.def)             Requested size: 178.64447pt x 350.25572pt.
+<JoDo new UI design/App_drawer.png, id=402, 382.42876pt x 749.80125pt>
 File: JoDo new UI design/App_drawer.png Graphic file (type png)
 <use JoDo new UI design/App_drawer.png>
 Package pdftex.def Info: JoDo new UI design/App_drawer.png  used on input line 
-417.
-(pdftex.def)             Requested size: 203.83583pt x 399.64665pt.
+420.
+(pdftex.def)             Requested size: 178.64447pt x 350.25572pt.
  [15] [16 <./JoDo new UI design/HomeScreen.png> <./JoDo new UI design/App_drawe
 r.png>]
-<JoDo new UI design/lock_screen.png, id=427, 337.26pt x 733.74126pt>
+<JoDo new UI design/lock_screen.png, id=426, 337.26pt x 733.74126pt>
 File: JoDo new UI design/lock_screen.png Graphic file (type png)
 <use JoDo new UI design/lock_screen.png>
 Package pdftex.def Info: JoDo new UI design/lock_screen.png  used on input line
- 431.
-(pdftex.def)             Requested size: 203.83965pt x 443.4726pt.
-<JoDo new UI design/dashboard.png, id=428, 337.26pt x 733.74126pt>
+ 434.
+(pdftex.def)             Requested size: 160.99266pt x 350.2549pt.
+<JoDo new UI design/dashboard.png, id=427, 337.26pt x 733.74126pt>
 File: JoDo new UI design/dashboard.png Graphic file (type png)
 <use JoDo new UI design/dashboard.png>
 Package pdftex.def Info: JoDo new UI design/dashboard.png  used on input line 4
-32.
-(pdftex.def)             Requested size: 203.83965pt x 443.4726pt.
- [17] [18 <./JoDo new UI design/lock_screen.png> <./JoDo new UI design/dashboar
-d.png>]
+35.
+(pdftex.def)             Requested size: 160.99266pt x 350.2549pt.
+
+
+LaTeX Warning: File `sweat_coin_app_UI.jpeg' not found on input line 454.
+
+
+! Package pdftex.def Error: File `sweat_coin_app_UI.jpeg' not found: using draf
+t setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.454 ... keepaspectratio]{sweat_coin_app_UI.jpeg}
+                                                  
+? 
+[17 <./JoDo new UI design/lock_screen.png> <./JoDo new UI design/dashboard.png>
+] [18]
 No file main.bbl.
 (./main.aux)
 
@@ -714,29 +726,27 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: F75D9852688A7BAE552513559B0C6E71;7483
-(rerunfilecheck)             After:  FC9D4822A4F2E7F10F9273F0FA4527AF;7397.
+(rerunfilecheck)             Before: FC9D4822A4F2E7F10F9273F0FA4527AF;7397
+(rerunfilecheck)             After:  74E91BEC7AC667FDB9BA540F0065CC25;7673.
  ) 
 Here is how much of TeX's memory you used:
- 11172 strings out of 480247
- 177769 string characters out of 5896152
+ 11220 strings out of 480247
+ 178850 string characters out of 5896152
  570596 words of memory out of 5000000
- 28763 multiletter control sequences out of 15000+600000
- 475937 words of font info for 51 fonts, out of 8000000 for 9000
+ 28794 multiletter control sequences out of 15000+600000
+ 476106 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  68i,7n,77p,722b,590s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.5.4} has been referenced but does not 
-exist, replaced by a fixed one
-
- </home/hariom/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600p
-k></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (18 pages, 2815446 bytes).
+ </home/hariom/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.60
+0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (18 pages, 2821574 bytes).
 PDF statistics:
- 507 PDF objects out of 1000 (max. 8388607)
- 461 compressed objects within 5 object streams
- 197 named destinations out of 1000 (max. 500000)
- 353 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 515 PDF objects out of 1000 (max. 8388607)
+ 467 compressed objects within 5 object streams
+ 201 named destinations out of 1000 (max. 500000)
+ 345 words of extra memory for PDF output out of 10000 (max. 10000000)
 
