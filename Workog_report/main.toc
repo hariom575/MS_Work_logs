@@ -36,4 +36,3 @@
 \contentsline {subsubsection}{\numberline {5.2.1}Problem in the current UI}{15}{subsubsection.5.2.1}%
 \contentsline {subsubsection}{\numberline {5.2.2}Proposed UI Prototypes:}{15}{subsubsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.3}To Do}{17}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}To Do}{19}{subsection.5.4}%
