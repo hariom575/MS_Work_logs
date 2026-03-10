@@ -1,3 +1,4 @@
+
 \documentclass[12pt]{article}
  
 \usepackage{multirow}
@@ -392,7 +393,174 @@ This pilot study will help validate the effectiveness, usability, and engagement
 \begin{enumerate}
     \item Why Being HomeScreen(Fully minimalist and less visual cues) disliked by users?
 \end{enumerate}
+\section{Feb 26 (last meeting) - Mar 04 2026}
+{ \bf No. of Hours: 20}
+\subsection{List of Task Completed}
+\begin{enumerate}
+    \item Created a python Script to retrieve pilot study data from db and generate graphs and insights over them.
+    \item Fixed bugs and verified script output.
+    \item Generated pilot Study data analysis report (\href{https://drive.google.com/file/d/1GWn26HUfRNxbJ2xH5aLeTd6d8hEtVdlX/view?usp=sharing}{link}).
+    \item Collected log file from pilots phone.
+    \item In one device found Home screen was crashing due to Integer overflow exception.
+    \item App was crashing on Device BootUp in pilots phone.
+    \item Prepared new UI design proposal for HomeScreen, Lock Screen and App Drawer.
+    \item Created Google form  (\href{https://forms.gle/D1U46AeNB6NzSw1fA}{link}) for post pilot study feedback, similar to what Omkar used for Intentor user study.
+    \item Collected response from all the participants.
+\end{enumerate}
+\subsection{Proposed new UI for JoDo}
+\subsubsection{Problem in the current UI}
+\begin{enumerate}
+    \item It looks like old school.
+    \item Progress bar has occupied to much space and it is the main cause of so runtime exceptions in the HomeScreen.
+    \item Current UI not properly reflect out Psychology of \textbf{JoDo} as well as \textbf{Digital Minimalism}
+\end{enumerate}
+\subsubsection{Proposed UI Prototypes:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\linewidth,height=0.50\textheight, keepaspectratio]{JoDo new UI design/HomeScreen.png}
+    \includegraphics[width=0.45\linewidth, height=0.50\textheight, keepaspectratio]{JoDo new UI design/App_drawer.png}
+
+     \vspace{0.3cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{Home-screen(left), App-drawer(right)}
+    \label{fig:ui_prototype}
+\end{figure}
+
 \newpage
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\linewidth,height=0.50\textheight, keepaspectratio]{JoDo new UI design/lock_screen.png}
+    \includegraphics[width=0.45\linewidth, height=0.50\textheight, keepaspectratio]{JoDo new UI design/dashboard.png}
+
+    \vspace{0.3cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{Lock-screen (left), DashBoard (right)}
+    \label{fig:ui_prototype}
+\end{figure}
+\subsection{To Do}
+\begin{enumerate}
+    \item Create summary for qualitative analysis through the response recieved in google form from all the 3 participants.
+\end{enumerate}
+\subsubsection{JoDo economy similar to \href{https://play.google.com/store/apps/details?id=in.sweatco.app&pcampaignid=web_share}{Sweat Coin App}}
+\begin{enumerate}
+    \item Create JoDo Economy similar to sweatcoin, they convert steps into real money (but their rewards are virtual ). 
+\end{enumerate}
+
+\centering
+\includegraphics[width=0.45\linewidth,height=0.50\textheight, keepaspectratio]{sweat_coin_app_UI.jpeg}
+
+\section{Mar 02 2026 - Mar 09 2026}
+{\bf No. of Hours: 20}
+
+\subsection{UI Changes}
+\begin{enumerate}
+    \item Create new UI for Homescreen, Appdrawer and LockScreen.
+    \item Made all the buttons function in the new UI.
+    \item Reflected real usage from device.
+    \item Resued all the existing fuctionality from the app and only changed the UI.
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{home_screen_new.jpeg}
+    \hspace{0,3cm}
+    \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{home-screen-old.jpeg}
+
+     \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{Home-screen-new(left),Home-Screen-old(right)}
+    \label{fig:ui_prototype}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{lock_screen_new.jpeg}
+    \hspace{0,3cm}
+    \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{lock-screen-old.jpeg}
+
+     \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{Lock-screen-new(left),Lock-Screen-old(right)}
+    \label{fig:ui_prototype}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{App_drawer_new.jpeg}
+    \hspace{0,3cm}
+    \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{app-drawer-old.jpeg}
+
+     \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{AppDrawer-screen-new(left),AppDrawer-Screen-old(right)}
+    \label{fig:ui_prototype}
+\end{figure}
+
+
+\subsection{Pilot Study: Post-Intervention Survey Results}
+
+A follow-up survey was administered to three participants after the pilot study using a mixed-methods instrument combining SUS-inspired Likert items and open-ended qualitative questions.
+
+\subsubsection*{Quantitative Summary}
+
+\begin{table}[H]
+\centering
+\caption{Likert Response Summary (1 = Strongly Disagree / Never, 5 = Strongly Agree / Always)}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{|X|c|c|c|}
+\hline
+\textbf{Statement} & \textbf{P1} & \textbf{P2} & \textbf{P3} \\
+\hline
+JoDo is helpful in taking control over digital habits & 5 & 4 & 4 \\
+\hline
+I found the system unnecessarily complex & 1 & 2 & 4 \\
+\hline
+I thought the system was easy to use & 3 & 4 & 2 \\
+\hline
+I would need technical support to use this system & 1 & 2 & 2 \\
+\hline
+The functions were well integrated & 5 & 3 & 4 \\
+\hline
+There was too much inconsistency in the system & 1 & 3 & 1 \\
+\hline
+\textbf{Likelihood to recommend (out of 10)} & \textbf{10} & \textbf{8} & \textbf{7} \\
+\hline
+\end{tabularx}
+\end{table}
+
+\noindent All three participants rated JoDo positively for helpfulness (mean = 4.3/5) and expressed willingness to recommend it (mean = 8.3/10). Perceived complexity varied: P1 found the system simple and well-integrated, while P3 found navigation more demanding, particularly when the launcher was active and direct app access was restricted by design.
+
+\subsubsectio{Qualitative Themes}
+
+\noindent\textbf{Awareness and behaviour change.} All three participants reported increased awareness of their phone usage. P2 noted that the pre-launch warning reduced impulsive social media access. P3 observed a reduction in YouTube usage, attributing it partly to the friction introduced by the launcher's search-first navigation and partly to leaderboard motivation.
+
+\noindent\textbf{Gamification as motivator.} The leaderboard and points system were the most frequently praised features across all three responses. P3 explicitly cited the desire to rank first as a driver of sustained engagement with the challenge.
+
+\noindent\textbf{UI and design feedback.} Two participants flagged the interface as visually dated and inconsistent with the dark theme. P2 described the design as ``old-school'' and noted that dashboard icons did not match the black colour scheme — directly motivating the UI redesign documented in the previous section.
+
+\noindent\textbf{Bugs and accuracy.} P2 identified two technical issues: unlock count inflation due to power-button presses being registered as unlocks, and the ability to bypass app restrictions through alternative routes. Both are noted as items for the next development iteration.
+
+\subsubsection{Summary}
+
+The pilot study confirmed that the core JoDo mechanisms — usage warnings, the launcher-as-friction model, and competitive leaderboards — produce measurable awareness and self-reported behaviour change even in a small three-participant cohort. The primary actionable feedback was the need for a modern, consistent UI (addressed in \S3) and improved unlock-detection accuracy (pending).
+\
+
+\clearpage
 \bibliographystyle{apalike}
 \bibliography{reference}
 
