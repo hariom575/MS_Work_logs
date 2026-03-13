@@ -1219,7 +1219,7 @@ Actual Phone Usage (Digital Well-being) & Self-reported actual usage often align
 \item Added models and API to upload file to server for user study analysis part.
 \item Added Android side changes to upload log file to server every 12 hours and clear the log file once upload is successful.
 \end{enumerate}
-\section{Feb 23 2026 to Mar 26 2026}
+\section{Feb 23 2026 to Mar 01 2026}
 {\bf No. of Hours: 5}
 \subsection{List of Task Completed}
 \begin{enumerate}
@@ -1238,7 +1238,7 @@ Actual Phone Usage (Digital Well-being) & Self-reported actual usage often align
     \item Change the permission flow don't ask to much permission on on-boarding as user as generally scared to grant so many permission in the beginning.
     \item Fix graph layout: Make it a proper dashboard like famous apps like: Digital well-Being, StayFree or use secure Digital wellbeing APIs from our App if any .
 \end{enumerate}
-\section{Feb 23 2026 (last meeting) to Mar 26 2026}
+\section{Feb 23 2026 (last meeting) to Mar 05 2026}
 {\bf No. of Hours: 16}
 \subsection{List of Task Completed}
 \begin{enumerate}
@@ -1250,6 +1250,7 @@ Actual Phone Usage (Digital Well-being) & Self-reported actual usage often align
         \begin{enumerate}
             \item \textbf{Earlier: } Load data from Room Database which is stored in Hard Disk .
             \item \textbf{Now: } Created two shared prefs(Act as cache),which are very light weight and reading them will take less time as compared to quering the DB entries. Though shared prefs persist data across process lifecycle, it is saved in Hard-disk it is loaded in main memory during runtime which makes it to access faster as compared to room db.
+             \end{enumerate}
             \item \textbf{Room DB and SharePrefs Cache: } On every background worker run, data is saved in Room db and copied to SharedPref cache, and when UI observe the Live data, Repository can get data from either cache or DB.
             \item The above process follows the \textbf{MVVM} architecture: \textbf{Model} \textbf{View} \textbf{ViewModel}, and with the help of view model UI state can be reused,survive config changes and process restart after being killed by Android OS.
             \item With the help of the the Repository we can have multiple data storage and Repo can give which ever data is available to ViewModel and from ViewModel to View(UI), in this UI can be loaded fast on process restart.
@@ -1259,7 +1260,7 @@ Actual Phone Usage (Digital Well-being) & Self-reported actual usage often align
             \item As JoDo app is currently got accepted by play store( \href{https://play.google.com/store/apps/details?id=in.ac.iitb.cse.jodo&pcampaignid=web_share}{link}),  so I am not planing to integrate Firebase as Exact alarm is working fine and on time.
            
             
-        \end{enumerate}
+       
     \end{enumerate}
 \end{enumerate}
 \subsection{To Do}
@@ -1273,6 +1274,149 @@ Actual Phone Usage (Digital Well-being) & Self-reported actual usage often align
      \item Add Age Restriction of above 16 or 18 (will decide according to current standards).
      \item Give Drop Down for gender selection.
 \end{enumerate}
+\end{enumerate}
+\section{Mar 06 2026 (last meeting) to Mar 10 2026}
+{\bf No. of Hours: 16}
+\subsection{List of Task Completed}
+\begin{enumerate}
+    \item Changed permission flow: removed \textbf{Default launcher}, \textbf{Pause App Activity when unused} during on-boarding.
+    \item Made \textbf{Read call logs} permission optional.
+    \item Instead of single screen, created five layout files and reused same fragment to ask permission for on every screen.
+    \item Used viewpager adapter to switch between Permission Fragments.
+    \item Added drop down to ask gender.
+    \item Added age limit above 13 year.
+    \item Added a small setting icon on home screen, after atleast 7 day of installation we can ask pause app activity permission (To Do).
+
+    \item Added permission to make JoDo as Lock screen, stored it in the shared prefs, and shown lock screen accordingly.
+    \item Changed background of all the onboarding screen to black including login and register screen 
+    
+\end{enumerate}
+\subsection{New vs Old UI comparision}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{login-screen-new.png}
+    \hspace{0,3cm}
+    \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{login-screen.jpeg}
+
+     \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{Login-screen-new(left),Login-screen-old(right)}
+    \label{fig:ui_prototype}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{register-scree-new.png}
+    \hspace{0,3cm}
+    \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{register-screen.jpeg}
+
+     \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{Register-screen-new(left),Register-screen-old(right)}
+    \label{fig:ui_prototype}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{onboarding-screen-new.png}
+    \hspace{0,3cm}
+    \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{get-started-screen.jpeg}
+
+     \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{GetStarted-screen-new(left),GetStarted-screen-old(right)}
+    \label{fig:ui_prototype}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{permission-screen.jpeg}
+    \hspace{0,3cm}
+    % \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{get-started-screen.jpeg}
+
+     \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{Permission-screen-old}
+    \label{fig:ui_prototype}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{draw-over-app-permission.png}
+    \hspace{0,3cm}
+    \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{battery-optimization-permission.png}
+
+     \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{New Permission UI}
+    \label{fig:ui_prototype}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{notification-permission.png}
+    \hspace{0,3cm}
+    \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{lock-screen-permision.png}
+
+     \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{New Permission UI}
+    \label{fig:ui_prototype}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{phone call permission.png}
+    \hspace{0,3cm}
+    \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{usage-states-permission.png}
+
+     \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{New Permission UI}
+    \label{fig:ui_prototype}
+\end{figure}
+\section{Mar 11 2026 (last meeting) to Mar 12 2026}
+{\bf No. of Hours: 10}
+\subsection{List of Task Completed}
+\begin{enumerate}
+     \item Studied Nginx as a reverse proxy, API gateway, load balancer and it's benefits.
+     \item We can intergrate reverse proxy, API gateway, load balancer,internal DDos protection in single Nginx instance.
+     \item Created Nginx config file.
+    \item Installed Nginx in docker container at server.
+     \item Added Nginx as an reverse proxy or API gateway, for all the APIs applied global rate limit of 50 request per day.
+    \item Nginx will forward all the trafic coming at port 80 to the django docker container at port 8000.
+    \item Earlier we were exposing port 8000 to now Nginx can hide it.
+    \item Added directive (Key value config) for different context (parts of whole config) like events, server,location, etc. 
+    \item Added rate limit config in Nginx.
+     \item Used Django Axes to protect from brute force attack where user can change ip but Axes track combination of IP and username as we don't have username info at nginx server.
+     \item Disabled port 8000 using ufw firewall.
+     \item Removed port from the API as default port 80 will be used for http communication.
+     \item set up Nginx as a cache as well, and served static files directly from nginx.
+     \item To serve staticfiles, nginx share volume with Django app.
+\end{enumerate}
+\subsection{To Do}
+\begin{enumerate}
+    \item Change UI background color, make every screen background black.
+    \item Modify the DashBoard to Look like modern Dashboard.
+    \item Combine : \textbf{Points,Usage,unlocks,App launches } history in a single dashboard.
+    \item Modify the reward reveal animation, make it feel like real basketball hit.
+    \item Create the Rounded Corner logo for JoDo App.
 \end{enumerate}
 
 \end{document}
