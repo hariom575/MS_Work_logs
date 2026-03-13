@@ -1407,8 +1407,6 @@ Actual Phone Usage (Digital Well-being) & Self-reported actual usage often align
      \item Used Django Axes to protect from brute force attack where user can change ip but Axes track combination of IP and username as we don't have username info at nginx server.
      \item Disabled port 8000 using ufw firewall.
      \item Removed port from the API as default port 80 will be used for http communication.
-     \item set up Nginx as a cache as well, and served static files directly from nginx.
-     \item To serve staticfiles, nginx share volume with Django app.
 \end{enumerate}
 \subsection{To Do}
 \begin{enumerate}

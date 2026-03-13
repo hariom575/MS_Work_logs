@@ -1,0 +1,166 @@
+\contentsline {section}{\numberline {1}Octobor 14, 2024 - Octobor 21, 2024}{7}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Understood the intenton UI code}{7}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Setting up Android Studio and Intentor on local machine}{7}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Development of Digital Detox Library}{7}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Future Goals}{7}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Research and Testing}{8}{subsubsection.1.4.1}%
+\contentsline {section}{\numberline {2}Plans for RA work}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Analyze and Optimize Existing Features}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Enhance Functionality}{8}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Strengthen App Monitoring}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Introduce New Features}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Technical Improvements}{9}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Testing and Deployment}{9}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Documentation }{9}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Dec 10 2024 - Dec 13 2024}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Testing intentor App on Android version 13}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Understood implemetation Details of Intentor through omkar's work}{9}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Logging and Data Collection}{9}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Understanding various types of service available in Android to use in Intentor}{10}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Introduction}{10}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2} Foreground Service}{10}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3} Background Service}{10}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.4}Bound Service}{10}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Intent Service (Deprecated)}{11}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6} Started Service}{11}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Alternatives to Traditional Services}{11}{subsection.3.7}%
+\contentsline {section}{\numberline {4} Dec 15 2024 - Dec 19 2024 }{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Breaking Down User Feedback Testing in More Concrete Steps}{12}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Defining The Goals}{12}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Choose a Feedback Collection Method}{12}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Collect and Analyze Feedback}{12}{subsubsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.2}Setting up backend server for intentor on local and connecting it to application}{13}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}UnderStanding More about Android}{13}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Android Fundamentals}{13}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Essential Android Components}{13}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.4}Data Storage and Management}{13}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Market Research and Observations}{14}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Dec 30 2024 - Jan 03 2024}{14}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Implementation Of Onboarding Screen}{14}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Plan for making Introductory video for user study}{14}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Jan 06 2025 - Jan 10 2025}{15}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Design the On Boarding Screen}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Audio Narration Script for Introductory Vedio:}{15}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Introduction}{15}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Feature Demonstration}{15}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Benefit}{15}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4}Call-to-Action}{16}{subsubsection.6.2.4}%
+\contentsline {section}{\numberline {7}Jan 12 2025- Jan 17 2025}{16}{section.7}%
+\contentsline {section}{\numberline {8}Jan 19 2025 - Feb 4 2025}{16}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Time spent}{16}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}List of tasks:}{17}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Some Highlights from implemenation of popup}{17}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Overview of some similar product explored}{17}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}Minimalistic phone}{17}{subsubsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.2}AppBlock}{18}{subsubsection.8.4.2}%
+\contentsline {section}{\numberline {9}Feb 5 2025 - Feb 12 2025}{18}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Time spent}{18}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Current state machine diagram}{19}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Correct state machine diagram}{20}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Reason to Use AccessibilityService Over Usage States and Usage Events}{20}{subsection.9.4}%
+\contentsline {subsubsection}{\numberline {9.4.1}Real-time App Monitoring}{20}{subsubsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.4.2}More Detailed App Interaction Tracking}{20}{subsubsection.9.4.2}%
+\contentsline {subsubsection}{\numberline {9.4.3}App Blocking and Overlay Capabilities}{21}{subsubsection.9.4.3}%
+\contentsline {subsubsection}{\numberline {9.4.4}Compatibility with Newer Android Versions}{21}{subsubsection.9.4.4}%
+\contentsline {subsubsection}{\numberline {9.4.5}Detecting System-Wide Events}{21}{subsubsection.9.4.5}%
+\contentsline {subsubsection}{\numberline {9.4.6}Background Execution}{21}{subsubsection.9.4.6}%
+\contentsline {subsubsection}{\numberline {9.4.7}When to Use UsageStatsManager Instead?}{21}{subsubsection.9.4.7}%
+\contentsline {subsubsection}{\numberline {9.4.8}Conclusion for Social Media Usage Control App}{21}{subsubsection.9.4.8}%
+\contentsline {section}{\numberline {10}Feb 13, 2025 - Feb 17, 2025}{21}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Time spend}{21}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Key take away from meeting}{22}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Revised state machine diagram}{23}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Revised imlementation}{23}{subsection.10.4}%
+\contentsline {section}{\numberline {11}Mar 2, 2025 - Mar 5, 2025}{24}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Time spent}{24}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}summary of changes made}{24}{subsection.11.2}%
+\contentsline {section}{\numberline {12}Mar 19, 2025 - Mar 25, 2025}{24}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Time spent}{24}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}List of task done}{24}{subsection.12.2}%
+\contentsline {section}{\numberline {13}May 22 2025 - May 26 2025}{24}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Time spent}{24}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Summary of work done}{25}{subsection.13.2}%
+\contentsline {section}{\numberline {14}May 27 2025 - June 02 2025}{25}{section.14}%
+\contentsline {subsection}{\numberline {14.1}TO DO for RA work}{25}{subsection.14.1}%
+\contentsline {section}{\numberline {15}June 03 2025 - June 09 2025}{26}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Investigating Working of Alarm in Android}{26}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}Following things are needed to make the services running for 24 * 7 hours}{27}{subsection.15.2}%
+\contentsline {subsection}{\numberline {15.3}Current issue in Intentor}{27}{subsection.15.3}%
+\contentsline {subsection}{\numberline {15.4}Reason of Stopping Intentor App in Your Phone}{27}{subsection.15.4}%
+\contentsline {subsection}{\numberline {15.5}Using Alarm Manager to restart the service after every hour or some custom interval}{28}{subsection.15.5}%
+\contentsline {subsection}{\numberline {15.6}Insights from \href {https://play.google.com/store/apps/details?id=com.unpluq.beta&hl=en_IN}{Unplug} Application}{28}{subsection.15.6}%
+\contentsline {subsection}{\numberline {15.7}Meetings Key Decisions: }{28}{subsection.15.7}%
+\contentsline {section}{\numberline {16}June 10 2025 - June 16 2025}{28}{section.16}%
+\contentsline {subsection}{\numberline {16.1}List of Tasks Completed :}{28}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}Detail of the Implementation}{28}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3}Fix Query Starting Time}{29}{subsection.16.3}%
+\contentsline {subsection}{\numberline {16.4}Battery Optimization permission }{29}{subsection.16.4}%
+\contentsline {subsection}{\numberline {16.5}Runtime Permission of Disable Pause app activity if unused}{29}{subsection.16.5}%
+\contentsline {subsection}{\numberline {16.6}Insights from Stay Free App, Your Hour and Unplug Application}{30}{subsection.16.6}%
+\contentsline {section}{\numberline {17}June 17 2025 - June 23 2025}{30}{section.17}%
+\contentsline {subsection}{\numberline {17.1}List of task completed}{30}{subsection.17.1}%
+\contentsline {section}{\numberline {18}June 30 2025 - July 06 2025}{30}{section.18}%
+\contentsline {subsection}{\numberline {18.1}List of task completed}{30}{subsection.18.1}%
+\contentsline {section}{\numberline {19}July 07 2025 - July 13 2025}{31}{section.19}%
+\contentsline {section}{\numberline {20}July 13 2025 - July 19 2025}{31}{section.20}%
+\contentsline {subsection}{\numberline {20.1}List of Task Completed}{31}{subsection.20.1}%
+\contentsline {section}{\numberline {21}July 21 2025 - July 27 2025}{31}{section.21}%
+\contentsline {section}{\numberline {22}July 28 2025 - Aug 03 2025}{32}{section.22}%
+\contentsline {subsection}{\numberline {22.1}List of Task completed}{32}{subsection.22.1}%
+\contentsline {section}{\numberline {23}Aug 04 2025 - Aug 10 2025}{33}{section.23}%
+\contentsline {subsection}{\numberline {23.1}List of Task Completed}{33}{subsection.23.1}%
+\contentsline {section}{\numberline {24}Aug 04 2025 - Aug 10 2025}{33}{section.24}%
+\contentsline {subsection}{\numberline {24.1}List of Task completed: }{33}{subsection.24.1}%
+\contentsline {section}{\numberline {25}Aug 11 2025 - Aug 17 2025}{33}{section.25}%
+\contentsline {subsection}{\numberline {25.1}List of Tasks Completed:}{33}{subsection.25.1}%
+\contentsline {section}{\numberline {26}Aug 18 2025 - Aug 24 2025}{33}{section.26}%
+\contentsline {subsection}{\numberline {26.1}List of Tasks Completed:}{34}{subsection.26.1}%
+\contentsline {section}{\numberline {27}Aug 25 2025 - Aug 31 2025}{34}{section.27}%
+\contentsline {subsection}{\numberline {27.1}List of Tasks Completed:}{34}{subsection.27.1}%
+\contentsline {section}{\numberline {28}Sep 01 2025 - Sep 07 2025}{34}{section.28}%
+\contentsline {subsection}{\numberline {28.1}List of Tasks Completed:}{34}{subsection.28.1}%
+\contentsline {section}{\numberline {29}Sep 08 2025 - Sep 14 2025}{34}{section.29}%
+\contentsline {subsection}{\numberline {29.1}List of Tasks Completed:}{35}{subsection.29.1}%
+\contentsline {section}{\numberline {30}Sep 15 2025 - Sep 21 2025}{35}{section.30}%
+\contentsline {subsection}{\numberline {30.1}List of Tasks Completed:}{35}{subsection.30.1}%
+\contentsline {section}{\numberline {31}Sep 22 2025 - Sep 28 2025}{35}{section.31}%
+\contentsline {subsection}{\numberline {31.1}List of Tasks Completed:}{35}{subsection.31.1}%
+\contentsline {section}{\numberline {32}Sep 29 2025 - Oct 05 2025}{35}{section.32}%
+\contentsline {subsection}{\numberline {32.1}List of Tasks Completed:}{36}{subsection.32.1}%
+\contentsline {section}{\numberline {33}Oct 06 2025 - Oct 12 2025}{36}{section.33}%
+\contentsline {subsection}{\numberline {33.1}List of Tasks Completed:}{36}{subsection.33.1}%
+\contentsline {section}{\numberline {34}Oct 13 2025 - Oct 19 2025}{36}{section.34}%
+\contentsline {subsection}{\numberline {34.1}List of Tasks Completed:}{36}{subsection.34.1}%
+\contentsline {section}{\numberline {35}Overall Progress Summary (Aug–Oct 2025)}{37}{section.35}%
+\contentsline {section}{\numberline {36}Nov 1 2025 - Nov 9 2025}{37}{section.36}%
+\contentsline {subsection}{\numberline {36.1}Impact Summary}{37}{subsection.36.1}%
+\contentsline {subsection}{\numberline {36.2}List of Tasks Completed}{37}{subsection.36.2}%
+\contentsline {subsection}{\numberline {36.3}Background Workers Overview}{39}{subsection.36.3}%
+\contentsline {subsection}{\numberline {36.4}Workflow Diagram}{40}{subsection.36.4}%
+\contentsline {section}{\numberline {37}Nov 10 2025 - Nov 16 2025}{40}{section.37}%
+\contentsline {subsection}{\numberline {37.1}List of task completed:}{40}{subsection.37.1}%
+\contentsline {section}{\numberline {38}Nov 17, 2025 -- Nov 23, 2025}{41}{section.38}%
+\contentsline {section}{\numberline {39}Dec 02 2025 to Dec 07 2025}{42}{section.39}%
+\contentsline {subsection}{\numberline {39.1}List of Task Completed:}{42}{subsection.39.1}%
+\contentsline {section}{\numberline {40} Dec 09 2025 to Dec 14 2025}{42}{section.40}%
+\contentsline {section}{\numberline {41}Dec 15 2025 to Dec 21 2025}{42}{section.41}%
+\contentsline {section}{\numberline {42}Dec 22 2025 to Dec 31 2025}{43}{section.42}%
+\contentsline {subsection}{\numberline {42.1}To Do:}{43}{subsection.42.1}%
+\contentsline {subsection}{\numberline {42.2}List of Task Completed}{44}{subsection.42.2}%
+\contentsline {section}{\numberline {43}Jan 5 2026 to Jan 11 2026}{44}{section.43}%
+\contentsline {subsection}{\numberline {43.1}TO DO: }{44}{subsection.43.1}%
+\contentsline {subsection}{\numberline {43.2}Survey Summary and Key Observations}{44}{subsection.43.2}%
+\contentsline {subsection}{\numberline {43.3}Battery optimization changes: }{44}{subsection.43.3}%
+\contentsline {subsection}{\numberline {43.4}Upload log file to the server for user study analysis: }{45}{subsection.43.4}%
+\contentsline {section}{\numberline {44}Feb 23 2026 to Mar 01 2026}{46}{section.44}%
+\contentsline {subsection}{\numberline {44.1}List of Task Completed}{46}{subsection.44.1}%
+\contentsline {subsection}{\numberline {44.2}To Do}{46}{subsection.44.2}%
+\contentsline {section}{\numberline {45}Feb 23 2026 (last meeting) to Mar 05 2026}{46}{section.45}%
+\contentsline {subsection}{\numberline {45.1}List of Task Completed}{46}{subsection.45.1}%
+\contentsline {subsection}{\numberline {45.2}To Do}{47}{subsection.45.2}%
+\contentsline {section}{\numberline {46}Mar 06 2026 (last meeting) to Mar 10 2026}{48}{section.46}%
+\contentsline {subsection}{\numberline {46.1}List of Task Completed}{48}{subsection.46.1}%
+\contentsline {subsection}{\numberline {46.2}New vs Old UI comparision}{49}{subsection.46.2}%
+\contentsline {section}{\numberline {47}Mar 11 2026 (last meeting) to Mar 12 2026}{55}{section.47}%
+\contentsline {subsection}{\numberline {47.1}List of Task Completed}{55}{subsection.47.1}%
+\contentsline {subsection}{\numberline {47.2}To Do}{56}{subsection.47.2}%
