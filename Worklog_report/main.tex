@@ -565,8 +565,12 @@ There was too much inconsistency in the system & 1 & 3 & 1 \\
 
 The pilot study confirmed that the core JoDo mechanisms - usage warnings, the launcher-as-friction model, and competitive leaderboards — produce measurable awareness and self-reported behaviour change even in a small three-participant cohort. The primary actionable feedback was the need for a modern, consistent UI (addressed in \$3) and improved unlock-detection accuracy.
 
-\section{Mar 09 2026 (last meeting) - Mar 12 2026}
-{\bf No. of Hours: 10}
+\section{Mar 09 2026 (last meeting) - Mar 13 2026}
+{\bf No. of Hours: 12}
+\subsection{Offline Reward}
+\begin{enumerate}
+    \item Created JoDo passport similar to the passport that people visit countries and get stamp of that country, we can also follow similar kind of approach whenenver people visit a place and do offline activity in IIT they get stamped and have memory offline memories. \href{https://drive.google.com/file/d/1oMPdChhu_n5pfZ2k6dNrNa-poAVlBPzW/view?usp=sharing}{link}
+\end{enumerate}
 \subsection{To Do}
 \begin{enumerate}
     \item Implement Security measures to prevent \textbf{Denial of Service} and \textbf{Brute Force} attack.
@@ -582,6 +586,7 @@ The pilot study confirmed that the core JoDo mechanisms - usage warnings, the la
 \subsection{Completed Work}
 \subsubsection{Throttling Implementation from Django Rest Framework (Inbuilt - Library)}
 \begin{enumerate}
+
     \item Throttling is similar to \textbf{Permission}, in that it determines if a request should be authorized or not.
     \item As with permissions, multiple throttles may be used. Our API might have a restrictive throttle for unauthenticated requests, and a less restrictive throttle for authenticated requests.
     \item The application-level throttling that REST framework provides should not be considered a security measure or protection against brute forcing or denial-of-service attacks. Deliberately malicious actors will always be able to spoof IP origins. In addition to this, the built-in throttling implementations are implemented using Django's cache framework, and use non-atomic operations to determine the request rate, which may sometimes result in some fuzziness.
@@ -604,8 +609,29 @@ The pilot study confirmed that the core JoDo mechanisms - usage warnings, the la
 \subsubsection{A note on concurrency}
 \begin{enumerate}
     \item The built-in throttle implementations are open to race conditions, so under high concurrency they may allow a few extra requests through.
-    \item If our project relies on guaranteeing the number of requests during concurrent requests, you will need to implement your own throttle class.
+    \item If the project relies on guaranteeing the number of requests during concurrent requests, the we  will need to implement our own throttle class.
 \end{enumerate}
+
+\section{Mar 13 2026 (last meeting) - Mar 16 2026}
+{\bf No. of Hours: 10}
+\subsection{Work Done}
+\begin{enumerate}
+    \item Created new user \textbf{jododevsecops} with sudo permission and disabled root login.
+    \item Disabled all the ports except ssh,http and https port.
+    \item Integrated \textbf{HTTPs} in the Nginx server.
+    \item forwarded all the calls from port 80 to https.
+    \item Installed \textbf{CERTBOT} using docker container.
+    \item Added command in \textbf{certbot} to renew ssl certificate every 12 hr.
+    \item Shared command volume btw certbot and Nginx.
+    \item Fixed bugs in permission screen (sometime it was not redirecting to login page after granting all the permission)
+    \item Asked default launcher app permission in the \textbf{Home Screen}
+    \item Added settings button on the homescreen clicking on it will ask permission for:  \textbf{Pause app activity when unused.}
+\end{enumerate}
+\subsection{To Do}
+\begin{enumerate}
+    \item Complete the testing and create the .aab file and send it for deployment.
+\end{enumerate}
+
 \clearpage
 \bibliographystyle{apalike}
 \bibliography{reference}
