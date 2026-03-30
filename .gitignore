@@ -36,3 +36,6 @@ Running_MS_report/texput.log
 *.pdf
 *.log
 Worklog_report/texput.log
+*.aux
+*.out
+*.toc
