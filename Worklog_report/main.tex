@@ -622,22 +622,67 @@ The pilot study confirmed that the core JoDo mechanisms - usage warnings, the la
     \item forwarded all the calls from port 80 to https.
     \item Installed \textbf{CERTBOT} using docker container.
     \item Added command in \textbf{certbot} to renew ssl certificate every 12 hr.
-    \item Shared command volume btw certbot and Nginx.
+    \item Shared common volume btw certbot and Nginx.
     \item Fixed bugs in permission screen (sometime it was not redirecting to login page after granting all the permission)
     \item Asked default launcher app permission in the \textbf{Home Screen}
 \end{enumerate}
 \subsection{Offline Rewards}
 \begin{enumerate}
     \item 100rs canteen credit redeemable at Gulmohar or the other restuarant in IIT.
-    \item Mess fee Waiver(approx 3000 value) for monthly winner.
     \item IITB Hoodie.
     \item Stainless steel bottle + alumini-style tote bag.
-    \item sports watch.
+    \item Sports watch.
     \item IITB branded notebook and pen set from campus bookstore.
 \end{enumerate}
 \subsection{To Do}
 \begin{enumerate}
     \item Create the .aab file and send it for deployment.
+\end{enumerate}
+\section{Mar 16 2026 (last meeting) - Mar 20 2026}
+{\bf No. of Hours: 20}
+\subsection{Work Done}
+\begin{enumerate}
+    \item Created a separate worker to pull \textbf{last 7 days} avg mobile
+    phone usage app wise as well as for full device because avg usage for last 7 day remains constant throughout the day.
+    \item Fixed Bug: Upload logs API was failing in Android client because it was hitting wrong end point.
+    \item Added \textbf{Privacy Policy URL} in the App.
+    \item Stopped launching Notification Foreground service from BootComplete reciever as newer version of Android discourage launching long running service from Broadcast Reciever, Instead launched it from HomeScreen.
+    \item Tested Application from end to end in my device like BootUp, call, data uploads, launcher not freezing, popup opening properly, log file getting uploaded properly.
+    \item Merged all my work to jodo-app-development branch.
+    \item Created .aab file from \textbf{jodo\-app\-development} branch.
+    \item Create Roadmap plan for 1 month user study.
+\end{enumerate}
+\subsection{Study Plan: Joy of Digital cOntrol}
+\begin{enumerate}
+    \item Created user study plan in the  following file in the same folder \textbf{user\_study\_proposal.tex}
+\end{enumerate}
+
+\section{Mar 21 2026 (last meeting) - Mar 30 2026}
+{\bf No. of Hours: 15}
+\subsection{Work Done}
+\begin{enumerate}
+    \item Made the changes suggested in JoDo passport (\href{https://canva.link/x8w50ao7f9vl1xl}{link}) .
+    \item \textbf{Estimated Budget for user study (30 days weeks):}
+    \begin{enumerate}
+        \item 100 rupees per day for daily winner, total = 3000
+        \item IITB notebook + pen set for top 3 winner, total = 500*3*4=6000
+        \item Monthly winner: 1st rank sports watch : 3000, second rank : IITB Hoodie: 1500, Third - Fifthg rank: Steel bottle and Bag: 3*1000
+        \item JoDo cards printing cost approx 500. 
+        \item total estimated budget is 17000
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Code Scaning using Harness SAST and SCA}
+\begin{enumerate}
+    \item Done static Analyis using Harness SAST and SCA to find vulnerability in the server side code and third party library.
+    \item Found 21 vulnerability mostly from third party library, link to the report: \href{https://drive.google.com/file/d/1HfIV1nEnnZx0QsAe7Flo7K23HKdTCwdX/view?usp=sharing}{link}
+\end{enumerate}
+
+\subsection{To Do}
+\begin{enumerate}
+    \item Request someone to Update APK on play store.
+    \item Complete second pilot study.
+    \item Complete user study in next sem.
 \end{enumerate}
 
 \clearpage
