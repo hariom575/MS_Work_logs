@@ -1,0 +1,336 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{multirow}
+\usepackage{parskip}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage{textcomp}
+
+% Color definitions
+\definecolor{iitbblue}{RGB}{10, 35, 90}
+\definecolor{accentgold}{RGB}{180, 130, 20}
+\definecolor{tealgreen}{RGB}{15, 110, 86}
+\definecolor{purplecolor}{RGB}{60, 52, 137}
+\definecolor{coralcolor}{RGB}{113, 43, 19}
+\definecolor{lightbg}{RGB}{248, 248, 252}
+\definecolor{infobg}{RGB}{230, 241, 251}
+\definecolor{infoborder}{RGB}{24, 95, 165}
+\definecolor{tablehead}{RGB}{10, 35, 90}
+\definecolor{rowalt}{RGB}{248, 248, 252}
+
+\hypersetup{colorlinks=true, linkcolor=iitbblue, urlcolor=tealgreen}
+
+% Page style
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{iitbblue}\textbf{JoDo} \textcolor{gray}{|} BPS-2 User Study Plan}
+\fancyhead[R]{\small\color{gray}IIT Bombay · Hariom Mewada}
+\fancyfoot[C]{\small\color{gray}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{iitbblue}\leaders\hrule height \headrulewidth\hfill}}
+
+% Section formatting
+\titleformat{\section}{\color{iitbblue}\large\bfseries}{\color{accentgold}\thesection.}{0.6em}{}[\vspace{0.1em}{\color{iitbblue}\titlerule[0.5pt]}]
+\titleformat{\subsection}{\color{iitbblue}\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.5em}{0.8em}
+\titlespacing*{\subsection}{0pt}{1.2em}{0.5em}
+
+% tcolorbox styles
+\tcbuselibrary{skins, breakable}
+
+\newtcolorbox{rqbox}{
+  colback=infobg, colframe=infoborder,
+  arc=0pt, boxrule=0pt, leftrule=2pt,
+  left=10pt, right=10pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{notebox}{
+  colback=lightbg, colframe=gray!30,
+  arc=4pt, boxrule=0.5pt,
+  left=10pt, right=10pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{formulabox}{
+  colback=lightbg, colframe=gray!30,
+  arc=4pt, boxrule=0.5pt,
+  left=10pt, right=10pt, top=8pt, bottom=8pt,
+  fontupper=\ttfamily\small
+}
+
+% List styling
+\setlist[itemize]{leftmargin=1.5em, itemsep=2pt, parsep=0pt, topsep=4pt}
+\setlist[enumerate]{leftmargin=1.5em, itemsep=2pt, parsep=0pt, topsep=4pt}
+
+% -----------------------------------------------
+\begin{document}
+
+% -----------------------------------------------
+\section*{BPS-2 User Study Plan: Joy of Digital cOntrol (JoDo)}
+\addcontentsline{toc}{section}{BPS-2 User Study Plan}
+
+{\color{gray}\small Hariom Mewada (24M2137) \textbar{} Advisor: Prof.\ Bhaskaran Raman \textbar{} IIT Bombay}
+
+\bigskip
+
+JoDo is not a productivity app---it is a \textbf{digital wellbeing system}. Users earn reward tiers and leaderboard points by \textbf{using their phone less}: lower screen time, fewer unlocks, and consistent daily self-regulation. The user study validates whether this launcher-integrated, reward-driven approach causes measurable, sustained behavioural change---not just engagement.
+
+\medskip
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{lll}
+\toprule
+\textbf{Participants} & \textbf{Active study duration} & \textbf{Design} \\
+\midrule
+$\sim$20 IITB students & 30 days (5\,PM--5\,PM cycle) & Single-arm longitudinal, within-subject \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% -----------------------------------------------
+\subsection{Research Questions}
+
+\begin{rqbox}
+\textbf{RQ1} --- Does the JoDo launcher + reward system reduce daily screen time and unlock counts compared to participants' own pre-study baselines?
+\end{rqbox}
+\vspace{4pt}
+\begin{rqbox}
+\textbf{RQ2} --- Do tiered rewards (Platinum / Daily / Weekly / Monthly) and the leaderboard sustain motivation for self-regulation over 30 days, or does engagement decay?
+\end{rqbox}
+\vspace{4pt}
+\begin{rqbox}
+\textbf{RQ3} --- Does the onboarding passport create a sense of commitment and progress that improves Day-7 and Day-30 retention inside the app?
+\end{rqbox}
+\vspace{4pt}
+\begin{rqbox}
+\textbf{RQ4} --- What qualitative factors---social competition, reward visibility, launcher friction---drive or hinder sustained digital self-control?
+\end{rqbox}
+
+% -----------------------------------------------
+\subsection{Study Phases}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[H]
+\centering
+\caption{Overview of the three study phases}
+\begin{tabularx}{\linewidth}{>{\bfseries\color{iitbblue}}l >{\bfseries}l X}
+\toprule
+\rowcolor{tablehead}
+\color{white}Phase & \color{white}Timing & \color{white}Key activities \\
+\midrule
+Phase 0 & Week $-$1 (pre-study) &
+Recruit 20 participants $\cdot$ written consent $\cdot$ ethics clearance $\cdot$ pre-study survey on screen habits and wellbeing $\cdot$ install JoDo and capture natural baseline via \texttt{UploadBaselineWorker} \\
+\addlinespace
+Phase 1 & Days 1--30 &
+Passport issued on Day 1 $\cdot$ reward system activated $\cdot$ leaderboard live from Day 1 $\cdot$ daily winner  at 5\,PM $\cdot$ weekly winner rewards on Days 7, 14, 21, 28 $\cdot$ mid-study pulse survey on Day 15 $\cdot$ re-engagement nudge after 2 consecutive missed days \\
+\addlinespace
+Phase 2 & Week 6 (post-study) &
+Monthly top-5 rewards on Day 30 $\cdot$ exit survey (NPS + reflection) $\cdot$ optional 20-min semi-structured interview with 5 participants $\cdot$ data export and anonymisation $\cdot$ statistical analysis vs Phase 0 baseline $\cdot$ guide presentation \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% -----------------------------------------------
+\subsection{What the System Actually Measures}
+
+The reward system operates on two parallel mechanisms: a \textbf{score-based tier system}
+that reflects each user's personal restraint relative to their own baseline, and a
+\textbf{daily winner selection} that determines who receives the physical daily reward.
+
+\subsubsection*{Score and tier computation}
+
+Each user's daily score is computed by the Celery scheduler at 17:20 IST using the
+formula derived from BPS-1:
+
+\begin{formulabox}
+Score = w1 * (1 - T\_screen / T\_max)  +  w2 * (1 - N\_unlock / N\_max)  +  w3 * Consistency\\
+\\
+Tier: score > 0.8 -> Platinum  |  > 0.6 -> Gold  |  > 0.4 -> Silver  |  else -> Bronze\\
+Computation cycle: 5 PM to 5 PM IST daily
+\end{formulabox}
+
+Tiers are \textbf{personal} --- they reflect improvement against each participant's own
+Phase~0 baseline, not against other users. Every participant can reach Platinum on
+the same day.
+
+\subsubsection*{Daily winner selection}
+
+The physical daily reward (Rs.~100 canteen credit) is assigned to exactly
+\textbf{one participant per day} via the \texttt{assign\_daily\_reward} Celery task.
+Selection follows a strict two-step process:
+
+\begin{enumerate}
+  \item \textbf{Primary ranking:} All participants with a \texttt{DailyPoints} entry
+  for today are ranked by \texttt{total\_points} (descending).
+
+  \item \textbf{Tie-breaker chain} (applied only when points are equal, in this order):
+  \begin{enumerate}[label=\roman*.]
+    \item Night-session screen time (lower usage wins)
+    \item Day-session screen time
+    \item Total screen time
+    \item Evening-session screen time
+    \item Total unlock count
+    \item Total app launches
+  \end{enumerate}
+\end{enumerate}
+
+The winner is written to \texttt{DailyReward} with status \texttt{NOT\_REDEEMED} via
+\texttt{get\_or\_create}, ensuring no duplicate assignments on Celery retries. If no
+\texttt{RewardTier} of type \texttt{daily} exists, the task exits silently.
+
+\begin{notebox}
+\small
+\textbf{Two distinct comparisons run simultaneously.} The tier system is
+\textbf{within-subject} --- you vs.\ your own Phase~0 baseline, measuring personal
+behaviour change. The daily winner is \textbf{between-subject} --- competitive ranking
+across all participants for that day. The study analyses both: tier progression tracks
+individual habit change (RQ1), while leaderboard dynamics track whether social
+competition sustains motivation over 30 days (RQ2).
+\end{notebox}
+
+% -----------------------------------------------
+\subsection{Measurement Instruments}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+\centering
+\caption{Data sources and their role in the study}
+\begin{tabularx}{\linewidth}{>{\bfseries}p{0.22\linewidth} p{0.30\linewidth} p{0.12\linewidth} X}
+\toprule
+\rowcolor{tablehead}
+\color{white}Metric & \color{white}Source & \color{white}Cadence & \color{white}What it tells you \\
+\midrule
+Daily screen time & \texttt{UsageStatsWorker} & Every day & Primary outcome: did phone use decrease? \\
+\rowcolor{rowalt}
+Daily unlock count & \texttt{UsageSession} table & Every day & Impulsive checking behaviour \\
+Daily reward tier & \texttt{DailyReward} table & Every day at 5\,PM & Self-regulation quality \\
+\rowcolor{rowalt}
+Leaderboard rank & \texttt{DailyRank} table & Daily / weekly / lifetime & Social motivation effect over time \\
+Streak days & Derived from \texttt{DailyPoints} & Weekly & Consistency of effort \\
+\rowcolor{rowalt}
+App retention (DAU) & Login events & Every day & Does JoDo hold engagement over 30 days? \\
+Passport stamps earned & In-app passport state & Cumulative & Did the onboarding artifact create commitment? \\
+\rowcolor{rowalt}
+Wellbeing self-rating & Survey & Pre / Day 15 / exit & Subjective sense of focus, calm, control \\
+Reward redemption rate & \texttt{/rewards/\{id\}/redeem/} & Ongoing & Active engagement with the reward system \\
+\rowcolor{rowalt}
+NPS + qualitative exit & Exit survey + interviews & Day 30 & Perceived value; what worked; what felt coercive \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% -----------------------------------------------
+\subsection{The Passport --- Its Role in the Study}
+
+The onboarding passport is issued as both a physical gift on Day 1. Each day a participant visit a place for offline activity a stamp is added onto it . It functions as a \textbf{visible commitment device}, making the 30-day challenge feel tangible and personal.
+
+From a research perspective, stamps accumulated = high-tier days. RQ3 specifically tests whether participants who engage more actively with the passport artifact show better D7/D30 retention and more consistent streaks.
+
+\begin{notebox}
+\small The passport is not the study---it is one instrument within it. The study tests whether the full JoDo system (launcher + reward tiers + leaderboard + passport) produces measurable behaviour change in screen time and unlock patterns over 30 days.
+\end{notebox}
+
+% -----------------------------------------------
+\subsection{Week-by-Week Timeline}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+\centering
+\caption{Detailed week-by-week execution plan}
+\begin{tabularx}{\linewidth}{>{\bfseries\color{iitbblue}}p{0.18\linewidth} X}
+\toprule
+\rowcolor{tablehead}
+\color{white}Period & \color{white}Activities \\
+\midrule
+Week $-$1 (baseline) & Recruit participants $\cdot$ consent $\cdot$ install JoDo in passive mode $\cdot$ baseline survey $\cdot$ 7 days of natural usage logged automatically \\
+\rowcolor{rowalt}
+Day 1 & Reward system activated $\cdot$ physical passport gifted $\cdot$ in-app passport initialised $\cdot$ participants briefed on scoring formula and tiers \\
+Week 1 (Days 1--7) & Daily tier notifications $\cdot$ first leaderboard competition $\cdot$ Day 7: first weekly winner announced and rewarded $\cdot$ measure D7 retention \\
+\rowcolor{rowalt}
+Week 2 (Days 8--14) & Track streak formation $\cdot$ observe leaderboard rank volatility $\cdot$ Day 14: second weekly winner $\cdot$ re-engagement nudge to at-risk participants \\
+Day 15 & Mid-study pulse survey: Is the launcher helpful or annoying? Does the leaderboard motivate or stress? Have you noticed screen time changing? Rate your digital control (1--10). \\
+\rowcolor{rowalt}
+Weeks 3--4 (Days 15--28) & Key sustainability window: does engagement hold or decay after novelty fades? Weekly winners on Days 21 and 28. \\
+Day 30 -- Week 6 & Monthly top-5 rewarded $\cdot$ exit survey $\cdot$ optional interviews $\cdot$ compare Day 1--30 trends vs Phase 0 baseline $\cdot$ guide presentation \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% -----------------------------------------------
+\subsection{Reward Structure}
+
+Rewards are tied directly to the backend's reward tier and leaderboard system from BPS-1.
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+\centering
+\caption{Reward tiers, winners, and motivational rationale}
+\begin{tabularx}{\linewidth}{>{\bfseries}p{0.14\linewidth} p{0.18\linewidth} p{0.22\linewidth} X}
+\toprule
+\rowcolor{tablehead}
+\color{white}Cadence & \color{white}Who wins & \color{white}Reward & \color{white}What it reinforces \\
+\midrule
+\color{tealgreen}Daily & Top 1 by daily score & Rs.\ 100 canteen credit (Gulmohar) & Immediate feedback: the score formula works \\
+\rowcolor{rowalt}
+\color{purplecolor}Weekly & Top 3 by weekly points & IITB notebook + pen set & Consistency across 7 days, not just one good day \\
+\color{accentgold}Monthly -- 1st & Highest cumulative score & IITB Hoodie & Sustained self-regulation over 30 days \\
+\rowcolor{rowalt}
+\color{accentgold}Monthly -- 2nd & Runner-up & Sports watch & Aspiration: visible enough to drive competition \\
+\color{accentgold}Monthly -- 3rd--5th & Top 3--5 & Steel bottle + tote bag & Broadens the winning zone to reduce early dropout \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% -----------------------------------------------
+\subsection{Analysis Plan}
+
+\subsubsection*{Quantitative}
+\begin{itemize}
+  \item \textbf{Primary test:} Paired $t$-test or Wilcoxon signed-rank comparing Phase 0 baseline vs.\ Day 15 and Day 30 screen time and unlock counts per participant (within-subject).
+  \item \textbf{Tier progression:} Distribution of Platinum / Gold / Silver / Bronze across the 30 days --- is the cohort improving, plateauing, or regressing?
+  \item \textbf{Retention curve:} Daily Active Users across 30 days --- where do dropouts occur?
+  \item \textbf{Streak vs.\ score:} Does consistency of daily engagement predict overall score improvement?
+\end{itemize}
+
+\subsubsection*{Qualitative}
+\begin{itemize}
+  \item Exit survey open-ends: \textit{``What changed in how you think about your phone?''}
+  \item Semi-structured interviews (5 participants): Did launcher friction feel helpful or annoying? Did leaderboard create anxiety?
+  \item Mid-study pulse: early signal on autonomy vs.\ perceived coercion.
+  \item Passport reflection: Did the physical artifact create a sense of ownership and commitment?
+\end{itemize}
+
+% -----------------------------------------------
+\subsection{Ethics and Participant Safeguards}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+\centering
+\caption{Ethical considerations and mitigations}
+\begin{tabularx}{\linewidth}{>{\bfseries}p{0.18\linewidth} X}
+\toprule
+\rowcolor{tablehead}
+\color{white}Concern & \color{white}Mitigation \\
+\midrule
+Informed consent & Written consent before Phase 0. Participants told exactly what data is collected and their right to withdraw at any time. \\
+\rowcolor{rowalt}
+Privacy & Only aggregated usage statistics uploaded --- no app content, no personal identifiers. Consistent with BPS-1 data minimisation principle. \\
+No coercion & No app is permanently blocked. The launcher nudges; it does not restrict. Core autonomy-supportive design from the BPS-1 thesis. \\
+\rowcolor{rowalt}
+Leaderboard stress & Competition could induce anxiety. Day 15 pulse explicitly checks this. Participants may opt out of the leaderboard without losing reward eligibility. \\
+Withdrawal & Participants may exit at any point. Data collected to that point is anonymised and retained unless deletion is requested. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\end{document}

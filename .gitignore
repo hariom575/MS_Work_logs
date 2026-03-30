@@ -34,3 +34,9 @@ Running_MS_report/texput.log
 
 
 .vscode/
+*.pdf
+*.log
+Worklog_report/texput.log
+*.aux
+*.out
+*.toc
