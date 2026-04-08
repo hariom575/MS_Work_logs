@@ -1,2 +1,2 @@
 ## MS Work Log Reports
-Excellencr isnt born, it's built.
+Excellence isn't born, it's built.
