@@ -33,6 +33,7 @@ Running_MS_report/main.blg
 Running_MS_report/texput.log
 
 
+.vscode/
 *.pdf
 *.log
 Worklog_report/texput.log
