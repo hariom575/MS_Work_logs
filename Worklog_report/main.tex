@@ -667,8 +667,8 @@ The pilot study confirmed that the core JoDo mechanisms - usage warnings, the la
     \item \textbf{Estimated Budget for user study (30 days weeks):}
     \begin{enumerate}
         \item 100 rupees per day for daily winner, total = 3000
-        \item IITB notebook + pen set for top 3 winner, total = 500*3*4=6000
-        \item Monthly winner: 1st rank sports watch : 3000, second rank : IITB Hoodie: 1500, Third - Fifthg rank: Steel bottle and Bag: 3*1000
+        \item IITB notebook + pen set for top 3 weekly winner, total = 500*3*4=6000
+        \item Monthly winner: 1st rank sports watch : 3000, second rank : IITB Hoodie: 1500, Third - Fifth rank: Steel bottle and Bag: 3*1000
         \item JoDo cards printing cost approx 500. 
         \item total estimated budget is 17000
     \end{enumerate}
@@ -686,7 +686,39 @@ The pilot study confirmed that the core JoDo mechanisms - usage warnings, the la
     \item Complete second pilot study.
     \item Complete user study in next sem.
 \end{enumerate}
+\section{Mar 30 2026 (last meeting) - April 06 2026}
+{\bf No. of Hours: 15}
+\subsection{Work Done}
+\begin{enumerate}
+    \item Created consent form (google form) for pilot study \href{https://docs.google.com/forms/d/e/1FAIpQLScx9lyvxXDgia69XFIVvhky8M308N_4QHE2dzBAPSCAI8cA4Q/viewform?usp=sharing&ouid=114310670116364214566}{link} 
+    \item Updated privacy policy \href{https://hariom575.github.io/jodo-privacy-policy/}{link}
+    \item Fixed bug in total usage calculation logic, earlier total sum of day + night + evening session usage time was not equal to total usage session time.
+    \item In Django admin show data for every day for every user in single row for all the four sessions of the day, currently we are storing data in session wise formate for every date it is wasting space as well as create confusions while interpreting the data.
+    \item Created New layout for get started screen.
+    \item 
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{get-started-screen.jpeg}
+        \hspace{0,3cm}
+        \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{new_get_started_screen.jpeg}
+    
+         \vspace{0.5cm}
+    
+        % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+        % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+    
+        \caption{Get Started screen old (left)vs new UI (right)}
+        \label{fig:ui_get_started screen}
+    \end{figure}
+\end{enumerate}
+\subsection{To Do}
+\begin{enumerate}
+    \item Store upload status at server side.
 
+    \item Only consider those users for weekly competition which are joined atleast 7 days before.
+    \item Plan for ethics committee approval for user study.
+    \item Republish app with latest code and updated privacy policy.
+\end{enumerate}
 \clearpage
 \bibliographystyle{apalike}
 \bibliography{reference}
