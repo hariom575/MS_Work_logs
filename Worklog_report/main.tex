@@ -210,11 +210,11 @@
         \label{fig:enter-label}
     \end{figure}
 \end{enumerate}
-\subsection{Pilot Study Plan for Jodo App}
+\subsection{Pilot Study Plan for JoDo App}
 
 \textbf{Objective}
 
-The purpose of this pilot study is to evaluate the effectiveness of the Jodo app in improving digital wellbeing and productivity among college students. The study aims to measure whether users experience increased focus time, reduced distractions, improved productivity, and better overall study habits.
+The purpose of this pilot study is to evaluate the effectiveness of the JoDo app in improving digital wellbeing and productivity among college students. The study aims to measure whether users experience increased focus time, reduced distractions, improved productivity, and better overall study habits.
 
 \subsection{1. Define the Goal}
 
@@ -693,7 +693,7 @@ The pilot study confirmed that the core JoDo mechanisms - usage warnings, the la
     \item Created consent form (google form) for pilot study \href{https://docs.google.com/forms/d/e/1FAIpQLScx9lyvxXDgia69XFIVvhky8M308N_4QHE2dzBAPSCAI8cA4Q/viewform?usp=sharing&ouid=114310670116364214566}{link} 
     \item Updated privacy policy \href{https://hariom575.github.io/jodo-privacy-policy/}{link}
     \item Fixed bug in total usage calculation logic, earlier total sum of day + night + evening session usage time was not equal to total usage session time.
-    \item In Django admin show data for every day for every user in single row for all the four sessions of the day, currently we are storing data in session wise formate for every date it is wasting space as well as create confusions while interpreting the data.
+    \item In Django admin shown data for every day for every user in single row for all the four sessions of the day, currently we are storing data in session wise formate for every date it is wasting space as well as create confusions while interpreting the data.
     \item Created New layout for get started screen.
     \item 
         \begin{figure}[H]
@@ -718,6 +718,36 @@ The pilot study confirmed that the core JoDo mechanisms - usage warnings, the la
     \item Only consider those users for weekly competition which are joined atleast 7 days before.
     \item Plan for ethics committee approval for user study.
     \item Republish app with latest code and updated privacy policy.
+\end{enumerate}
+\section{April 07 2026  - April 15 2026}
+{\bf No. of Hours: 10}
+\subsection{Migration from 4KB page size to 16KB page size}
+\begin{enumerate}
+    \item Historically, Android has supported 4KB page sizes, which has optimized system memory performance for the average amount of total memory that Android device have typically had.
+    \item Begining with Android 15, AOSP supports devices that are configured to use a page size of 16KB.
+    \item As device manufucturers continue to build devices with larger amount of physical memory(RAM), many of these devices will adopt 16KB (and eventually higher) page size to optimize device's performance.
+    \item \textbf{Benefits and Performance Gain: } 
+    Devices configured with 16KB page use slighly more memory on average, but also gain various performance improvement for both system and apps:
+    \begin{enumerate}
+        \item Lower App launche times while the system is under memory pressure. 3.16 \% lower on average.  with more significant improvement on some apps (upto 30 \%) improvement,
+        \item Reduced power draw on App launch. 4.56 \% redunction on average.
+        \item Fast camera launch: 4.48 \% fast camera launch (Irrelavent to our app)
+        \item  Improved system Boot time: improved by 8 \% on an average (Irrelavent to our app).
+    \end{enumerate}
+\end{enumerate}
+\subsection{APK Analysis Report from Android Studio}
+\begin{enumerate}
+    \item   \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{apk_analysis.png}
+    
+        \caption{APK analysis report from android studio}
+        \label{fig:apk_analysis_report_from_android_studio}
+    \end{figure}
+\end{enumerate}
+\subsection{Code or Config Changes}
+\begin{enumerate}
+    \item Our App does not require any code change as our apk does not have any native pre-build library which depends on 16KB page size.
 \end{enumerate}
 \clearpage
 \bibliographystyle{apalike}
