@@ -210,11 +210,11 @@
         \label{fig:enter-label}
     \end{figure}
 \end{enumerate}
-\subsection{Pilot Study Plan for Jodo App}
+\subsection{Pilot Study Plan for JoDo App}
 
 \textbf{Objective}
 
-The purpose of this pilot study is to evaluate the effectiveness of the Jodo app in improving digital wellbeing and productivity among college students. The study aims to measure whether users experience increased focus time, reduced distractions, improved productivity, and better overall study habits.
+The purpose of this pilot study is to evaluate the effectiveness of the JoDo app in improving digital wellbeing and productivity among college students. The study aims to measure whether users experience increased focus time, reduced distractions, improved productivity, and better overall study habits.
 
 \subsection{1. Define the Goal}
 
@@ -667,8 +667,8 @@ The pilot study confirmed that the core JoDo mechanisms - usage warnings, the la
     \item \textbf{Estimated Budget for user study (30 days weeks):}
     \begin{enumerate}
         \item 100 rupees per day for daily winner, total = 3000
-        \item IITB notebook + pen set for top 3 winner, total = 500*3*4=6000
-        \item Monthly winner: 1st rank sports watch : 3000, second rank : IITB Hoodie: 1500, Third - Fifthg rank: Steel bottle and Bag: 3*1000
+        \item IITB notebook + pen set for top 3 weekly winner, total = 500*3*4=6000
+        \item Monthly winner: 1st rank sports watch : 3000, second rank : IITB Hoodie: 1500, Third - Fifth rank: Steel bottle and Bag: 3*1000
         \item JoDo cards printing cost approx 500. 
         \item total estimated budget is 17000
     \end{enumerate}
@@ -686,7 +686,242 @@ The pilot study confirmed that the core JoDo mechanisms - usage warnings, the la
     \item Complete second pilot study.
     \item Complete user study in next sem.
 \end{enumerate}
+\section{Mar 30 2026 (last meeting) - April 06 2026}
+{\bf No. of Hours: 15}
+\subsection{Work Done}
+\begin{enumerate}
+    \item Created consent form (google form) for pilot study \href{https://docs.google.com/forms/d/e/1FAIpQLScx9lyvxXDgia69XFIVvhky8M308N_4QHE2dzBAPSCAI8cA4Q/viewform?usp=sharing&ouid=114310670116364214566}{link} 
+    \item Updated privacy policy \href{https://hariom575.github.io/jodo-privacy-policy/}{link}
+    \item Fixed bug in total usage calculation logic, earlier total sum of day + night + evening session usage time was not equal to total usage session time.
+    \item In Django admin shown data for every day for every user in single row for all the four sessions of the day, currently we are storing data in session wise formate for every date it is wasting space as well as create confusions while interpreting the data.
+    \item Created New layout for get started screen.
+    \item 
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{get-started-screen.jpeg}
+        \hspace{0,3cm}
+        \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{new_get_started_screen.jpeg}
+    
+         \vspace{0.5cm}
+    
+        % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+        % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+    
+        \caption{Get Started screen old (left)vs new UI (right)}
+        \label{fig:ui_get_started screen}
+    \end{figure}
+\end{enumerate}
+\subsection{To Do}
+\begin{enumerate}
+    \item Store upload status at server side.
 
+    \item Only consider those users for weekly competition which are joined atleast 7 days before.
+    \item Plan for ethics committee approval for user study.
+    \item Republish app with latest code and updated privacy policy.
+\end{enumerate}
+\section{April 07 2026  - April 15 2026}
+{\bf No. of Hours: 10}
+\subsection{Migration from 4KB page size to 16KB page size}
+\begin{enumerate}
+    \item Historically, Android has supported 4KB page sizes, which has optimized system memory performance for the average amount of total memory that Android device have typically had.
+    \item Begining with Android 15, AOSP supports devices that are configured to use a page size of 16KB.
+    \item As device manufucturers continue to build devices with larger amount of physical memory(RAM), many of these devices will adopt 16KB (and eventually higher) page size to optimize device's performance.
+    \item \textbf{Benefits and Performance Gain: } 
+    Devices configured with 16KB page use slighly more memory on average, but also gain various performance improvement for both system and apps:
+    \begin{enumerate}
+        \item Lower App launche times while the system is under memory pressure. 3.16 \% lower on average.  with more significant improvement on some apps (upto 30 \%) improvement,
+        \item Reduced power draw on App launch. 4.56 \% redunction on average.
+        \item Fast camera launch: 4.48 \% fast camera launch (Irrelavent to our app)
+        \item  Improved system Boot time: improved by 8 \% on an average (Irrelavent to our app).
+    \end{enumerate}
+\end{enumerate}
+\subsection{APK Analysis Report from Android Studio}
+\begin{enumerate}
+    \item   \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{apk_analysis.png}
+    
+        \caption{APK analysis report from android studio}
+        \label{fig:apk_analysis_report_from_android_studio}
+    \end{figure}
+\end{enumerate}
+\subsection{Code or Config Changes}
+\begin{enumerate}
+    \item Our App does not require any code change as our apk does not have any native pre-build library which depends on 16KB page size.
+\end{enumerate}
+\section{May 11 2026  - May 17 2026}
+{\bf No. of Hours: 10}
+\subsection{List of Task Completed:}
+\begin{enumerate}
+    \item Completed pilot study 2 with 3 users.
+    \item Fixed bugs appeared in pilots study 2.
+    \item Tested the new changes in all pilot devices.
+    \item Increased version code and version number for new play store deployment.
+    \item Created new .aab file for new deployment and verified that new .aab file is not corrupted.
+\end{enumerate}
+\section{May 18 2026 - May 19 2026}
+{\bf No. of Hours 10}
+
+\subsection{Proposed User study plan: }
+\begin{enumerate}
+    \item Create 2 week user study plan.
+    \item Create on boarding form.
+    \item Take approval from ethics committee.
+    \item Create template for advertisement email.
+    \item Create poster for user study.
+    \item Start recruitment through mails and in person contact.
+\end{enumerate}
+
+\subsection{Summary of the paper: "In my defense, only three hours on Instagram": Designing
+Toward Digital Self-Awareness and Well-being} \cite{karthik2026}
+\begin{enumerate}
+    \item Screen use pervades daily life, shaping work, leisure, and social connections while raising concerns for digital well-being.
+    \item Theme of this paper is: \textbf{self-awareness, reflecting on one's digital behavior -as a critical pathway to digital well-being.}
+    \item They created an app called: \textbf{WellScreen}
+    \item Their main design for digital intervention is : They ask \textbf{Today's total usage time prediction} from the user in apps in particular category like social , entertainment, productivity and finance, shopping and food, and creativity. When the day ends they show the users their actual usages with color coded graphs and compare the estimated usage with the actual usage.
+    \item At the end of the day they ask 5 question survey from the users (answer on the scale of 5-10) which includes: 
+    \begin{enumerate}
+        \item How satisfied are you with app usage?
+        \item Did you meet your usage goal?
+        \item How focused did you feel?
+        \item How stressed did your usage make you feel?
+        \item How in control did you feel?
+        \item And a final self-reflection message from the user and their thoughts about their usage.
+    \end{enumerate}
+    \item They conducted user study with 25 participants mostly were university students over the period of 2 weeks.
+    \item The goal of their user study was to find out: \textbf{How discrepancies between estimated and actual usage shaped digital awareness and well-being.}
+    \item Participants  underestimate productivity and social and while overestimating entertainment app use. They showed a 10 \% improvement in positive effects ratting \textit{WellScreen} as \textbf{Moderately useful} (median SUS=80, IAM=14)..
+    \item Their background literature includes: 
+    \begin{enumerate}
+        \item Digital Well-being as a concept: Digital well-being in \textit{HCI}, Digital well-being for college students.
+        \item Self-awareness and Reflective Tools.
+        \item Human-centered design of Digital well-being.
+    \end{enumerate}
+    \item \textbf{User Study Desgin and Method}:
+    \begin{enumerate}
+        \item \textit{The main goal of their was to examine how the recognizance of, and regular self-regulation on, college student's  estimated-actual gap in smartphone usage habits could advance our understanding of digital self-awareness and digital well-being.}
+    \end{enumerate}
+    \item \textbf{Participants and Recruitment} : They recruited participants through social media mainly through \textit{Reddit} community.
+  \end{enumerate}
+
+\subsection{Positive Points}
+\begin{enumerate}
+    \item Their study was focused mainly on behavior change,  they correlated screen time estimation and actual gap with individual differences which is good.
+    \item They focused on individual digital self regulation and digital well-being, which could help in furthur developing individual specific digital well-being solutions which focuses on individual behaviour change rather than a group.
+    \item Their work targeted what factor results in disparities.Why user generally ended up spending more than estimated? they tried to find out the digital well-being definitions with the help of statistics and user interview and actual screen usage pattern.
+    \item They have done so many statistical analysis both on usage data as well as self-reported user data.
+\end{enumerate}
+\subsection{Negative Points}
+\begin{enumerate}
+    \item Their approached digital-well-being through self-awareness or self-reflection, showing the users the actual vs estimation, they haven't included any limiting strategy or motivational element.
+    \item They haven't considered relapse in their study.
+    \item Though their sample size is vary demographically but it was very small (only 25 people.)
+\end{enumerate}
+\section{May 20 2026  - May 24 2026}
+{\bf No of Hours: 25}
+\subsection{Pilot study 2 Report}
+\begin{enumerate}
+    \item The focus in pilot study 2 was mostly kept on ensuring the stability of the application across various devices before going for a larger user study for 2-3 weeks.
+    \item Recruited 3 pilots with offline interaction from Hostel 14 (Master's CSE student).
+    \item Before Downloading the app, all the 3 participants were asked to fill the \href{https://docs.google.com/forms/d/e/1FAIpQLScx9lyvxXDgia69XFIVvhky8M308N_4QHE2dzBAPSCAI8cA4Q/viewform}{consent form} .
+    \item \textbf{Demographics: } Sex: male, age group: 22-26 for all the three participants.
+    \item \textbf{Device Details: } Redmi 9I (Xiaomi), One-Plus, and Samsung.
+    \item \textbf{Duration of the study:} 3 days.
+    \item \textbf{Major Bugs/Crashes Found during Pilot study (Reported by Firebase Crash-analytics)}
+    \begin{enumerate}
+        \item \textbf{ AppDao\_Impl.insertUsageSummary:} java.lang.IllegalStateException - Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number.
+        \item \textbf{ AppDao\_Impl.insertApps:} java.lang.IllegalStateException - Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number.
+        \item \textbf{ AppDao\_Impl.insertUsageSummary:} java.lang.IllegalStateException - Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number.
+        
+        \item \textbf{ActivityThread.generateForegroundServiceDidNotStartInTimeException: } Sometimes background service did not started from launcher.  
+    \end{enumerate}
+    \item \textbf{Applied Fixes:} 
+    \begin{enumerate}
+    \item Increased Room DataBase version Number in Android Client.
+    \item Migrated foreground service launch from BootComplete receiver to HomeScreen, aligning with Android's background execution limitations.
+    \end{enumerate}
+\item \textbf{Feedback Recieved on Usability and UI: }
+\begin{enumerate}
+    \item One user wanted the lock screen should be option and permission for phone call should be asked when the user user enable JoDo as a lock-screen else do no ask during on-boarding.
+    \item Give a setting button from which user can either set jodo as lock-screen or not.
+    \item One pilot user wanted to use phone's default font instead of JoDo's font.
+    \item One pilot user wanted to give option to set custom wallpaper on Home or lock Screen.
+    \item All the three users rated 5/5  for to the  HomeScreen, app drawer, leaderboard, competition, and rewards design.
+\end{enumerate}
+\end{enumerate}
+
+
+\subsection{Results}
+\subsubsection{Estimated Vs. Actual Usage Gap}
+\begin{enumerate}
+    \item Their core finding is that people are very bad at estimating their own phone use - but in interesting, category-specific ways rather than uniformaly under or over-estimating.
+    \item \textbf{What the Number shows?: }
+    \begin{enumerate}
+        \item \textbf{Social Media} was underestimated by \textbf{~9.6\%}. People used it more than they thought. Which is very natural by design of social media.
+        \item \textbf{Productivity Apps} are under-estimated by \textbf{~16 \%}. People did more work than they themselve give credit for.
+        \item \textbf{Entertainment} apps are over-estimate People thought that they were watching/gaming more than they actually were.
+        \item At the \textbf{Aggregated level}, the estimated and actual totals didn't significantly differ -- meaning the error cancle each other out, which is why looking out at screen time only would have missed this all of this.
+        \item \textbf{What predicts a smaller gap?} Self control was the most consistent factor across all the models (Table  4 \& 5 in paper) particularly for productivity apps and creativity apps, (this data doesn't reflect wether they are productive or creative or not, this results are based on the app usage data). This suggest that self - regulatory capacity is not just about \textbf{limiting} use, it's also linked to better \textit{awareness of one's behavior. } 
+        \item \textbf{The Paradox (Table 6) :} smaller gaps (more accurate estimators) report higher satisfaction and stronger self-control day-to-day but also high stress and lower goal adherence. The authers suggest that accurate self-awareness may create a kind of performance pressure - once you know what you actually do, you feel more obligated to live upto your own predictions. Some participants even described skipping logging on days they expected irregularities, essentially avoiding the discomfort of seeing a large gap. 
+    \end{enumerate}
+\end{enumerate}
+
+\subsubsection{WellBeing \& Affect Changes: }
+\begin{enumerate}
+    \item \textbf{The headline finding (Table 7) : } Participants showed a statistically significant \textbf{10 \% increase in positve affect}. (Cohen's d = 0.63, a large size effect size) after two weeks with WellScreen. Negative affect slightly decreased, but not significantly.
+    \item \textbf{What's important to intercept here: }
+    \begin{enumerate}
+        \item Trait based measures - self-control and self-regulation - did \textit{not} change, which the authors correctly note is expected. These are stable personality-like traits unlikely to shift in two weeks. So the tool wasn't changing who \textit{people} are, but it was changing how they felt.
+        \item The wellbeing improvement was likely driven by \textbf{shift in emotional interpretation} rather than actual behavior change. Participants describe a process of meaning-making  -- they reflected on their usage, justified it to themselves, and came away feeling more at peace with their habits. This mirrors psychological theories of self-discrepancy reduction (closing the gap between your "actual" and "ideal" self).
+    \end{enumerate}
+    \item \textbf{How participants' definition of digital well-being evolved: } This is one of the richer qualitative finding, At the start, most participants defined digital well-being narrowly as "time management" or "balance between real and virtual life". By the end their definitions had expanded to include 
+    \begin{enumerate}
+        \item \textbf{Intentionality: } - using technology purposefully rather than mindlessly.
+        \item \textbf{Emotional Quality: } - whether digital interactions made them feel good or bad.
+        \item \textbf{Digital footprint awareness: } - one participants even extended it to concern about data shared with corporation and AI systems.
+    \end{enumerate}
+    \item This conceptual broadening is significant: a two-week lightweight intervention shifted not just feelings, but how people think about what healty technology even means.
+\end{enumerate}
+\subsubsection{WellScreen Usability \& Self-Awareness}
+\begin{enumerate}
+    \item \textbf{Usability scores (Figure 2 from paper) : } The median \textbf{SUS scroe was 80}, which is considered "above average/acceptable". The median \textbf{IAM (invention appriateness) score was 14/20. } Indicating participants found it \textit{moderately} appropriate - useful, but not a perfect fit for everyone's context.
+    \item  \textbf{The two-demisional breakdown (Figure 3)} is one of the most pratically interesting findings. Participants were mapped by self-control level and SUS score into four quadrants.
+    \begin{enumerate}
+        \item \textbf{High self-control + High usability:} Mostly willing to continue using it, but some felt the effort wasn't worth it ("it was me putting all the efforts")
+        \item \textbf{High self-control + Low usability: } Mixed responses; wanted more than just data recording - wanted the tool to do something with their data.
+        \item \textbf{Low self-control + Low Usability: } Evenly split; some found it eye-opening, others found it demotivating ("I just feel sad after looking at them")
+        \item \textbf{Low self-control + High usability:} Strongest enthusiasm - this is the "sweet spot" where the  tool is most valuable, because the person genuinely need help and finds the tool easy to use. 
+        \item \textbf{The key insight here} is that enthusiasm for a well-being tool require both a felt need (low self-control) and a good experience (high usability). If either is missing, the tool loses it's value.
+    \end{enumerate}
+    \item \textbf{Screen time as imperfect metric: } Participants also surfaced a fundamental measurement problem. Screen time conflates very different behaviors - some using YouTube as background music has to keep their screen on (inflating numbers), while a Spotify user doesn't. Falling asleep with TikTok open adds hours of "usage" that  wasn't conscious engagement. This reinforce the paper's broader argument that raw screen time is a poor proxy for digital well-being.
+    \item \textbf{Value judgements in self-reflection: } Perhaps the most humanly interesting qualitative finding is that participants did'nt just \textit{report} their data. they \textit{judge} and \textit{defended} it. The title of the paper comes directly from a participants log entry justifying their screen time. People consistently distinguished "good use" (staying in touch with family, industry news) from "bad use" (mindless scrolling), and felt guilt even for activities they considered meaningful wjem the numbers looked high. WellScreen essentially functioned as a mirror that people felt compelled to justify themselves to.
+\end{enumerate}
+\subsubsection{Bottom line across all three RQs: }
+\begin{enumerate}
+    \item The paper's central argument holds up well in the data - self-awareness, not restriction, is the more promising path to digital well-being. The tool produced real emotional benefits without any explicit behavior-change mechanisms. simply by making the gap between perception and reality visible and prompting structured reflection.
+\end{enumerate}
+\subsection{Proposed User Study Design for JoDo}
+\subsubsection{Overview}
+A \textbf{two week deployment study} with college students, combining quantitative usage logging, validated survey at entry and exit, and semi-structured interviews - mirroring \textit{WellScreen's} three-phase structure but adapted to JoDo's reward-and-competition mechanics. 
+\subsection{Phase 1: Entry Survey \& Interview (Day 0)}
+\textbf{Survey Instruments} (same logic as WellScreen, capture stable traits as covariats)
+\begin{enumerate}
+    \item \textbf{BFI-10} for personality traits, since prior work link personality to technology use.
+    \item \textbf{Brief self-control scale BSCS} - especially important for JoDo, because our competition design should theoritically benefit lower self-control users most.
+    \item \textbf{Short-Self-Regulation-Questionair (SSRQ)}
+    \item \textbf{PANAS-SF} for baseline positive and negative effects.
+    \item Basic Demographics: age, gender, device type, self-reported daily screen time.
+\end{enumerate}
+\textbf{Entry Interview (30-45 minutes, via vedio call)}
+\newline
+Ask about: 
+\begin{enumerate}
+    \item Their current smartphone habits and pain points.
+    \item Prior experience with any digital well-being tool(e.g. Forest, Appblock, StayFree, Minimalist launcher, etc.)
+    \item Their understanding of what "digital well-being" means to them (This is important because WellScreen showed that the digital well-being definitions evolve, so it will give us some baseline to compare.)
+    \item Initial reaction to \textit{JoDo} after a breif demo - do they find competition framing exiting or anxiety-inducing?
+\end{enumerate}
+\subsection{Phase 2: 2-Week Deployment}
 \clearpage
 \bibliographystyle{apalike}
 \bibliography{reference}
