@@ -1,0 +1,84 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\setlength{\parskip}{0.8ex}
+\renewcommand{\baselinestretch}{1.1}
+
+\begin{document}
+
+%--------------------------------------
+% Title Page
+%--------------------------------------
+\begin{titlepage}
+\centering
+\includegraphics[width=5cm]{iitb.eps}\\[0.8cm]
+
+{\bfseries\Large Indian Institute of Technology Bombay}\\[1.2cm]
+{\Large \textbf{Thesis BPS 2 Report}}\\[1.2cm]
+
+{\bfseries\LARGE JoDo: Joy of Digital cOntrol\par}
+\vspace{0.4cm}
+{\Large A Launcher-Integrated Reward System for Digital Wellbeing and Mindful Smartphone Use\par}
+
+\vspace{1.8cm}
+\begin{tabular}{rl}
+\textbf{Author:} & Hariom Mewada (Roll No. 24M2137)\\
+\textbf{Advisor:} & Prof. Bhaskaran Raman\\
+\end{tabular}
+
+\vfill
+{\large May 2026}
+
+\end{titlepage}
+
+%--------------------------------------
+% Acknowledgements
+%--------------------------------------
+\newpage
+\begin{center}
+\textbf{\LARGE Acknowledgements}
+\end{center}
+
+I would like to express my sincere gratitude to my thesis advisor, \textbf{Prof. Bhaskaran Raman}, for providing me with the opportunity to pursue my research at IIT Bombay. His continuous guidance, insightful feedback, and patient mentorship have been invaluable in shaping the technical and conceptual foundations of this project.
+
+\vspace{0.8cm}
+\hfill Hariom Mewada
+
+%--------------------------------------
+% Abstract
+%--------------------------------------
+
+\begin{abstract}
+Modern smartphones have become indispensable, yet their constant connectivity and persuasive design often undermine self-control, leading to habitual checking, distraction, and reduced focus. Existing digital-wellbeing tools mainly rely on restrictive controls such as app limits or passive screen-time dashboards. These approaches frequently fail to sustain engagement or encourage meaningful behavioral change.
+
+\textbf{JoDo (Joy of Digital cOntrol)} addresses this gap through a reward-driven, autonomy-supportive approach to mindful smartphone use. The system combines a minimalist launcher, intentional app-access flow, daily reward tiers, and a peer leaderboard. By transforming routine interactions into opportunities for positive feedback, JoDo encourages users to self-regulate without coercion.
+
+The BPS-2 phase focused Mostly on pilot study and improvement on existing features based on pilot study results:
+\begin{itemize}
+  \item planned and conducted 2 pilot study, each one for two weeks.
+  \item Conducted pre-pilot study plus post pilot study interviews.
+  \item Made furthere changes in the App's UI based on pilot study feedback.
+  \item Fixed bug in the system that appeared during pilot study.
+  \item Made the system more secured by integrating https, port blocking, enabling firewall protection and installed NGINX server as a reverse proxy.
+  \item Tested the app across various android devices and fixed bugs encountered in those devices.
+  
+\end{itemize}
+
+Preliminary observations from the pilot study indicate improved awareness of screen-time patterns and strong user motivation to maintain higher reward tiers.  
+The planned BPS-3 phase will include a formal user study—conducted to quantitatively assess behavioral outcomes and long-term participation.
+
+\end{abstract}
+
+\newpage
+\end{document}
