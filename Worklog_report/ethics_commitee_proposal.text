@@ -1,0 +1,58 @@
+
+\documentclass[12pt]{article}
+ 
+\usepackage{multirow}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{titlesec}
+\usepackage{lipsum} % For placeholder text, remove this in your actual document
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}     % For better column formatting
+
+% \usepackage[style=authoryear-comp, backend=biber]{biblatex}
+% \addbibresource{refernece.bib}
+\titleformat{\section}[block]{\filcenter\bfseries\Large}{\thesection.}{1em}{}
+
+
+% Set the subsection title format
+\titleformat{\subsection}
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+\title{Hariom Mewada BPS2 Weekly Report}
+\author{Hariom Mewada\\
+24M2137}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+\section{Application for Ethical Clearance}
+\textbf{Human Participants Research Study}
+\newline
+\textbf{Title of the Study:}JoDo: Evaluating a Launcher-Integrated-Reward System for Mindful Smartph
+\textbf{Principal Investigator:} Hariom Mewada,24M2137,MS by Research,Dept. of CSE, IIT Bombay
+\newline
+24m2137@iitb.ac.in
+\newline
+\textbf{Faculty Advisor:} Prof. Bhaskaran Raman,Dept. of CSE, IIT Bombay br@cse.iitb.ac.inone use and Digital Well-being
+\newline
+\textbf{Date of Submission:}24/05/2026
+
+\subsection{Background and Rationale}
+Excessive and unregulated smartphone use is an increasing documented concern in academic and public health literature.Existing digital well-being interventions predominately rely on restriction-based mechanism such as timer,app-blocking, and lockout.Research has consistently shown that such approaches undermine user autonomy,trigger psychological reactance,and fail to produce lasting behavior\cite{ko2015, Roffarello2023}.
+
+This study evaluates \textbf{JoDo (Joy Of Digital cOntrol)}, a novel Android launcher application developed at IIT Bombay that takes fundamentally difference approach:rather than restricting access,JoDo promotes mindful smartphone usage through a launcher-integrated reward system,real time usage transparency,friction at the point of app access,and social competition via leader-boards.The system is grounded in principal of digital minimalism,intrinsic and extrinsic motivation theory,and prior HCI research on entry point intervention.
+\bibliography{reference}
+\bibliographystyle{apalike}
+\end{document}
