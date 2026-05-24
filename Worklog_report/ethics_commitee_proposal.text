@@ -1,58 +1,141 @@
-
-\documentclass[12pt]{article}
- 
-\usepackage{multirow}
-\usepackage{geometry}
-\geometry{a4paper, margin=1in}
-\usepackage{titlesec}
-\usepackage{lipsum} % For placeholder text, remove this in your actual document
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{float}
-\usepackage{amsmath}
-\usepackage{titlesec}
+\usepackage{geometry}
+\geometry{left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\usepackage{setspace}
 \usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{amsmath}
 \usepackage{enumitem}
-\usepackage{tabularx}
 \usepackage{longtable}
-\usepackage{multirow}
-\usepackage{multicol}
-\usepackage{array}     % For better column formatting
+\usepackage{booktabs} 
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{colortbl}
 
-% \usepackage[style=authoryear-comp, backend=biber]{biblatex}
-% \addbibresource{refernece.bib}
-\titleformat{\section}[block]{\filcenter\bfseries\Large}{\thesection.}{1em}{}
+\definecolor{lightgray}{gray}{0.93}
 
-
-% Set the subsection title format
-\titleformat{\subsection}
-{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\setlength{\parskip}{0.8ex}
+\renewcommand{\baselinestretch}{1.1}
 
 \begin{document}
 
-\title{Hariom Mewada BPS2 Weekly Report}
-\author{Hariom Mewada\\
-24M2137}
-\maketitle
+%--------------------------------------
+% Title Page
+%--------------------------------------
+\begin{titlepage}
+\centering
+\includegraphics[width=5cm]{iitb.eps}\\[0.8cm]
+
+{\bfseries\Large Indian Institute of Technology Bombay}\\[1.2cm]
+{\Large \textbf{Application for Ethical Clearance}}\\[1.2cm]
+
+{\bfseries\LARGE JoDo: Joy of Digital cOntrol\par}
+\vspace{0.4cm}
+{\Large Evaluating a Launcher-Integrated Reward System for Mindful Smartphone Use and Digital Wellbeing\par}
+
+\vspace{1.8cm}
+\begin{tabular}{rl}
+\textbf{Author:} & Hariom Mewada (Roll No. 24M2137)\\
+\textbf{Advisor:} & Prof. Bhaskaran Raman\\
+\end{tabular}
+
+\vfill
+{\large October 2025}
+
+\end{titlepage}
 
 \newpage
 \tableofcontents
 \newpage
-\section{Application for Ethical Clearance}
-\textbf{Human Participants Research Study}
-\newline
-\textbf{Title of the Study:}JoDo: Evaluating a Launcher-Integrated-Reward System for Mindful Smartph
-\textbf{Principal Investigator:} Hariom Mewada,24M2137,MS by Research,Dept. of CSE, IIT Bombay
-\newline
-24m2137@iitb.ac.in
-\newline
-\textbf{Faculty Advisor:} Prof. Bhaskaran Raman,Dept. of CSE, IIT Bombay br@cse.iitb.ac.inone use and Digital Well-being
-\newline
-\textbf{Date of Submission:}24/05/2026
 
-\subsection{Background and Rationale}
+\section{Background and Rationale}
 Excessive and unregulated smartphone use is an increasing documented concern in academic and public health literature.Existing digital well-being interventions predominately rely on restriction-based mechanism such as timer,app-blocking, and lockout.Research has consistently shown that such approaches undermine user autonomy,trigger psychological reactance,and fail to produce lasting behavior\cite{ko2015, Roffarello2023}.
 
 This study evaluates \textbf{JoDo (Joy Of Digital cOntrol)}, a novel Android launcher application developed at IIT Bombay that takes fundamentally difference approach:rather than restricting access,JoDo promotes mindful smartphone usage through a launcher-integrated reward system,real time usage transparency,friction at the point of app access,and social competition via leader-boards.The system is grounded in principal of digital minimalism,intrinsic and extrinsic motivation theory,and prior HCI research on entry point intervention.
+The central research question driving this study is: \textit{How can a launcher integrated reward system promote mindful smartphone usage while preserving user autonomy?}
+
+\section{Study Objectives}
+The specific objective of the study are to:
+\begin{enumerate}
+    \item Evaluate the effect of \textbf{JoDo} on participants' daily smartphone usage pattern for a two-week period.
+    \item Assess changes in participants' psychological well-being, specifically positive and negative affect,before and after using JoDo.
+    \item Examine how competition and leaderboard rank interact with participants' daily sense of motivation,stress,and self-control.
+    \item Understand participants' subjective experience of autonomy,fairness,and engagement with reward system.
+    \item Identify design implications for future digital well-being tools that integrate motivation and social dynamics.
+\end{enumerate}
+\section{Study Design}
+This is a \textbf{single arm,observational deployment study} with no control condition.It is not a clinical trial and does not involve any medical intervention,deception,or withholding of treatment.The study follows a three phase design: 
+\begin{enumerate}
+    \item \textbf{Phase 1 - Entry (Day 0):}participants complete a validated on-boarding survey (approximately 20 minute) covering demographic information,prior digital well-being tool experience,self-control traits(BSCS),self-regulation tendency(SSRQ),and baseline semotional well-being (PANAS-SF).Following the survey,participants' attend a 30-45 minute semi-structured vedio interview and are onboarded onto JoDo.
+    \item \textbf{Phase 2 - Deployment (Day 1 - 14):}Participants use JoDo as their default Android launcher for 14 consecutive days.JoDo automatically logs screen time, unlock count, and app launch count.Each evening participants complete a short daily survey(5-7 minutes) covering satisfaction,self-control,stress,focus,leaderboard rank perception, and open-ended reflection. An optional mid-point check-in is offered on Day 7.
+    \item \textbf{Phase 3 - Exit (Day 15):}Participants compelte an exit survey repeating the PANAS-SF, BSCS, and SSRQ instruments, and additioally complete the System Usability Scale(SUS) and Intervention Appropriateness Measure(IAM).They then attend a 30-45 minute semi-structured exit interview.
+\end{enumerate}
+\section{Participants Recruitment}
+\textbf{Target sample size:}20-25 participants(following prior comparable studies in this space, e.g. \cite{karthik2026}, N = 25)
+
+\textbf{Eligibility criteria:}
+\begin{itemize}
+    \item 18 years of age or older
+    \item Currently enrolled college student(UG,PG, or PhD)
+    \item Uses and Android smartphone as a primary device
+    \item Able to commit for 14 days of participation
+    \item Available for 2 vidio call interviews
+\end{itemize}
+\textbf{Exclusion criteria:}
+\begin{enumerate}
+    \item iOS user(JoDo is Android-only)
+    \item Individuals currently participating in another digital well-being study
+    \item Individuals who report a current diagnosis of a mental health condition that may be exacerbated by reflection on technology use(self-reported on interest form)
+\end{enumerate}
+
+\textbf{Recruitment method:}
+Participants will be recruited through college online communities(Reddit,Whatsapp groups), department mailing list, and hostel notice board at IIT Bombay.A standardized recruitment advertisement and email will be used.Interested individaul will complete an online interest and screening form.Researchers will review responses and invite eligible participants within 3-5 working days.
+\section{Data Collection and Instruments}
+The following data will be collected:
+\begin{table}[h]
+\centering
+\caption{Data Collection Instruments and Timeline}
+\label{tab:data-collection}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{>{\raggedright\arraybackslash}p{4.5cm} 
+                >{\raggedright\arraybackslash}p{5.5cm} 
+                >{\raggedright\arraybackslash}p{3cm}}
+\toprule
+\textbf{Data Type} & \textbf{Instrument} & \textbf{Timing} \\
+\midrule
+\rowcolor{lightgray}
+Demographic information 
+    & Custom survey 
+    & Day 0 \\
+Personality \& self-control traits 
+    & BSCS, SSRQ, BFI-10 
+    & Day 0 and Day 15 \\
+\rowcolor{lightgray}
+Emotional wellbeing 
+    & PANAS-SF 
+    & Day 0 and Day 15 \\
+Daily wellbeing \& rank perception 
+    & Custom daily survey 
+    & Days 1--14 \\
+\rowcolor{lightgray}
+Automatic usage logs 
+    & JoDo app (screen time, unlocks, launches) 
+    & Days 1--14 \\
+Usability \& appropriateness 
+    & SUS, IAM 
+    & Day 15 \\
+\rowcolor{lightgray}
+Qualitative experience 
+    & Semi-structured interviews 
+    & Day 0 and Day 15 \\
+\bottomrule
+\end{tabular}
+\end{table}
+All validated instruments (BSCS,SSRQ,PANAS-SF,SUS,IAM) are publicly available and have been widely used in HCI and psychology with no unknown risks to participants.
 \bibliography{reference}
 \bibliographystyle{apalike}
 \end{document}
