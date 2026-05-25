@@ -818,7 +818,7 @@ Toward Digital Self-Awareness and Well-being} \cite{karthik2026}
     \item Though their sample size is vary demographically but it was very small (only 25 people.)
 \end{enumerate}
 \section{May 20 2026  - May 24 2026}
-{\bf No of Hours: 20}
+{\bf No of Hours: 25}
 \subsection{Pilot study 2 Report}
 \begin{enumerate}
     \item The focus in pilot study 2 was mostly kept on ensuring the stability of the application across various devices before going for a larger user study for 2-3 weeks.
@@ -826,7 +826,7 @@ Toward Digital Self-Awareness and Well-being} \cite{karthik2026}
     \item Before Downloading the app, all the 3 participants were asked to fill the \href{https://docs.google.com/forms/d/e/1FAIpQLScx9lyvxXDgia69XFIVvhky8M308N_4QHE2dzBAPSCAI8cA4Q/viewform}{consent form} .
     \item \textbf{Demographics: } Sex: male, age group: 22-26 for all the three participants.
     \item \textbf{Device Details: } Redmi 9I (Xiaomi), One-Plus, and Samsung.
-    \item \textbf{Duration of the study:} 3 days.
+    \item \textbf{Duration of the study:} 7 days.
     \item \textbf{Major Bugs/Crashes Found during Pilot study (Reported by Firebase Crash-analytics)}
     \begin{enumerate}
         \item \textbf{ AppDao\_Impl.insertUsageSummary:} java.lang.IllegalStateException - Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number.
@@ -851,7 +851,8 @@ Toward Digital Self-Awareness and Well-being} \cite{karthik2026}
 \end{enumerate}
 
 
-\subsection{Results}
+\subsection{Results from the Paper: "In my defense, only three hours on Instagram": Designing
+Toward Digital Self-Awareness and Well-being \cite{karthik2026}}
 \subsubsection{Estimated Vs. Actual Usage Gap}
 \begin{enumerate}
     \item Their core finding is that people are very bad at estimating their own phone use - but in interesting, category-specific ways rather than uniformaly under or over-estimating.
@@ -900,7 +901,115 @@ Toward Digital Self-Awareness and Well-being} \cite{karthik2026}
 \begin{enumerate}
     \item The paper's central argument holds up well in the data - self-awareness, not restriction, is the more promising path to digital well-being. The tool produced real emotional benefits without any explicit behavior-change mechanisms. simply by making the gap between perception and reality visible and prompting structured reflection.
 \end{enumerate}
+\subsection{Proposed User Study Design for JoDo}
+\subsubsection{Overview}
+A \textbf{two week deployment study} with college students, combining quantitative usage logging, validated survey at entry and exit, and semi-structured interviews - mirroring \textit{WellScreen's} three-phase structure but adapted to JoDo's reward-and-competition mechanics. 
+\subsubsection{Phase 1: Entry Survey \& Interview (Day 0)}
+\textbf{Survey Instruments} (same logic as WellScreen, capture stable traits as covariats)
+\begin{enumerate}
+    \item \textbf{BFI-10} for personality traits, since prior work link personality to technology use.
+    \item \textbf{Brief self-control scale BSCS} - especially important for JoDo, because our competition design should theoritically benefit lower self-control users most.
+    \item \textbf{Short-Self-Regulation-Questionair (SSRQ)}
+    \item \textbf{PANAS-SF} for baseline positive and negative effects.
+    \item Basic Demographics: age, gender, device type, self-reported daily screen time.
+\end{enumerate}
+\textbf{Entry Interview (30-45 minutes, via vedio call)}
+\newline
+Ask about: 
+\begin{enumerate}
+    \item Their current smartphone habits and pain points.
+    \item Prior experience with any digital well-being tool(e.g. Forest, Appblock, StayFree, Minimalist launcher, etc.)
+    \item Their understanding of what "digital well-being" means to them (This is important because WellScreen showed that the digital well-being definitions evolve, so it will give us some baseline to compare.)
+    \item Initial reaction to \textit{JoDo} after a breif demo - do they find competition framing exiting or anxiety-inducing?
+\end{enumerate}
+\subsubsection{Phase 2: 2-Week Deployment}
+\textbf{What to track Automatically (JoDo already does this) : }
+\begin{enumerate}
+    \item Daily screen time.
+    \item Unlock count.
+    \item App launch count.
+    \item Points scored per day.
+    \item Leader-board rank (daily/weekly)
+    \item Wether the user interacted with \textit{Lock Now} voluntarily or not.
+\end{enumerate}
 
+\textbf{Daily/Weekly Micro-survey (Needs to be implemented with either Notification or Google form)}
+\begin{enumerate}
+    \item How satisfied were you with your phone use today? (1–7)
+    \item Did you feel in control of your phone use today? (1–7)
+    \item How stressed did you feel today? (1–7)
+    \item Did the leaderboard/competition motivate you to use your phone less today? (1–7)
+    \item Did you feel the rewards were fair/meaningful? (1–7)
+    \item Did you voluntarily lock your phone today? (Yes/No)
+    \item Since JoDo intervenes at the entry point (lock screen friction, app drawer transparency), We can ask participants to note on any given day whether they noticed the friction or found themselves reconsidering opening an app
+\end{enumerate}
+\subsubsection{Phase 3: Exit Survey \& Interview (Day 15)
+}
+\textbf{Exit Survey: }
+\begin{enumerate}
+    \item Repeat PANAS-SF, BSCS, SSRQ (to detect changes, note trait measures are unlikely to shift, but affect should)
+    \item \textbf{System Usability Scale (SUS)} - same as \textit{WellScreen}
+    \item \textbf{Intervention Appropriateness Measure (IAM)} - how fitting did JoDo feel in their life?
+    \item Additional Items specific to JoDo:
+    \begin{itemize}
+        \item Did the competition feel motivating or stressful?
+        \item Did the rewards feel meaningful or hollow or over time?
+        \item Did you ever disable or ignore the lock screen friction? why?
+    \end{itemize}
+\end{enumerate}
+\textbf{Exit Interview (30 - 45 mins)}
+\begin{enumerate}
+    \item How did their experience of competition evolved over the two weeks? (earlier enthusiasm vs late engagement)
+    \item Did social comparison on leader-board feel supportive or discouraging?
+    \item Did their definition of "digital well-being" change? (compare to entry time)
+    \item What would make them using JoDo long term?
+    \item Did they ever feel JoDo was unfair - e.g. getting penalized for actual productivity use?
+\end{enumerate}
+\subsection{Participants \& Recruitement}
+Following WellScreen approach closely: 
+\begin{enumerate}
+    \item Target \textbf{N = 20 - 25} college students (aim for 20+ completion).
+\item Recruit through IITB subreddits, department mailing list, whatsApp/telegram college group.
+\item \textbf{Inclusion Criteria:} Android users, 18+ age, use their smartphone every day.
+\item \textbf{Compensation:} Distribute daily and weekly rewards after exit interview, give drop-outs low price rewards if they won any.
+\end{enumerate}
+\subsection{Analysis Plan: }
+\subsubsection{Quantitative: }
+\begin{enumerate}
+    \item Paired t-tests comparing entry vs. exit PANAS, BSCS, SSRQ scores. (with cohen's d effect size)
+    \item Mixed effect regression: do daily points/ranks predicts daily satisfaction, self-control or stress? Do lower screen time days relates with higher positive affect?
+    \item Track engagement decay: does daily survey completion or Lock Now usage drops after week 1 or firebase daily active user drops after week 1? This directly answers JoDo's key concern, Sustained motivation.
+\end{enumerate}
+\subsubsection{Qualitative: }
+\begin{enumerate}
+    \item Reflexive thematic analysis on interview transcripts. (same method as WellScreen)
+    \item Code for: motivation dynamics, competitive pressure, perceived fairness of rewards, habitual vs intentional use.
+\end{enumerate}
+\subsection{Study Timeline Summary
+}
+\begin{table}[h]
+\centering
+\caption{Study Timeline Summary}
+\label{tab:study-timeline}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Day} & \textbf{Activity} \\
+\hline
+Day 0 & Entry survey + interview + JoDo onboarding \\
+\hline
+Days 1--14 & Daily micro-survey + automatic logging \\
+\hline
+Day 7 & Optional mid-point check-in (10 min pulse survey) \\
+\hline
+Day 15 & Exit survey + interview \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Logistics for User Study}
+\begin{enumerate}
+    \item Created Onboarding form which includes consent and Entry survey questions: \href{https://forms.gle/3uZ9fVCiFv3HCYja7}{link}.
+\end{enumerate}
 \clearpage
 \bibliographystyle{apalike}
 \bibliography{reference}

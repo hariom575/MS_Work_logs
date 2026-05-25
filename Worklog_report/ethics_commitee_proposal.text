@@ -1,0 +1,210 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{booktabs} 
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{colortbl}
+
+\definecolor{lightgray}{gray}{0.93}
+
+\setlength{\parskip}{0.8ex}
+\renewcommand{\baselinestretch}{1.1}
+
+\begin{document}
+
+%--------------------------------------
+% Title Page
+%--------------------------------------
+\begin{titlepage}
+\centering
+\includegraphics[width=5cm]{iitb.eps}\\[0.8cm]
+
+{\bfseries\Large Indian Institute of Technology Bombay}\\[1.2cm]
+{\Large \textbf{Application for Ethical Clearance}}\\[1.2cm]
+
+{\bfseries\LARGE JoDo: Joy of Digital cOntrol\par}
+\vspace{0.4cm}
+{\Large Evaluating a Launcher-Integrated Reward System for Mindful Smartphone Use and Digital Wellbeing\par}
+
+\vspace{1.8cm}
+\begin{tabular}{rl}
+\textbf{Author:} & Hariom Mewada (Roll No. 24M2137)\\
+\textbf{Advisor:} & Prof. Bhaskaran Raman\\
+\end{tabular}
+
+\vfill
+{\large October 2025}
+
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Background and Rationale}
+Excessive and unregulated smartphone use is an increasing documented concern in academic and public health literature.Existing digital well-being interventions predominately rely on restriction-based mechanism such as timer,app-blocking, and lockout.Research has consistently shown that such approaches undermine user autonomy,trigger psychological reactance,and fail to produce lasting behavior\cite{ko2015, Roffarello2023}.
+
+This study evaluates \textbf{JoDo (Joy Of Digital cOntrol)}, a novel Android launcher application developed at IIT Bombay that takes fundamentally difference approach:rather than restricting access,JoDo promotes mindful smartphone usage through a launcher-integrated reward system,real time usage transparency,friction at the point of app access,and social competition via leader-boards.The system is grounded in principal of digital minimalism,intrinsic and extrinsic motivation theory,and prior HCI research on entry point intervention.
+The central research question driving this study is: \textit{How can a launcher integrated reward system promote mindful smartphone usage while preserving user autonomy?}
+
+\section{Study Objectives}
+The specific objective of the study are to:
+\begin{enumerate}
+    \item Evaluate the effect of \textbf{JoDo} on participants' daily smartphone usage pattern for a two-week period.
+    \item Assess changes in participants' psychological well-being, specifically positive and negative affect,before and after using JoDo.
+    \item Examine how competition and leaderboard rank interact with participants' daily sense of motivation,stress,and self-control.
+    \item Understand participants' subjective experience of autonomy,fairness,and engagement with reward system.
+    \item Identify design implications for future digital well-being tools that integrate motivation and social dynamics.
+\end{enumerate}
+\section{Study Design}
+This is a \textbf{single arm,observational deployment study} with no control condition.It is not a clinical trial and does not involve any medical intervention,deception,or withholding of treatment.The study follows a three phase design: 
+\begin{enumerate}
+    \item \textbf{Phase 1 - Entry (Day 0):}participants complete a validated on-boarding survey (approximately 20 minute) covering demographic information,prior digital well-being tool experience,self-control traits(BSCS),self-regulation tendency(SSRQ),and baseline semotional well-being (PANAS-SF).Following the survey,participants' attend a 30-45 minute semi-structured vedio interview and are onboarded onto JoDo.
+    \item \textbf{Phase 2 - Deployment (Day 1 - 14):}Participants use JoDo as their default Android launcher for 14 consecutive days.JoDo automatically logs screen time, unlock count, and app launch count.Each evening participants complete a short daily survey(5-7 minutes) covering satisfaction,self-control,stress,focus,leaderboard rank perception, and open-ended reflection. An optional mid-point check-in is offered on Day 7.
+    \item \textbf{Phase 3 - Exit (Day 15):}Participants compelte an exit survey repeating the PANAS-SF, BSCS, and SSRQ instruments, and additioally complete the System Usability Scale(SUS) and Intervention Appropriateness Measure(IAM).They then attend a 30-45 minute semi-structured exit interview.
+\end{enumerate}
+\section{Participants Recruitment}
+\textbf{Target sample size:}20-25 participants(following prior comparable studies in this space, e.g. \cite{karthik2026}, N = 25)
+
+\textbf{Eligibility criteria:}
+\begin{itemize}
+    \item 18 years of age or older
+    \item Currently enrolled college student(UG,PG, or PhD)
+    \item Uses and Android smartphone as a primary device
+    \item Able to commit for 14 days of participation
+    \item Available for 2 vidio call interviews
+\end{itemize}
+\textbf{Exclusion criteria:}
+\begin{enumerate}
+    \item iOS user(JoDo is Android-only)
+    \item Individuals currently participating in another digital well-being study
+    \item Individuals who report a current diagnosis of a mental health condition that may be exacerbated by reflection on technology use(self-reported on interest form)
+\end{enumerate}
+
+\textbf{Recruitment method:}
+Participants will be recruited through college online communities(Reddit,Whatsapp groups), department mailing list, and hostel notice board at IIT Bombay.A standardized recruitment advertisement and email will be used.Interested individaul will complete an online interest and screening form.Researchers will review responses and invite eligible participants within 3-5 working days.
+\section{Data Collection and Instruments}
+The following data will be collected:
+\begin{table}[h]
+\centering
+\caption{Data Collection Instruments and Timeline}
+\label{tab:data-collection}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{>{\raggedright\arraybackslash}p{4.5cm} 
+                >{\raggedright\arraybackslash}p{5.5cm} 
+                >{\raggedright\arraybackslash}p{3cm}}
+\toprule
+\textbf{Data Type} & \textbf{Instrument} & \textbf{Timing} \\
+\midrule
+\rowcolor{lightgray}
+Demographic information 
+    & Custom survey 
+    & Day 0 \\
+Personality \& self-control traits 
+    & BSCS, SSRQ, BFI-10 
+    & Day 0 and Day 15 \\
+\rowcolor{lightgray}
+Emotional wellbeing 
+    & PANAS-SF 
+    & Day 0 and Day 15 \\
+Daily wellbeing \& rank perception 
+    & Custom daily survey 
+    & Days 1--14 \\
+\rowcolor{lightgray}
+Automatic usage logs 
+    & JoDo app (screen time, unlocks, launches) 
+    & Days 1--14 \\
+Usability \& appropriateness 
+    & SUS, IAM 
+    & Day 15 \\
+\rowcolor{lightgray}
+Qualitative experience 
+    & Semi-structured interviews 
+    & Day 0 and Day 15 \\
+\bottomrule
+\end{tabular}
+\end{table}
+All validated instruments (BSCS,SSRQ,PANAS-SF,SUS,IAM) are publicly available and have been widely used in HCI and psychology with no unknown risks to participants.
+\section{Risks and Benefits}
+\textbf{Participants' Risks:}
+This study poses \textbf{minimal risks} to participants.The primary potential risk is mild psychological discomfort arising from increase awareness of one's own smartphone usage,particularly if participants feel their usage is higher than they expected or if they rank low on leader-board.This is inherent and minor risk of any self-monitoring study.To mitigate this:
+\begin{enumerate}
+    \item Participants are informed before enrollment that leader-board ranking are relative and do not reflect personal worth or academic ability
+    \item Participants are reminded at on-boarding and in the daily survey that they may withdraw at any point without penalty.
+    \item The daily survey include an open-ended reflection field where any distress can be noted and followed up by research team
+    \item No data will be shared with any third party including participant's institutions
+\end{enumerate}
+There are no psychological risks associated with participation.JoDo does not collect any personally identifiable information beyond what is voluntarily provided by participants.
+\textbf{Potential Benefits:}
+\begin{itemize}
+    \item Participants may develop greater self-awareness of their smartphone habits
+    \item Participants may experience improve positive affect,consistent with prior work on reflective digital well-being interventions
+    \item Participants will contribute to research that could inform the design of more effective and autonomy preserving digital well-being tools
+    \item Participants will receive financial compensation upto 1000 (INR).
+\end{itemize}
+\section{Informed Consent}
+Informed consent will be obtained from all the participants prior to any data collection.. The consent process will include:
+\begin{itemize}
+    \item A written Participant Information Sheet explaining the study purpose,procedures,risks,benefits,and rights
+    \item A signed consent form confirming voluntary participation,right to withdraw,and agreement to audio recording of interviews
+    \item Verbal confirmation of consent at the start of each interview
+\end{itemize}
+Participants under 18 age will not be enrolled.Consent form will be stored securely and separately from research data.
+\section{Data Privacy and Storage}
+\begin{enumerate}
+    \item All data will be anonymized using participant ID codes before analysis
+    \item Interview recordings will be transcribed and then deleted within 30 days of transcription
+    \item Anonymized transcripts and survey data will be stored on password-protected IIT Bombay servers
+    \item No personally identifiable information will appear in any publication or report
+    \item Data will be retained for a maximum of 5 years following study completion, after which it will be securely deleted
+    \item The study complies with IIT Bombay data privacy policies and applicable Indian data protection guidelines
+\end{enumerate}
+\section{Compensation and Reward Structure}
+Unlike conventional study compensation, JoDo's reward system is integral to the intervention itself — the rewards are not external payments for participation but are the motivational mechanism being studied. This is an important distinction: participants are not being paid to complete surveys or interviews; rather, they are competing within the app as part of the natural study experience.
+The reward structure is as follows:
+Daily Rewards:
+Top-performing participant(s) on the daily leaderboard receive gift vouchers worth \₹100-200, distributed at the end of each 24-hour competition cycle.
+Weekly Rewards:
+The top 3 participants on the weekly leaderboard receive:
+\begin{itemize}
+    \item 1st Place - \₹3000
+    \item 2nd Place - \₹2000
+    \item 3rd Place - \₹1000
+\end{itemize}
+Gift vouchers will be distributed as Amazon or Flipkart vouchers sent to participants' registered email addresses.
+Ethical Considerations Regarding Performance-Based Rewards:
+The committee's attention is drawn to three potential concerns with this structure, and our mitigation strategies for each:
+Undue inducement: The reward amounts are meaningful but not so large as to compromise voluntary participation or cause participants to take undue risks. The maximum possible reward (₹3000) is consistent with compensation norms for short-term research participation at Indian institutions.
+Fairness and dropout risk: Participants who fall behind on the leaderboard early may feel demotivated or feel their continued participation is futile. To mitigate this, the leaderboard resets daily, meaning every participant has a fresh opportunity each day regardless of prior performance. Additionally, examining this fairness perception is explicitly one of the research questions of the study, and the daily survey includes items measuring how rank affects motivation and wellbeing.
+Non-winners feeling unrewarded: All participants who complete the full two-week study, regardless of leaderboard outcome, will receive a certificate of participation from the Department of CSE, IIT Bombay. This ensures that completing the study has a tangible acknowledgement for all participants.
+Participants will be clearly informed at the onboarding stage that rewards are merit-based and not guaranteed, so that enrollment decisions are made with full knowledge of the compensation structure.
+\section{ Research Team Qualifications}
+\textbf{Hariom Mewada} is an MS by Research student in the Department of CSE at IIT Bombay with prior experience in Android development and HCI research. He is the primary developer of the JoDo application and will be the primary point of contact for participants.
+
+\textbf{Prof. Bhaskaran Raman} is a faculty member in the Department of CSE at IIT Bombay with extensive research experience in networked systems and mobile computing. He will supervise all aspects of the study design, data analysis, and reporting.
+\section{Declaration}
+We confirm that:
+\begin{itemize}
+    \item This study has been designed in accordance with ethical principles for research involving human participants
+    \item All participants will provide informed consent prior to enrollment
+    \item Participant data will be handled with strict confidentiality
+    \item The study poses no more than minimal risk to participants
+    \item We will comply with all conditions imposed by the Ethics Committee
+\end{itemize}
+\textbf{Principal Investigator Signature}: \_\_\_\_\_\_\_\_\_\_\_\_\_ \textbf{Date:} \_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\textbf{Faculty Advisor Signature}: \_\_\_\_\_\_\_\_\_\_\_\_\_ \textbf{Date:} \_\_\_\_\_\_\_\_\_\_\_\_\_
+\bibliography{reference}
+\bibliographystyle{apalike}
+\end{document}
