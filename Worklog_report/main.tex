@@ -1011,7 +1011,89 @@ Day 15 & Exit survey + interview \\
     \item Created On-boarding form which includes consent and Entry survey questions: \href{https://forms.gle/3uZ9fVCiFv3HCYja7}{link}.
     \item Created ethical committee proposal: file name : ethical\_commitee\_proposal.tex
 \end{enumerate}
-\clearpage
+
+\section{May 25 2026  - May 28 2026}
+{\bf No. of Hours: 10}
+\subsection{Experience Sampling Method}
+ESM is a research method developed by psychologist \textbf{Mihaly Csikszentmihalyl} in the 1970s where participants are prompted to report their thoughts, feelings, and behaviors \textbf{in the moment or close to it}, rather than retrospectively. The code idea is simple but powerful:
+\newline
+\textit{Ask people what they are experiencing now, not what they remember experiencing.}
+\newline
+This matters because human memory is reconstructive and biased - if you ask someone at the end of the day how stressed they felt, they will likely anchor on the most intense moment or the most recent one, not their average experience. ESM bypasses this by catching people in real time.
+\subsection{The Three Core Types of ESM}
+\subsubsection{Signal-Contingent (Radndom)}
+prompts are sent at \textbf{random intervals} throughout the day. The participants has no way to anticipate them.
+\begin{itemize}
+   \item Best for: capturing naturalistic, unbiased snapshots of mood and behavior
+   \item Example: 5 random prompts btw 8am and 10pm
+   \item Weakness: can interrupt participants at inconvenient times
+\end{itemize}
+\subsection{Interval-Contingent (Fixed Schedule)}
+Prompts are sent at \textbf{Fixed, regular interval} - e.g. every 2 hours, or once every morning and evening.
+\begin{itemize}
+    \item Best for: tracking change over time at consistent measurement points
+    \item Example: one prompt at 9am and 9pm every day
+    \item Weakness: participants can anticipate and "prepare" their answers
+\end{itemize}
+\subsubsection{Event-Contingent (Triggered)}
+Prompts are sent \textbf{when a specific event occurs} - either detected automatically or self-reported by participants.
+\begin{itemize}
+    \item Best for: studying specific behavior in context
+    \item Example: a prompt triggered every time the participants unlocks their phone, or opens Instagram
+    \item Weakness: relies on accurate event detection or hones self-reporting
+\end{itemize}
+\subsection{Which Type Fits JoDo Best}
+For JoDo, we can use a \textbf{combination of event-contingent and interval-contingent ESM}
+
+\textbf{Event-contingent}: Since JoDo is a launcher, it sits at the entry point of every phone interaction. We cab trigger a micro-ESN prompt at specific moments:
+\begin{itemize}
+    \item When participants hits a screen time threshold (e.g. crosses 50 \% of their daily goal)
+    \item When the participant voluntarily taps "Lock Now"
+    \item when the participants opens a specific app category (e.g. social media) more than N times in a day.
+\end{itemize}
+
+\textbf{Interval-contingent:} One fixed promt at every evening.
+
+\subsection{Key Principles of Good ESM Design}
+\subsubsection{Bravity is Non-Negotiable}
+Each ESM prompt should take \textbf{no more than 1 -2 minutes} to complete. The moment it feels like burden, compliance drops sharply. Aim for 3-5 items per prompt maximum for in app trigger, and no more than 7-8 for end-of-day survey.
+\subsubsection{Response Burden Tracking}
+We should track and report how long participants actually take to complete each ESM prompt. This is standard in ESM studies and helps to argue that our method was not overly burdensome.
+
+\subsubsection{Compliance Rate}
+A good ESM study reports the percentage of prompted surveys that were actually completed.
+
+\subsubsection{Timing Validity}
+ESM data is only valid if participants repond \textbf{close to the time of the prompt}. We should record the timestamp of when the prompt was sent and when it was completed, and set a response window - e.g. if not completed within 2 hours, the prompt expires. This prevents participants from batch-completing multiple surveys the next moring from memory, which defeats the purpose entirely.
+\subsection{Question Design for ESM}
+ESM questions should be:
+\begin{enumerate}
+    \item \textbf{Present-tense or very recent past} - "Right now, how do you feel?" not "How have you been feeling?"
+    \item \textbf{Single-construct per item} - do not combine two ideas in one question.
+    \item \textbf{Validated scales adapted for momentary assessment} - ther PANAS for example has a momemtary version where we can ask about feeling right now instead of "over the past week"
+\end{enumerate}
+
+
+\subsection{How ESM Fits into JoDo's study specifically}
+\textbf{Morning Prompt (Interval-contingent) 8:00 AM, 2 minutes}
+Sent every morning as a brief intention - setting moment:
+\begin{enumerate}
+    \item How is your phone use goal for today? (open text, optional)
+    \item How motivated do you feel to use your phone mindfully today? (1 - 7)
+    \item How are you feeling right now? (PANAS momentary -select from the word list)
+\end{enumerate}
+
+
+\textbf{In-App Triggger Prompt (Event-Contingent) - triggered by threshold crossing, 1 minutes}
+Sent when participants crosses 50 \% of their daily screen time goal:
+\begin{enumerate}
+    \item You have used your phone for X minutes today. Does this feel intentional or habitual? (Intentional/Habitual/Mixed)
+    \item Do you want to keep going or take a break? (Keep going/ Take a break / Lock Now)
+\end{enumerate}
+
+\textbf{Evening Prompt (Interval-Contigent) 9:00PM, 5-7 minutes}
+Our existing daily survey.
+\clearpage 
 \bibliographystyle{apalike}
 \bibliography{reference}
 
