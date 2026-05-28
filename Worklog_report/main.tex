@@ -1028,7 +1028,7 @@ prompts are sent at \textbf{random intervals} throughout the day. The participan
    \item Example: 5 random prompts btw 8am and 10pm
    \item Weakness: can interrupt participants at inconvenient times
 \end{itemize}
-\subsection{Interval-Contingent (Fixed Schedule)}
+\subsubsection{Interval-Contingent (Fixed Schedule)}
 Prompts are sent at \textbf{Fixed, regular interval} - e.g. every 2 hours, or once every morning and evening.
 \begin{itemize}
     \item Best for: tracking change over time at consistent measurement points
@@ -1093,6 +1093,115 @@ Sent when participants crosses 50 \% of their daily screen time goal:
 
 \textbf{Evening Prompt (Interval-Contigent) 9:00PM, 5-7 minutes}
 Our existing daily survey.
+
+
+\textbf{Quick Overview of Measurement Scales planing to use for JoDo's user study: }
+\subsection{Big Five Inventory - BFI-10}
+The BFI - 10 is a shortened version of the Big Five Inventory developed by \textbf{Soto \& John (2017)}. It measures the five core dimenstions of human personality using just 10 items - two per trait - making it practical for studies where personality is covariated rather than the primary focus.
+
+\textbf{The Five Traits it measutes}
+\begin{enumerate}
+    \item \textbf{Extraversion} - the tendency to be outgoing,sociable, ad energetic vs. reserved and solitary. In digital well-being research, extraverts tends to use social media more and may respond differently to social competition features like JoDo's leaderboard.
+    \item \textbf{Agreeableness} - the tendency to be cooperative, trusting, and empathetic. Highly agreeable people may ber mmore sensitive to social comparision on leaderboards.
+    \item \textbf{Consientiousness} - the tendency to be organized, disciplined, and goal-directed. This is particularly relevant to JoDo because conscientious people are generally better at self-regulation and may need less intervention.
+    \item \textbf{Neuroticism} - the tendency toward emotional instability, anxiety, and negative affect. In \textit{WellScreen}, neuroticism was significantly associated with social app E-A gaps. For JoDo, highly neurotic participants may be more vulnerable to stress from losing on the leaderboard.
+    \item \textbf{Openess} - the tendency to be imaginative, curious, and open to new experiences. Nat predict willigness to engage with a novel tool like JoDo.
+\end{enumerate}
+
+
+\textbf{How it is Scored}
+Each trait is measured by two items on 5-point Likert scale (1 = Disagree strongly, 5 = Agree strongly). One item per trait is reverse-scored. The two items for each trait are averaged to give a score between 1 and 5.
+
+
+\textbf{Why it is in Our Study}
+Following \textit{WellScreen}, BFI-10 serves as a \textbf{trait-level covariate} in our regression models. We are not trying to change personlilty - we are controlling for it so that personality differences do not confount our main finding about JoDo's effect on wellbeing and behavior.
+
+\textbf{Sample Items}
+\begin{itemize}
+    \item "I see myself as someone who is reserved" (Extraversion, reverse-scored)
+    \item "I see myself as someone who does a thorough job" (Conscientousness)
+\end{itemize}
+
+
+\subsection{Brief Self-Contrl scale - BSCS}
+\textbf{What it is}
+
+The BSCS was developed by \textbf{Tangney, Baumeister \& Boone (2004)} and is one of the most widely used measures of trait self-control in psychology and HCI. It measures a person's general capacity to override impulses, resist temptation, and regulate behaviour in line with  long-term goals.
+
+\textbf{What it Measures}
+
+The scale captures self-control as a \textbf{stable personality-like trait} - not a momentary state. It assesses five facets:
+\begin{itemize}
+    \item \textbf{Impulse control} - resisting urges and temptations
+    \textbf{Healthy habits} - maintaining  good routines
+    \textbf{Work ethic} - performing reliably and consistently
+    \item \textbf{Reliability} -  following through on commitments
+    \item \textbf{Ethical behavior} - avoding actions one knows are wrong
+\end{itemize}
+
+
+\textbf{How it is Scored}
+The standard BSCS has 13 items on a 5-point scale (1 = Not at all like me, 5 = Very much like me) . Several items are reverse-scored. All items are summed or averaged to produce a total score - higher scores indicate greater self-control.
+
+\textbf{Why it is in Our Study}
+BSCS was  the \textbf{single strongest predictor} in \textit{Wellscreen's} regression model - participants with higher sielf-control had smaller estimation - actual gaps and better calibrated awareness of their usage.
+
+\textbf{Sample Items}
+\begin{itemize}
+    \item "I am good at resisting temptation"
+    \item "I have trouble concentrating"
+    \item "I do certain things that are bad for me, if they are fun"
+\end{itemize}
+
+\subsection{Short Self-Regulation Questionaire - SSRQ}
+\textbf{What it is}
+
+The SSRQ was developed by \textbf{Carey, Neal \& Collins (2004)} as a shortened version of the original Self-Regulation Questionaire by Miller \& Brown. While BSCS measures the capacity to control impulses, SSRQ measures the process of self-regualtion - specifically how well some one set goals, monitor progress, and adjusts behavior.
+
+\textbf{What it Measures}
+SSRQ captures self-regulation as an \textbf{active behavioural process}  with several components: 
+\begin{enumerate}
+    \item \textbf{Goal Setting} - wether the person sets clear goals for themselves
+    \item \textbf{Self-monitoring} - wether the person tracks their own behavior against goals
+    \item \textbf{Decision-making} - wether the person evaluates options before acting
+    \item \textbf{Goal revision} - wether the person adjusts goals when they are not working
+    \item \textbf{Self-evaluation} - wether the person reflects on their progress
+\end{enumerate}
+
+\textbf{How it is Scored}
+The full SSRQ has 31 items byt studies commonly use a shortened adapted version. Items are rated on a 5-point scale (1 = Not t all true, 5 = Completely true). Higher scores indicate stronger self-regulatory ability.
+
+\textbf{The Difference Between BSCS and SSRQ}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|c}
+      \hline
+         What it captures & 
+         Trait impulse control & Goal management process \\
+         \hline
+         Nature & Relatively fixed disposition & More behavioral and learnable
+        \\
+        \hline
+        Questions it answer & Can this person resist temptation? & Does this person actively manage their behavior toward goals?
+        \\
+        \hline
+        Relevance to JoDo & predicts who needs JoDo most &7 Predictas who will engage with JoDo's Reflection feature
+    \end{tabular}
+    \caption{Comparision btw SSRQ and BSCS}
+    \label{tab:placeholder}
+\end{table}
+In practice, someone can have low BSCS (poor impulse control) but high SSRQ (good at setting and tracking goals) - they know what they want to do but struggle to resist temptation in the moment. JoDo's design should theoretically help both types but in different ways.
+
+\textbf{Why it is in our Study}
+SSRQ captures wether participants are already self-monitoring their digital use - which directly relates to JoDo's awareness features (app drawer transparency, lock screen usage summary). Participants with high SSRQ may already be doing what JoDo scafflods, making them less likely to find the tool novel or useful. This mirrors \textit{WellScreen's} finding that high self-control participants in Quadrants 1 were lukewarm about continues use.
+
+\textbf{Sample Items (adapted for digital use)}
+\begin{enumerate}
+    \item "I set goals for myself regarding my phone use"
+    \item "I keep track of how much time I spent on my phone"
+    \item "When I fail to meet my goals, I figure out what went wrong"
+\end{enumerate}
 \clearpage 
 \bibliographystyle{apalike}
 \bibliography{reference}
