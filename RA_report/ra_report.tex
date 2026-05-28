@@ -14,6 +14,8 @@
     \usepackage{hyperref}
     \usepackage{enumitem}
     \usepackage{tikz}
+    \newcommand{\rupee}{\textrupee}
+    
     \tikzstyle{block} = [rectangle, draw, fill=blue!15, 
     text width=10em, text centered, rounded corners, minimum height=3em]
     \tikzstyle{arrow} = [->, thick]
@@ -1363,7 +1365,7 @@
     \end{figure}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{notification-permission.png}
+        \includegraphics[width=0.50\linewidth,height=0.50\texthei\newcommand{\rupee}{\textrupee}ght, keepaspectratio]{notification-permission.png}
         \hspace{0,3cm}
         \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{lock-screen-permision.png}
     
@@ -1442,7 +1444,7 @@
     \item Coordinated with sir and sent him updated .aab file and screenshots of new UI.
 \end{enumerate}
 \section{Apr 06 2026 to Apr 09 2026}
-{\bf No. of Hours: 10}
+{\bf No. of Hours: 8}
 \subsection{Work Done}
 \begin{enumerate}
     \item Studied firebase crash analytics tool.
@@ -1463,13 +1465,19 @@
         \caption{Firebase crash analytics dashboard}
         \label{fig:firebase_crash_analytics}
     \end{figure}
-
-    
-\section{May 18 2026 to May 22 2026}
-{\bf No. of Hours: 2}
-\subsection{Work Done}
+\section{May 25 2026 to May 25 2026}
+{\bf No of Hours: 1}
+\subsection{To Do}
 \begin{enumerate}
-    \item Verified the new release  of app in the devices of pilots to and verified that the app is working fine and there is no crash.
+    \item Add the new functionality of sending notification at every day 5 pm to all the participants requesting them to fill daily survey.
+    \item Create API at the server side to accept this data and store it in db.
+    \item Based on pilot study feedback:
+    \begin{enumerate}
+        \item Make the LOCK screen optional
+        \item Don't ask the lock screen and Read phone state data permission during onboarding
+        \item Instead from the setting button present at the home screen give the option to make JoDo as lock screen and while making JoDo as lock screen ask permission to read call state (This permission is required to destroy lock screen overlay dynamically when there is call is call and lock screen overlay is covering the lock screen)
+        \item Remove the notification foreground service and use android accessibility service for foreground background detection as longer running service are forbidden in new devices also it consumes too much battery. 
+    \end{enumerate}
 \end{enumerate}
 \end{document}
     
