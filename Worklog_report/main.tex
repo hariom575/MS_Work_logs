@@ -1,96 +1,1355 @@
-\documentclass[12pt,a4paper]{report}
-\usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{geometry}
-\geometry{left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
-\usepackage{setspace}
-\usepackage{hyperref}
-\usepackage{booktabs}
-\usepackage{float}
-\usepackage{caption}
-\usepackage{amsmath}
-\usepackage{enumitem}
-\usepackage{longtable}
 
-\setlength{\parskip}{0.8ex}
-\renewcommand{\baselinestretch}{1.1}
+\documentclass[12pt]{article}
+ 
+\usepackage{multirow}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{titlesec}
+\usepackage{lipsum} % For placeholder text, remove this in your actual document
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}     % For better column formatting
+\newcommand{\rupee}{\textrupee}
+% \usepackage[style=authoryear-comp, backend=biber]{biblatex}
+% \addbibresource{refernece.bib}
+\titleformat{\section}[block]{\filcenter\bfseries\Large}{\thesection.}{1em}{}
+
+
+% Set the subsection title format
+\titleformat{\subsection}
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}
 
 \begin{document}
 
-%--------------------------------------
-% Title Page
-%--------------------------------------
-\begin{titlepage}
-\centering
-\includegraphics[width=5cm]{iitb.eps}\\[0.8cm]
-
-{\bfseries\Large Indian Institute of Technology Bombay}\\[1.2cm]
-{\Large \textbf{Thesis BPS 2 Report}}\\[1.2cm]
-
-{\bfseries\LARGE JoDo: Joy of Digital cOntrol\par}
-\vspace{0.4cm}
-{\Large A Launcher-Integrated Reward System for Digital Wellbeing and Mindful Smartphone Use\par}
-
-\vspace{1.8cm}
-\begin{tabular}{rl}
-\textbf{Author:} & Hariom Mewada (Roll No. 24M2137)\\
-\textbf{Advisor:} & Prof. Bhaskaran Raman\\
-\end{tabular}
-
-\vfill
-{\large May 2026}
-
-\end{titlepage}
-
-%--------------------------------------
-% Acknowledgements
-%--------------------------------------
-\newpage
-\begin{center}
-\textbf{\LARGE Acknowledgements}
-\end{center}
-
-I would like to express my sincere gratitude to my thesis advisor, \textbf{Prof. Bhaskaran Raman}, for providing me with the opportunity to pursue my research at IIT Bombay. His continuous guidance, insightful feedback, and patient mentorship have been invaluable in shaping the technical and conceptual foundations of this project.
-
-\vspace{0.8cm}
-\hfill Hariom Mewada
-
-%--------------------------------------
-% Abstract
-%--------------------------------------
-
-\begin{abstract}
-Modern smartphones have become indispensable, yet their constant connectivity and persuasive design often undermine self-control, leading to habitual checking, distraction, and reduced focus. Existing digital-wellbeing tools mainly rely on restrictive controls such as app limits or passive screen-time dashboards. These approaches frequently fail to sustain engagement or encourage meaningful behavioral change.
-
-\textbf{JoDo (Joy of Digital cOntrol)} addresses this gap through a reward-driven, autonomy-supportive approach to mindful smartphone use. The system combines a minimalist launcher, intentional app-access flow, daily reward tiers, and a peer leaderboard. By transforming routine interactions into opportunities for positive feedback, JoDo encourages users to self-regulate without coercion.
-
-The BPS-2 phase focused Mostly on pilot study and improvement on existing features based on pilot study results:
-\begin{itemize}
-  \item planned and conducted 2 pilot study, each one for two weeks.
-  \item Conducted pre-pilot study plus post pilot study interviews.
-  \item Made furthere changes in the App's UI based on pilot study feedback.
-  \item Fixed bug in the system that appeared during pilot study.
-  \item Made the system more secured by integrating https, port blocking, enabling firewall protection and installed NGINX server as a reverse proxy.
-  \item Tested the app across various android devices and fixed bugs encountered in those devices.
-  
-\end{itemize}
-
-Preliminary observations from the pilot study indicate improved awareness of screen-time patterns and strong user motivation to maintain higher reward tiers.  
-The planned BPS-3 phase will include a formal user study—conducted to quantitatively assess behavioral outcomes and long-term participation.
-
-\end{abstract}
+\title{Hariom Mewada BPS2 Weekly Report}
+\author{Hariom Mewada\\
+24M2137}
+\maketitle
 
 \newpage
 \tableofcontents
-\listoffigures
-\listoftables
-
 \newpage
-\chapter{Introduction}
-\section{Background and Motivation}
-The number of internet users reached 5.56 billions in 2024, representing 67.9 \% of the global population, with the average daily internet usage growing to 6 hours 38 minutes \citep{datareportal2024}. Digital Devices now enable continuous interaction anytime and anywhere; however constant connectivity often generate discomfort or a sense of loss when disconnected - a phenomenon described as \textit{technological unconsciousness}. 
 
-Hoehe and Thibaut (2020) \citep{HoeheThibaut2020} emphasized that individuals must be intentional, creative and mindful in their technology use to enhance relationships and productivity.
-\bibliography{reference}
+\section{Feb 02 2026 - Feb 07 2026}
+\subsection{To Do}
+\begin{enumerate}
+    \item Create plan for BPS2.
+    \item Read some papers related to digital well being, try to find out gapes.
+    \item Modify the app according to the future plan: Commertial tool or just a research prototype.
+    \item Try to have some behavior change result from the app.
+    \item If the result are promising then try some conferences to publish a paper on this work.
+\end{enumerate}
+\subsection{Proposed Changes to the existing system}
+\begin{enumerate}
+    \item  Deploy the existing app on play store.
+    \item Refine the UI elements to correctly reflect the underlying psychology.
+    \item Improve app's accuracy and performance as part of RA work.
+    \item Make the system more secure.
+\end{enumerate}
+\subsection{Summary: Navigating Digital well-Being in Digital era: A scoping review of digital-well being } \cite{Zhao2024DigitalWellbeing}
+\begin{enumerate}
+    \item Most people across generations perceive frequent internet use as normal and acceptable.
+    \item This study is a scoping review to identify, analyze, and synthesize existing definitions, measurements tools, and intervention strategies related to Digital well-Being(DWB).
+    \item  Research emerging from \textbf{Asia} is scarce
+        \item Existing Definition coverage on three perspectives:
+        \begin{enumerate}
+            \item DWB as emerging concept of well being influenced by technology use.
+            \item As a perceived impact of digital engagement on individual well-being.
+            \item As a balance use strategy within digital environment.
+        \end{enumerate}
+        \item Three overarching themes were synthesized -- behavioral intention to use technology, eudaimonic well being, and socio culture contextual factor.
+        \item Measurement tool for DWB remains limited; with high five scales identified but none offering an integrated framework, interventions, particularly that emphasize on digital disconnection, reveal mixed result about their effectiveness.
+        \item Collectively these findings highlights ambiguities, limited measurement development, and inconsistent intervention outcome.
+        \item This review advances theoritical clarity by framing DWB as a multi dimensional construct that bridges pyschological and socio technological domain.
+        \item It also provide practical guidance for developing culturally adaptive interventions and policy frameworks that promote balanced and meaningful digital engagement.
+    \end{enumerate}
+\subsection{Detailed Summary}
+\begin{enumerate}
+    \item According to \textbf{Data Report 2024} \cite{datareportal2024digital}, the number of internet user increased by \textbf{3.2 \% } from previous year, reaching \textbf{5.56 billion } user in \textbf{2024}. 
+    \item This  figure represents \textbf{67.9 \%} of the global population, although reporting delay suggest that the actual penetration rate is even higher.
+    \item The avg duration of daily internet usage has grown streadily, reaching \textbf{6h 38 min} .
+    \item Internet engagement spans all age groups, though usage tends to decline over age.
+    \item Digital devices now enable continous interaction anytime and anywhere, However constant connectivity often generate discomfort or a sense of loss when disconnected -- a phenomenon of called technological unconsciousness.
+    \item (Hoehe and Thibaut 2020 )\cite{hoehe2020going} emphasized that individuals must be intentional, creative, and mindful in their technology use to enhance relationships and producitivy; otherwise, technology risks eroding rather than supporting.
+    \item   As (Hoehe and Thibaut 2020) \cite{hoehe2020going} noted, technology itself is value neutral -- it can be beneficial or harmful depending on how it is applied.
+    \item When technology intented to improve life is used without restrain than it can 
+    ultimately reduce quality of life.
+    \item Since quality of life is closed tied to well-being \cite{upton2015quality}  \cite{weil1997technostress} scholars have begun to recognize the need of a new construct -- \textbf{digital well being} -- to describe well being in the digital age.
+    \item Yet how individual conceptualize and experience digital wellbeing(DWB) remains insufficiently understood \cite{nguyen2022everyday}.
+    \item The emergence of the term \textbf{digital - well being } reflects a broader historical evolution in how societies interpret the relationship between technology and quality of life.
+    \item Early scholarship on intrernet addiction \cite{kraut1998internet} technostress \cite{tarafdar2007technostress} laid the conceptual groundwork by examining the psychological costs of rapid oraganization.
+    \item This study highlighted the paradox of technological progress -- it's simulatenous capacity to enhance connectivity and generate new form of strain.
+    \item Building upon this foundation the notion of Digital well being emerged in in late \cite{keshav2010} as scholars and industry leaders sought to redefine a healthy relationship.
+    \item Major corporate initiative further popularized the concept . Google's \textbf{Digital well being} and Apple's \textbf{Screen Time} programs, for instance framed digital balance as design priority, emphasizing user awareness and self regulation.
+    \item This industry efforts marked a pivotal shift from merely preventing overuse to actively designing for well-being, signaling a convergence between technology ethics, public health, and user centric innovation.
+    \item Thus DWB represents both academic and applied response to evolving socio-technical landscape -- bridging earlier studies on technostress  and contemporary frameworks that emphasize agency, meaningfulness, and design responsibility.
+    \item Ghai et al. (2023) \cite{ghai2023digital}  examined global research trends using biblio-metric approach,revealing that DWB began to emerge as major topic in 2016 and has grown significantly since 2019.
+    \item This growth correlates with global digital adoption during and after the pendamic, advances in technology, increased affordability of devices, and expanding digital infrastruce enabeling broader connectivity.
+    \item Ghai et al. continue to characterize DWB research into three categories :
+    \begin{enumerate}
+        \item Studies exploring its relationship with smarphones, social network, wellness, overuse and disconnection, and digital ethics. 
+        \item Studies investigating how digital use related to individual well-being, and 
+        \item Research focusing on social media role on shaping DWB.
+    \end{enumerate}
+    \item The overlaping use of related terms -- such as digital wellness, digital minimalism \cite{dadischeck2021digital},  digital health \cite{smits2022digital}, and digital disconnection \cite{burr2020ethics} has blurred conceptual boundary.
+    \item Oste (2020) viewed DWB as recognizing the digital self -- a concious relationship with technology.
+    \item Abeele (2021 a) described it as the optimal balance between being connected and disconnected, influenced by personal, device-related, and situaltional factors.
+    \item Gui et al. (2017) expanded the factors to include community dimensions, suggesting that collective norms, values, and expactations also determine DWB.
+    \item Despite those contribution, a comprehesive and widely accepted definition remains lacking -- particulary one that  explicitely link DWB to convetional well-being concept.
+    \item \textbf{Google} defines digital well-being as a pleasant state that arrive when people use technology to achieve their goal.
+    \item Through it's dedicated  \href{https://wellbeing.google/}{website}, Google promotes awareness of how technology should empower, rather than distract user from meaningful goal.
+    \item Similarly, major technology firms now allow users to personalize digital environment \cite{hutmacher2022personalization}, Features such as algorithmic filtering, personalized recommedation, and adative interfaces are designed to enhance user satisfaction.
+    \item However, such personlization typically targets hedonic outcomes - maximizing pleasure and minimizing discomfort rather than eudaimonic outcomes which involves meaning and self-realization.
+    \item True digital well being thus engagement with purposeful, growth-oriented, experience \cite{hutmacher2022personalization}
+    \item Another source of confusion arises from measuring DWB through build-in through built in application that monitor screeentime or limit usage \cite{garciahermoso2020physical, przybylski2017goldilocks, twenge2019technology, whitlock2019screen} 
+    \item This tools lacks standarized critieria for determinig optimal digital activity levels, as impact of screen time across individuals.
+    \item More over imperical studies reveals inconsistent effect of this tools.
+    \item Ironically, user often rely on their device to help them disconnect -- adjusting app settings or selectively disabling distractions.
+    \item Additionally the use of term \textbf{Digital well-being} is completely vague, as many exlcude psychological and emotional dimesnions essesntial to accessing wellbeing.
+    \item Consequently this tools serve as self-monitoring system whose long term impacts remains uncertain.
+    \item Similarly, most major technology firm allows user to personalize digital environment. Features such as algorithmic filtering, personlized recommendation, and adaptive interface are designed to enhance user satisfaction.
+    \item However, such personalization target hadonic outcome -- \textbf{maximizing pleasure} and \textbf{minimizing discomfort},
+    rather than \textbf{eudaimonic} outcomes, which involve \textbf{meaning} and \textbf{self-realization}.
+    \item Another confusion arises from measuring \textbf{BWB} throguh built-in applications that monitor \textbf{scren time} or \textbf{limit usage}.
+    \item This tool \textbf{lack standardized criteria} for determining optimal digital activity level, as the \textbf{impact} of \textbf{screen time} varies across \textbf{Individual}.
+    \item More-over empirical studies reveal inconsistent effects of such tools on well-being. 
+    
+
+\end{enumerate}
+\subsection{Positive points}
+\begin{enumerate}
+    \item This study aims to extract, organize, and synthesize the current state of knowledge about digital well-being across populations and context. This review sought to identify \textbf{Definition}, \textbf{Measuremnts},\textbf{Interventions}.
+    \item This study provide clear conceptual or theoritical foundations for what digital well being actually means.
+    \item They have used JBI fraamework for scoping review, Unlike systematic reviews, scoping reviews do not require much critical appraisal or meta-analyis which aligns with the exploratory nature of the study.
+
+\end{enumerate}
+\section{Feb 08 2026 - Feb 15 2026}
+{\bf No. of Hours : 10 }
+\subsection{List of task completed}
+\begin{enumerate}
+    \item Coordinated with sir for the App deployment part.
+    \item Sent him signed APK to deploy a new app saparate from intentor app.
+    \item Created privacy policy for JoDo App: \href{https://hariom575.github.io/jodo-privacy-policy/}{link}
+    \item Recorded JoDo's feature demonstration video on Teblet using Emulator(Required on play store).
+    \item Sent him ScreenShot for various App Interfaces from both Android and Teblet Devices.
+    \item Created Account deletion form: \href{https://docs.google.com/forms/d/e/1FAIpQLSd2vWw8eGdYTU90m4CK05EfslhvGtIjgv8H-nlqEfTZkk-4IA/viewform}{link}
+    \item Recruited five pilots from my friend club: Aritra, Utkarsh, Hiranmay,Farhan and, mainak.
+    
+\end{enumerate}
+\section{Feb 17 2026 - Feb 22 2026}
+{\bf No of Hours: 15}
+\subsection{To Do}
+\begin{enumerate}
+    \item Decide How many day's the pilot study to be continued.
+    \item Decide what questions to ask in Pilot study.
+    \item Read papers on Digital well being.
+\end{enumerate}
+\subsection{List of completed task}
+\begin{enumerate}
+\item Called sir and sent him feature graphics:
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{feature_graphic.png}
+        \caption{Jodo Feature graphics}
+        \label{fig:enter-label}
+    \end{figure}
+\subsection{Proposed changes to the Lock and Home Screen UI}
+\begin{enumerate}
+    \item Make the Lock Screen and Home Screen  UI like \textbf{Binary Clock}, which can act as friction as well as user can see time too.
+\end{enumerate}
+\item Sent him all the details like: app description, details of the why we are running forground service and why we are quering all install app packages,
+\item my responses \textbf{We need to query all packages as our app is launcher app we have customised the app drawer to reflect usage time and launch count of every installed app that's why we need to QUERY\_ALL\_PACKAGES}
+\item Upgraded the app to target and compile sdk 35 accroding to play store requirement and sent him the upgrade .aab file.
+\item Upgraded version code and version name for new version deployment on playstore.
+\item Fixed errors in the App code that occured due \textbf{Compile SDK} upgrade from \textbf{34 to 35}, like in switch block we can not non constant identifiers.
+\end{enumerate}
+\subsection{In person feedback received so far}
+\begin{enumerate}
+    \item Give dropdown to select geneder.
+    \item Did not understood the usecase of cognitive friction (math single digit addition) on lock screen.
+    \item  UI looks like old school.
+    \item Bug in unlock count computation logic, currently it is considering lock button as unlock even though it is not actual unlock but a light on.
+    \item Inconsistent value of launch count on Whats-app popup.
+    \item User were having trust issue due to asking launcher permission in the beginning, they suggested to make it optional.
+    \item For one user app was not able to start, device name: \textbf{Realme 7, Android 11}
+    \item For one user device details : \textbf{Readme9, Android 13} App was crashing and not able to start.
+    \item user comment: \textbf{aur oneplus m middle s app slide karke baki running apps m move kar paa rahe h}
+    \item user comment: \textbf{Back or home button k zarurat nahi, Like app abhi bhi running h but tujhe msg kar paa raha hu}
+    \item user comment : \textbf{kuch app disable karne ka option dal de na, Otherwise baki appse directly access muskil ho jaa raha h}
+    \item One user had very trust issue with the app asked so much permission and he ended up uninstalling the app.
+    \item one user said he is not used such a launcher interface, He want his own phone launcher interface he continued to use app, He also had very much trust issue I had to explain him too much about the data usage  and anonymity.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{popup.jpeg}
+        \caption{wrong value of launch count}
+        \label{fig:enter-label}
+    \end{figure}
+    \item User is not able to get the usecase of timer.
+    \item His response \textbf{Muze ye timer ka kuch samajh he nahi ata, kya use hai iska}
+    \item I told him that this timer is for increasing awareness, his response is: \textbf{Nahi, isse kuch farak nahi padta muze, mein switch karke same app open karta hu to phirse counter start hota hai}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{timer.jpeg}
+        \caption{timer running on whatsapp interface}
+        \label{fig:enter-label}
+    \end{figure}
+    \item User don't like the UI design for side menu bar.
+    His reponse is: \textbf{Ye kuch khas nahi dikh raha}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{side_menu.jpeg}
+        \caption{side menu bar interface}
+        \label{fig:enter-label}
+    \end{figure}
+\end{enumerate}
+\subsection{Pilot Study Plan for JoDo App}
+
+\textbf{Objective}
+
+The purpose of this pilot study is to evaluate the effectiveness of the JoDo app in improving digital wellbeing and productivity among college students. The study aims to measure whether users experience increased focus time, reduced distractions, improved productivity, and better overall study habits.
+
+\subsection{1. Define the Goal}
+
+Clearly define measurable goals before starting the study. Example goals:
+
+\begin{itemize}
+    \item Determine whether users increase daily focused study time.
+    \item Measure reduction in screen distractions.
+    \item Evaluate usability and user experience.
+    \item Assess perceived productivity improvement.
+\end{itemize}
+
+Example measurable statement:
+
+\textit{Users increase daily focused study time by at least 30 minutes within 7 days of using Jodo.}
+
+\subsection{2. Select Participants}
+
+\begin{itemize}
+    \item Recruit 4-5 college students.
+    \item Include students from different semesters or departments.
+    \item Include both heavy and moderate phone users.
+\end{itemize}
+
+This ensures a diverse and relevant sample group aligned with the app’s target audience.
+
+\subsection{3. Decide Study Duration}
+
+\begin{itemize}
+    \item Minimum duration: 7 days.
+    \item Recommended duration: 14 days.
+\end{itemize}
+
+Digital wellbeing improvements require at least one week of consistent usage to observe meaningful trends.
+
+\subsection{4. Pre-Study Survey (Day 0)}
+
+Collect baseline data before participants begin using Jodo. Questions may include:
+
+\begin{itemize}
+    \item Average daily study time?
+    \item Average daily screen time?
+    \item Biggest source of distraction?
+    \item Rate productivity (1--10).
+    \item Rate stress level (1--10).
+\end{itemize}
+
+\subsection{5. Post-Study Survey (After 7 Days)}
+
+Collect feedback and outcome data:
+
+\begin{itemize}
+    \item Did Jodo help you focus? (1--10)
+    \item Did your study time increase?
+    \item Did your screen time reduce?
+    \item Which feature helped the most?
+    \item What was confusing or difficult?
+    \item Would you continue using Jodo? (Yes/No)
+    \item Would you recommend it to others? (Yes/No)
+\end{itemize}
+
+\subsection{6. Track In-App Metrics}
+
+If available, record:
+
+\begin{itemize}
+    \item Number of focus sessions completed
+    \item Total focus minutes
+    \item App blocking usage
+    \item Daily streak consistency
+\end{itemize}
+
+This provides objective behavioral data in addition to survey responses.
+
+\subsection{7. Conduct Short User Interviews}
+
+Interview at least 5 participants for deeper insights. Ask:
+
+\begin{itemize}
+    \item When did you feel like stopping the app?
+    \item What feature was most helpful?
+    \item What was frustrating?
+    \item What would you use instead if Jodo did not exist?
+\end{itemize}
+
+Qualitative feedback often reveals usability improvements and hidden pain points.
+
+\subsection{8. Data Analysis}
+
+Summarize results using a comparison table:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Metric & Before & After \\
+\hline
+Average Study Time & 2 hours & 2.7 hours \\
+Average Screen Time & 6 hours & 5 hours \\
+Productivity Rating & 5/10 & 7/10 \\
+\hline
+\end{tabular}
+\end{center}
+
+Calculate:
+\begin{itemize}
+    \item Percentage improvement in focus time
+    \item Dropout or uninstall rate
+    \item Most frequently appreciated feature
+\end{itemize}
+
+\subsection{9. Success Criteria}
+
+The pilot can be considered successful if:
+
+\begin{itemize}
+    \item 60\% or more participants want to continue using Jodo.
+    \item 50\% or more report increased focus time.
+    \item Uninstall rate remains below 30\%.
+    \item Clear and actionable feature improvements are identified.
+\end{itemize}
+
+\subsection{Conclusion}
+
+This pilot study will help validate the effectiveness, usability, and engagement level of the Jodo app among college students. The insights gained will guide feature improvements and prepare the app for broader deployment.
+
+\section{Feb 23 2026 - Mar 01 2026}
+{No. of Hours: 15}
+\subsection{To Do}
+\begin{enumerate}
+    \item Collect log files from various pilot devices and analyze it.
+    \item Create script to do data-analysis on pilot's usage data.
+    \item Complete post usage interview of the pilots.
+     \item Prepare final report  for pilot study.
+\end{enumerate}
+\subsection{List of task completed}
+\begin{enumerate}
+    \item Installed app in one more pilot phone(Samsung).
+    \item Currently 4 pilots are using the app.
+    \item Three pilots completed 7 days on the app.
+    \item created github repo (\href{https://github.com/hariom575/MS_Work_logs.git}{link}) for reports.
+    \item Created substructure for worklog, RA work, running ms report, running ms pres.
+\end{enumerate}
+\subsection{Proposed changes for reward model}\href{run:new_proposal.tex}{New Proposal}
+\begin{enumerate}
+    \item Like forest app they plant trees we can do water cleaning, pollution control stuff, education support for poor people.
+    Users focus (Pomodoro / deep work sessions).
+    \item For every X minutes completed:
+    \begin{enumerate}
+\item Fund water purification
+ \item Support air pollution control
+ \item Sponsor education hours
+ \item Plant trees
+ \item Waste recycling credits
+    \end{enumerate}
+   \item  Example IIT Bombay competition:
+“Which department funded more education hours this month?”
+
+\end{enumerate}
+\subsection{Problem encountered in JoDo}
+\begin{enumerate}
+    \item App keeps logging out in new devices (pilots).
+    \item Bugs in celery scheduler, container keeps stopping after throwing exception related to blocking.
+  
+\end{enumerate}
+\subsection{Feedback Recieved about JoDo}
+\begin{enumerate}
+    \item Pilot3 is also not comfortable with the HomeScreen.
+    \item  Pilot3 removed App as HomeScreen but still keeps using the App.
+\end{enumerate}
+
+\subsection{Pilot study user feedbacks}
+\begin{enumerate}
+    \item Change the default timer value if user click I am bored change it 30 minutes, and user click if am working change to 10 minutes.
+\end{enumerate}
+\subsection{New Questions}
+\begin{enumerate}
+    \item Why Being HomeScreen(Fully minimalist and less visual cues) disliked by users?
+\end{enumerate}
+\section{Feb 26 (last meeting) - Mar 04 2026}
+{ \bf No. of Hours: 20}
+\subsection{List of Task Completed}
+\begin{enumerate}
+    \item Created a python Script to retrieve pilot study data from db and generate graphs and insights over them.
+    \item Fixed bugs and verified script output.
+    \item Generated pilot Study data analysis report (\href{https://drive.google.com/file/d/1GWn26HUfRNxbJ2xH5aLeTd6d8hEtVdlX/view?usp=sharing}{link}).
+    \item Collected log file from pilots phone.
+    \item In one device found Home screen was crashing due to Integer overflow exception.
+    \item App was crashing on Device BootUp in pilots phone.
+    \item Prepared new UI design proposal for HomeScreen, Lock Screen and App Drawer.
+    \item Created Google form  (\href{https://forms.gle/D1U46AeNB6NzSw1fA}{link}) for post pilot study feedback, similar to what Omkar used for Intentor user study.
+    \item Collected response from all the participants.
+\end{enumerate}
+\subsection{Proposed new UI for JoDo}
+\subsubsection{Problem in the current UI}
+\begin{enumerate}
+    \item It looks like old school.
+    \item Progress bar has occupied to much space and it is the main cause of so runtime exceptions in the HomeScreen.
+    \item Current UI not properly reflect out Psychology of \textbf{JoDo} as well as \textbf{Digital Minimalism}
+\end{enumerate}
+\subsubsection{Proposed UI Prototypes:}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\linewidth,height=0.50\textheight, keepaspectratio]{JoDo new UI design/HomeScreen.png}
+    \includegraphics[width=0.45\linewidth, height=0.50\textheight, keepaspectratio]{JoDo new UI design/App_drawer.png}
+
+  %   \vspace{0.3cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{Home-screen(left), App-drawer(right)}
+    \label{fig:ui_prototype}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\linewidth,height=0.50\textheight, keepaspectratio]{JoDo new UI design/lock_screen.png}
+    \includegraphics[width=0.45\linewidth, height=0.50\textheight, keepaspectratio]{JoDo new UI design/dashboard.png}
+
+   % \vspace{0.3cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{Lock-screen (left), DashBoard (right)}
+    \label{fig:ui_prototype}
+\end{figure}
+
+\subsection{To Do}
+\begin{enumerate}
+    \item Create summary for qualitative analysis through the response recieved in google form from all the 3 participants.
+\end{enumerate}
+\subsubsection{JoDo economy similar to \href{https://play.google.com/store/apps/details?id=in.sweatco.app&pcampaignid=web_share}{Sweat Coin App}}
+\begin{enumerate}
+    \item Create JoDo Economy similar to sweatcoin, they convert steps into real money (but their rewards are virtual ). 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\linewidth,height=0.50\textheight, keepaspectratio]{sweat_coin_app_UI.jpeg}
+   \caption{UI interface from Sweat Coin app}
+    \label{fig:sweat_coin_app_UI}
+\end{figure}
+\end{enumerate}
+\section{Mar 02 2026 - Mar 09 2026}
+{\bf No. of Hours: 20}
+
+\subsection{UI Changes}
+\begin{enumerate}
+    \item Create new UI for Homescreen, Appdrawer and LockScreen.
+    \item Made all the buttons function in the new UI.
+    \item Reflected real usage from device.
+    \item Resued all the existing fuctionality from the app and only changed the UI.
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{home_screen_new.jpeg}
+    \hspace{0.3cm}
+    \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{home-screen-old.jpeg}
+
+    % \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{Home-screen-new(left),Home-Screen-old(right)}
+    \label{fig:ui_prototype}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{lock_screen_new.jpeg}
+    \hspace{0.3cm}
+    \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{lock-screen-old.jpeg}
+
+    % \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{Lock-screen-new(left),Lock-Screen-old(right)}
+    \label{fig:ui_prototype}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{App_drawer_new.jpeg}
+%    \hspace{0.3cm}
+    \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{app-drawer-old.jpeg}
+
+   %  \vspace{0.5cm}
+
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+    % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+
+    \caption{AppDrawer-screen-new(left),AppDrawer-Screen-old(right)}
+    \label{fig:ui_prototype}
+\end{figure}
+
+\clearpage
+\subsection{Pilot Study: Post-Intervention Survey Results}
+
+A follow-up survey was administered to three participants after the pilot study using a mixed-methods instrument combining SUS-inspired Likert items and open-ended qualitative questions.
+
+\subsubsection{Quantitative Summary}
+
+\begin{table}[H]
+\centering
+\caption{Likert Response Summary (1 = Strongly Disagree / Never, 5 = Strongly Agree / Always)}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{|X|c|c|c|}
+\hline
+\textbf{Statement} & \textbf{P1} & \textbf{P2} & \textbf{P3} \\
+\hline
+JoDo is helpful in taking control over digital habits & 5 & 4 & 4 \\
+\hline
+I found the system unnecessarily complex & 1 & 2 & 4 \\
+\hline
+I thought the system was easy to use & 3 & 4 & 2 \\
+\hline
+I would need technical support to use this system & 1 & 2 & 2 \\
+\hline
+The functions were well integrated & 5 & 3 & 4 \\
+\hline
+There was too much inconsistency in the system & 1 & 3 & 1 \\
+\hline
+\textbf{Likelihood to recommend (out of 10)} & \textbf{10} & \textbf{8} & \textbf{7} \\
+\hline
+\end{tabularx}
+\end{table}
+
+\noindent All three participants rated JoDo positively for helpfulness (mean = 4.3/5) and expressed willingness to recommend it (mean = 8.3/10). Perceived complexity varied: P1 found the system simple and well-integrated, while P3 found navigation more demanding, particularly when the launcher was active and direct app access was restricted by design.
+
+\subsubsection{Qualitative Themes}
+
+\noindent\textbf{Awareness and behaviour change.} All three participants reported increased awareness of their phone usage. P2 noted that the pre-launch warning reduced impulsive social media access. P3 observed a reduction in YouTube usage, attributing it partly to the friction introduced by the launcher's search-first navigation and partly to leaderboard motivation.
+
+\noindent\textbf{Gamification as motivator.} The leaderboard and points system were the most frequently praised features across all three responses. P3 explicitly cited the desire to rank first as a driver of sustained engagement with the challenge.
+
+\noindent\textbf{UI and design feedback.} Two participants flagged the interface as visually dated and inconsistent with the dark theme. P2 described the design as ``old-school'' and noted that dashboard icons did not match the black colour scheme — directly motivating the UI redesign documented in the previous section.
+
+\noindent\textbf{Bugs and accuracy.} P2 identified two technical issues: unlock count inflation due to power-button presses being registered as unlocks, and the ability to bypass app restrictions through alternative routes. Both are noted as items for the next development iteration.
+
+\subsubsection{Summary}
+
+The pilot study confirmed that the core JoDo mechanisms - usage warnings, the launcher-as-friction model, and competitive leaderboards — produce measurable awareness and self-reported behaviour change even in a small three-participant cohort. The primary actionable feedback was the need for a modern, consistent UI (addressed in \$3) and improved unlock-detection accuracy.
+
+\section{Mar 09 2026 (last meeting) - Mar 13 2026}
+{\bf No. of Hours: 12}
+\subsection{Offline Reward}
+\begin{enumerate}
+    \item Created JoDo passport similar to the passport that people visit countries and get stamp of that country, we can also follow similar kind of approach whenenver people visit a place and do offline activity in IIT they get stamped and have memory offline memories. \href{https://drive.google.com/file/d/1oMPdChhu_n5pfZ2k6dNrNa-poAVlBPzW/view?usp=sharing}{link}
+\end{enumerate}
+\subsection{To Do}
+\begin{enumerate}
+    \item Implement Security measures to prevent \textbf{Denial of Service} and \textbf{Brute Force} attack.
+    \item Implement Throttling and rate limit at API level as well as global throttle limit. Throattles indicate a temporary state, and are used to control the rate of request that client can send.
+    \item Use \textbf{Nginx + django-ratelimit + Redis} - that covers 90\% of real-world DoS scenarios without needing paid services.
+\end{enumerate}
+\subsection{Steps to achieve Rate limit in Django Server}
+\begin{enumerate}
+    \item Set up application level rate limit using \textbf{django-ratelimit} Libraty.
+    \item Setup nginx proxy, easy and very powerful can handle large number of connection concurrenly and drop the over rate limit request before they reach the django server.
+    \item Use radis cache as backend server to store the Throttling class provided by Django-ratelimit.
+\end{enumerate}
+\subsection{Completed Work}
+\subsubsection{Throttling Implementation from Django Rest Framework (Inbuilt - Library)}
+\begin{enumerate}
+
+    \item Throttling is similar to \textbf{Permission}, in that it determines if a request should be authorized or not.
+    \item As with permissions, multiple throttles may be used. Our API might have a restrictive throttle for unauthenticated requests, and a less restrictive throttle for authenticated requests.
+    \item The application-level throttling that REST framework provides should not be considered a security measure or protection against brute forcing or denial-of-service attacks. Deliberately malicious actors will always be able to spoof IP origins. In addition to this, the built-in throttling implementations are implemented using Django's cache framework, and use non-atomic operations to determine the request rate, which may sometimes result in some fuzziness.
+    \item The application-level throttling provided by REST framework is intended for implementing policies such as different business tiers and basic protections against service over-use.
+\end{enumerate}
+\subsubsection{How throttling is determined}
+\begin{enumerate}
+    \item As with permissions and authentication, throttling in REST framework is always defined as a list of classes.
+    \item Before running the main body of the view each throttle in the list is checked. If any throttle check fails an exceptions.Throttled exception will be raised, and the main body of the view will not run.
+\end{enumerate}
+\subsubsection{How clients are identified}
+\begin{enumerate}
+    \item The \textbf{X\-Forwarded-For} HTTP header and \textbf{REMOTE\_ADDR\ WSGI} variable are used to uniquely identify client IP addresses for throttling. If the X-Forwarded-For header is present then it will be used, otherwise the value of the \textbf{REMOTE\_ADDR} variable from the WSGI environment will be used.
+    \item If we need to strictly identify \textbf{unique client IP addresses}, we'll need to first configure the number of application proxies that the API runs behind by setting the \textbf{NUM\_PROXIES} setting. This setting should be an integer of zero or more. If set to \textbf{non\-zero} then the client IP will be identified as being the last IP address in the X\-Forwarded-For header, once any application proxy IP addresses have first been excluded. If set to zero, then the \textbf{REMOTE\_ADDR} value will always be used as the identifying IP address.
+\end{enumerate}
+\subsubsection{Setting up the cache}
+\begin{enumerate}
+    \item The throttle classes provided by REST framework use \textbf{Django's cache backend} . we should make sure that we've set appropriate cache settings. The default value of \textbf{LocMemCache backend} should be okay for simple setups.
+\end{enumerate}
+\subsubsection{A note on concurrency}
+\begin{enumerate}
+    \item The built-in throttle implementations are open to race conditions, so under high concurrency they may allow a few extra requests through.
+    \item If the project relies on guaranteeing the number of requests during concurrent requests, the we  will need to implement our own throttle class.
+\end{enumerate}
+
+\section{Mar 13 2026 (last meeting) - Mar 16 2026}
+{\bf No. of Hours: 12}
+\subsection{Work Done}
+\begin{enumerate}
+    \item Created new user \textbf{jododevsecops} with sudo permission and disabled root login.
+    \item Disabled all the ports except ssh,http and https port.
+    \item Integrated \textbf{HTTPs} in the Nginx server.
+    \item forwarded all the calls from port 80 to https.
+    \item Installed \textbf{CERTBOT} using docker container.
+    \item Added command in \textbf{certbot} to renew ssl certificate every 12 hr.
+    \item Shared common volume btw certbot and Nginx.
+    \item Fixed bugs in permission screen (sometime it was not redirecting to login page after granting all the permission)
+    \item Asked default launcher app permission in the \textbf{Home Screen}
+\end{enumerate}
+\subsection{Offline Rewards}
+\begin{enumerate}
+    \item 100rs canteen credit redeemable at Gulmohar or the other restuarant in IIT.
+    \item IITB Hoodie.
+    \item Stainless steel bottle + alumini-style tote bag.
+    \item Sports watch.
+    \item IITB branded notebook and pen set from campus bookstore.
+\end{enumerate}
+\subsection{To Do}
+\begin{enumerate}
+    \item Create the .aab file and send it for deployment.
+\end{enumerate}
+\section{Mar 16 2026 (last meeting) - Mar 20 2026}
+{\bf No. of Hours: 20}
+\subsection{Work Done}
+\begin{enumerate}
+    \item Created a separate worker to pull \textbf{last 7 days} avg mobile
+    phone usage app wise as well as for full device because avg usage for last 7 day remains constant throughout the day.
+    \item Fixed Bug: Upload logs API was failing in Android client because it was hitting wrong end point.
+    \item Stopped launching Notification Foreground service from BootComplete reciever as newer version of Android discourage launching long running service from Broadcast Reciever, Instead launched it from HomeScreen.
+    \item Tested Application from end to end in my device like BootUp, call, data uploads, launcher not freezing, popup opening properly, log file getting uploaded properly.
+    \item Merged all my work to jodo-app-development branch.
+    \item Created .aab file from \textbf{jodo\-app\-development} branch.
+    \item Create Roadmap plan for 1 month user study.
+\end{enumerate}
+\subsection{Study Plan: Joy of Digital cOntrol}
+\begin{enumerate}
+    \item Created user study plan in the  following file in the same folder \textbf{user\_study\_proposal.tex}
+\end{enumerate}
+
+\section{Mar 21 2026 (last meeting) - Mar 30 2026}
+{\bf No. of Hours: 15}
+\subsection{Work Done}
+\begin{enumerate}
+    \item Added \textbf{Privacy Policy URL} in the App.
+    \item Added \textbf{Account deletion form URL} in the App.
+    \item Increased version code and version name for new version deployment on play store.
+    \item Made the changes suggested in JoDo passport (\href{https://canva.link/x8w50ao7f9vl1xl}{link}) .
+    \item \textbf{Estimated Budget for user study (30 days weeks):}
+    \begin{enumerate}
+        \item 100 rupees per day for daily winner, total = 3000
+        \item IITB notebook + pen set for top 3 weekly winner, total = 500*3*4=6000
+        \item Monthly winner: 1st rank sports watch : 3000, second rank : IITB Hoodie: 1500, Third - Fifth rank: Steel bottle and Bag: 3*1000
+        \item JoDo cards printing cost approx 500. 
+        \item total estimated budget is 17000
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Code Scaning using Harness SAST and SCA}
+\begin{enumerate}
+    \item Done static Analyis using Harness SAST and SCA to find vulnerability in the server side code and third party library.
+    \item Found 21 vulnerability mostly from third party library, link to the report: \href{https://drive.google.com/file/d/1HfIV1nEnnZx0QsAe7Flo7K23HKdTCwdX/view?usp=sharing}{link}
+\end{enumerate}
+
+\subsection{To Do}
+\begin{enumerate}
+    \item Update APK on play store.
+    \item Complete second pilot study.
+    \item Complete user study in next sem.
+\end{enumerate}
+\section{Mar 30 2026 (last meeting) - April 06 2026}
+{\bf No. of Hours: 15}
+\subsection{Work Done}
+\begin{enumerate}
+    \item Created consent form (google form) for pilot study \href{https://docs.google.com/forms/d/e/1FAIpQLScx9lyvxXDgia69XFIVvhky8M308N_4QHE2dzBAPSCAI8cA4Q/viewform?usp=sharing&ouid=114310670116364214566}{link} 
+    \item Updated privacy policy \href{https://hariom575.github.io/jodo-privacy-policy/}{link}
+    \item Fixed bug in total usage calculation logic, earlier total sum of day + night + evening session usage time was not equal to total usage session time.
+    \item In Django admin shown data for every day for every user in single row for all the four sessions of the day, currently we are storing data in session wise formate for every date it is wasting space as well as create confusions while interpreting the data.
+    \item Created New layout for get started screen.
+    \item 
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{get-started-screen.jpeg}
+        \hspace{0,3cm}
+        \includegraphics[width=0.50\linewidth, height=0.50\textheight, keepaspectratio]{new_get_started_screen.jpeg}
+    
+         \vspace{0.5cm}
+    
+        % \includegraphics[width=0.45\linewidth]{JoDo new UI design/dashboard.png}
+        % \includegraphics[width=0.45\linewidth]{JoDo new UI design/lock_screen.png}
+    
+        \caption{Get Started screen old (left)vs new UI (right)}
+        \label{fig:ui_get_started screen}
+    \end{figure}
+\end{enumerate}
+\subsection{To Do}
+\begin{enumerate}
+    \item Store upload status at server side.
+
+    \item Only consider those users for weekly competition which are joined atleast 7 days before.
+    \item Plan for ethics committee approval for user study.
+    \item Republish app with latest code and updated privacy policy.
+\end{enumerate}
+\section{April 07 2026  - April 15 2026}
+{\bf No. of Hours: 10}
+\subsection{Migration from 4KB page size to 16KB page size}
+\begin{enumerate}
+    \item Historically, Android has supported 4KB page sizes, which has optimized system memory performance for the average amount of total memory that Android device have typically had.
+    \item Begining with Android 15, AOSP supports devices that are configured to use a page size of 16KB.
+    \item As device manufucturers continue to build devices with larger amount of physical memory(RAM), many of these devices will adopt 16KB (and eventually higher) page size to optimize device's performance.
+    \item \textbf{Benefits and Performance Gain: } 
+    Devices configured with 16KB page use slighly more memory on average, but also gain various performance improvement for both system and apps:
+    \begin{enumerate}
+        \item Lower App launche times while the system is under memory pressure. 3.16 \% lower on average.  with more significant improvement on some apps (upto 30 \%) improvement,
+        \item Reduced power draw on App launch. 4.56 \% redunction on average.
+        \item Fast camera launch: 4.48 \% fast camera launch (Irrelavent to our app)
+        \item  Improved system Boot time: improved by 8 \% on an average (Irrelavent to our app).
+    \end{enumerate}
+\end{enumerate}
+\subsection{APK Analysis Report from Android Studio}
+\begin{enumerate}
+    \item   \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.50\linewidth,height=0.50\textheight, keepaspectratio]{apk_analysis.png}
+    
+        \caption{APK analysis report from android studio}
+        \label{fig:apk_analysis_report_from_android_studio}
+    \end{figure}
+\end{enumerate}
+\subsection{Code or Config Changes}
+\begin{enumerate}
+    \item Our App does not require any code change as our apk does not have any native pre-build library which depends on 16KB page size.
+\end{enumerate}
+\section{May 11 2026  - May 17 2026}
+{\bf No. of Hours: 10}
+\subsection{List of Task Completed:}
+\begin{enumerate}
+    \item Completed pilot study 2 with 3 users.
+    \item Fixed bugs appeared in pilots study 2.
+    \item Tested the new changes in all pilot devices.
+    \item Increased version code and version number for new play store deployment.
+    \item Created new .aab file for new deployment and verified that new .aab file is not corrupted.
+\end{enumerate}
+\section{May 18 2026 - May 19 2026}
+{\bf No. of Hours 10}
+
+\subsection{Proposed User study plan: }
+\begin{enumerate}
+    \item Create 2 week user study plan.
+    \item Create on boarding form.
+    \item Take approval from ethics committee.
+    \item Create template for advertisement email.
+    \item Create poster for user study.
+    \item Start recruitment through mails and in person contact.
+\end{enumerate}
+
+\subsection{Summary of the paper: "In my defense, only three hours on Instagram": Designing
+Toward Digital Self-Awareness and Well-being} \cite{karthik2026}
+\begin{enumerate}
+    \item Screen use pervades daily life, shaping work, leisure, and social connections while raising concerns for digital well-being.
+    \item Theme of this paper is: \textbf{self-awareness, reflecting on one's digital behavior -as a critical pathway to digital well-being.}
+    \item They created an app called: \textbf{WellScreen}
+    \item Their main design for digital intervention is : They ask \textbf{Today's total usage time prediction} from the user in apps in particular category like social , entertainment, productivity and finance, shopping and food, and creativity. When the day ends they show the users their actual usages with color coded graphs and compare the estimated usage with the actual usage.
+    \item At the end of the day they ask 5 question survey from the users (answer on the scale of 5-10) which includes: 
+    \begin{enumerate}
+        \item How satisfied are you with app usage?
+        \item Did you meet your usage goal?
+        \item How focused did you feel?
+        \item How stressed did your usage make you feel?
+        \item How in control did you feel?
+        \item And a final self-reflection message from the user and their thoughts about their usage.
+    \end{enumerate}
+    \item They conducted user study with 25 participants mostly were university students over the period of 2 weeks.
+    \item The goal of their user study was to find out: \textbf{How discrepancies between estimated and actual usage shaped digital awareness and well-being.}
+    \item Participants  underestimate productivity and social and while overestimating entertainment app use. They showed a 10 \% improvement in positive effects ratting \textit{WellScreen} as \textbf{Moderately useful} (median SUS=80, IAM=14)..
+    \item Their background literature includes: 
+    \begin{enumerate}
+        \item Digital Well-being as a concept: Digital well-being in \textit{HCI}, Digital well-being for college students.
+        \item Self-awareness and Reflective Tools.
+        \item Human-centered design of Digital well-being.
+    \end{enumerate}
+    \item \textbf{User Study Desgin and Method}:
+    \begin{enumerate}
+        \item \textit{The main goal of their was to examine how the recognizance of, and regular self-regulation on, college student's  estimated-actual gap in smartphone usage habits could advance our understanding of digital self-awareness and digital well-being.}
+    \end{enumerate}
+    \item \textbf{Participants and Recruitment} : They recruited participants through social media mainly through \textit{Reddit} community.
+  \end{enumerate}
+
+\subsection{Positive Points}
+\begin{enumerate}
+    \item Their study was focused mainly on behavior change,  they correlated screen time estimation and actual gap with individual differences which is good.
+    \item They focused on individual digital self regulation and digital well-being, which could help in furthur developing individual specific digital well-being solutions which focuses on individual behaviour change rather than a group.
+    \item Their work targeted what factor results in disparities.Why user generally ended up spending more than estimated? they tried to find out the digital well-being definitions with the help of statistics and user interview and actual screen usage pattern.
+    \item They have done so many statistical analysis both on usage data as well as self-reported user data.
+\end{enumerate}
+\subsection{Negative Points}
+\begin{enumerate}
+    \item Their approached digital-well-being through self-awareness or self-reflection, showing the users the actual vs estimation, they haven't included any limiting strategy or motivational element.
+    \item They haven't considered relapse in their study.
+    \item Though their sample size is vary demographically but it was very small (only 25 people.)
+\end{enumerate}
+\section{May 20 2026  - May 24 2026}
+{\bf No of Hours: 40}
+\subsection{Pilot study 2 Report}
+\begin{enumerate}
+    \item The focus in pilot study 2 was mostly kept on ensuring the stability of the application across various devices before going for a larger user study for 2-3 weeks.
+    \item Recruited 3 pilots with offline interaction from Hostel 14 (Master's CSE student).
+    \item Before Downloading the app, all the 3 participants were asked to fill the \href{https://docs.google.com/forms/d/e/1FAIpQLScx9lyvxXDgia69XFIVvhky8M308N_4QHE2dzBAPSCAI8cA4Q/viewform}{consent form} .
+    \item \textbf{Demographics: } Sex: male, age group: 22-26 for all the three participants.
+    \item \textbf{Device Details: } Redmi 9I (Xiaomi), One-Plus, and Samsung.
+    \item \textbf{Duration of the study:} 7 days.
+    \item \textbf{Major Bugs/Crashes Found during Pilot study (Reported by Firebase Crash-analytics)}
+    \begin{enumerate}
+        \item \textbf{ AppDao\_Impl.insertUsageSummary:} java.lang.IllegalStateException - Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number.
+        \item \textbf{ AppDao\_Impl.insertApps:} java.lang.IllegalStateException - Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number.
+        \item \textbf{ AppDao\_Impl.insertUsageSummary:} java.lang.IllegalStateException - Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number.
+        
+        \item \textbf{ActivityThread.generateForegroundServiceDidNotStartInTimeException: } Sometimes background service did not started from launcher.  
+    \end{enumerate}
+    \item \textbf{Applied Fixes:} 
+    \begin{enumerate}
+    \item Increased Room DataBase version Number in Android Client.
+    \item Migrated foreground service launch from BootComplete receiver to HomeScreen, aligning with Android's background execution limitations.
+    \end{enumerate}
+\item \textbf{Feedback Recieved on Usability and UI: }
+\begin{enumerate}
+    \item One user wanted the lock screen should be option and permission for phone call should be asked when the user user enable JoDo as a lock-screen else do no ask during on-boarding.
+    \item Give a setting button from which user can either set jodo as lock-screen or not.
+    \item One pilot user wanted to use phone's default font instead of JoDo's font.
+    \item One pilot user wanted to give option to set custom wallpaper on Home or lock Screen.
+    \item All the three users rated 5/5  for to the  HomeScreen, app drawer, leaderboard, competition, and rewards design.
+\end{enumerate}
+\end{enumerate}
+
+
+\subsection{Results from the Paper: "In my defense, only three hours on Instagram": Designing
+Toward Digital Self-Awareness and Well-being \cite{karthik2026}}
+\subsubsection{Estimated Vs. Actual Usage Gap}
+\begin{enumerate}
+    \item Their core finding is that people are very bad at estimating their own phone use - but in interesting, category-specific ways rather than uniformaly under or over-estimating.
+    \item \textbf{What the Number shows?: }
+    \begin{enumerate}
+        \item \textbf{Social Media} was underestimated by \textbf{~9.6\%}. People used it more than they thought. Which is very natural by design of social media.
+        \item \textbf{Productivity Apps} are under-estimated by \textbf{~16 \%}. People did more work than they themselve give credit for.
+        \item \textbf{Entertainment} apps are over-estimate People thought that they were watching/gaming more than they actually were.
+        \item At the \textbf{Aggregated level}, the estimated and actual totals didn't significantly differ -- meaning the error cancle each other out, which is why looking out at screen time only would have missed this all of this.
+        \item \textbf{What predicts a smaller gap?} Self control was the most consistent factor across all the models (Table  4 \& 5 in paper) particularly for productivity apps and creativity apps, (this data doesn't reflect wether they are productive or creative or not, this results are based on the app usage data). This suggest that self - regulatory capacity is not just about \textbf{limiting} use, it's also linked to better \textit{awareness of one's behavior. } 
+        \item \textbf{The Paradox (Table 6) :} smaller gaps (more accurate estimators) report higher satisfaction and stronger self-control day-to-day but also high stress and lower goal adherence. The authers suggest that accurate self-awareness may create a kind of performance pressure - once you know what you actually do, you feel more obligated to live upto your own predictions. Some participants even described skipping logging on days they expected irregularities, essentially avoiding the discomfort of seeing a large gap. 
+    \end{enumerate}
+\end{enumerate}
+
+\subsubsection{WellBeing \& Affect Changes: }
+\begin{enumerate}
+    \item \textbf{The headline finding (Table 7) : } Participants showed a statistically significant \textbf{10 \% increase in positve affect}. (Cohen's d = 0.63, a large size effect size) after two weeks with WellScreen. Negative affect slightly decreased, but not significantly.
+    \item \textbf{What's important to intercept here: }
+    \begin{enumerate}
+        \item Trait based measures - self-control and self-regulation - did \textit{not} change, which the authors correctly note is expected. These are stable personality-like traits unlikely to shift in two weeks. So the tool wasn't changing who \textit{people} are, but it was changing how they felt.
+        \item The wellbeing improvement was likely driven by \textbf{shift in emotional interpretation} rather than actual behavior change. Participants describe a process of meaning-making  -- they reflected on their usage, justified it to themselves, and came away feeling more at peace with their habits. This mirrors psychological theories of self-discrepancy reduction (closing the gap between your "actual" and "ideal" self).
+    \end{enumerate}
+    \item \textbf{How participants' definition of digital well-being evolved: } This is one of the richer qualitative finding, At the start, most participants defined digital well-being narrowly as "time management" or "balance between real and virtual life". By the end their definitions had expanded to include 
+    \begin{enumerate}
+        \item \textbf{Intentionality: } - using technology purposefully rather than mindlessly.
+        \item \textbf{Emotional Quality: } - whether digital interactions made them feel good or bad.
+        \item \textbf{Digital footprint awareness: } - one participants even extended it to concern about data shared with corporation and AI systems.
+    \end{enumerate}
+    \item This conceptual broadening is significant: a two-week lightweight intervention shifted not just feelings, but how people think about what healty technology even means.
+\end{enumerate}
+\subsubsection{WellScreen Usability \& Self-Awareness}
+\begin{enumerate}
+    \item \textbf{Usability scores (Figure 2 from paper) : } The median \textbf{SUS scroe was 80}, which is considered "above average/acceptable". The median \textbf{IAM (invention appriateness) score was 14/20. } Indicating participants found it \textit{moderately} appropriate - useful, but not a perfect fit for everyone's context.
+    \item  \textbf{The two-demisional breakdown (Figure 3)} is one of the most pratically interesting findings. Participants were mapped by self-control level and SUS score into four quadrants.
+    \begin{enumerate}
+        \item \textbf{High self-control + High usability:} Mostly willing to continue using it, but some felt the effort wasn't worth it ("it was me putting all the efforts")
+        \item \textbf{High self-control + Low usability: } Mixed responses; wanted more than just data recording - wanted the tool to do something with their data.
+        \item \textbf{Low self-control + Low Usability: } Evenly split; some found it eye-opening, others found it demotivating ("I just feel sad after looking at them")
+        \item \textbf{Low self-control + High usability:} Strongest enthusiasm - this is the "sweet spot" where the  tool is most valuable, because the person genuinely need help and finds the tool easy to use. 
+        \item \textbf{The key insight here} is that enthusiasm for a well-being tool require both a felt need (low self-control) and a good experience (high usability). If either is missing, the tool loses it's value.
+    \end{enumerate}
+    \item \textbf{Screen time as imperfect metric: } Participants also surfaced a fundamental measurement problem. Screen time conflates very different behaviors - some using YouTube as background music has to keep their screen on (inflating numbers), while a Spotify user doesn't. Falling asleep with TikTok open adds hours of "usage" that  wasn't conscious engagement. This reinforce the paper's broader argument that raw screen time is a poor proxy for digital well-being.
+    \item \textbf{Value judgements in self-reflection: } Perhaps the most humanly interesting qualitative finding is that participants did'nt just \textit{report} their data. they \textit{judge} and \textit{defended} it. The title of the paper comes directly from a participants log entry justifying their screen time. People consistently distinguished "good use" (staying in touch with family, industry news) from "bad use" (mindless scrolling), and felt guilt even for activities they considered meaningful wjem the numbers looked high. WellScreen essentially functioned as a mirror that people felt compelled to justify themselves to.
+\end{enumerate}
+\subsubsection{Bottom line across all three RQs: }
+\begin{enumerate}
+    \item The paper's central argument holds up well in the data - self-awareness, not restriction, is the more promising path to digital well-being. The tool produced real emotional benefits without any explicit behavior-change mechanisms. simply by making the gap between perception and reality visible and prompting structured reflection.
+\end{enumerate}
+\subsection{Proposed User Study Design for JoDo}
+\subsubsection{Overview}
+A \textbf{two week deployment study} with college students, combining quantitative usage logging, validated survey at entry and exit, and semi-structured interviews - mirroring \textit{WellScreen's} three-phase structure but adapted to JoDo's reward-and-competition mechanics. 
+\subsubsection{Phase 1: Entry Survey \& Interview (Day 0)}
+\textbf{Survey Instruments} (same logic as WellScreen, capture stable traits as covariats)
+\begin{enumerate}
+    \item \textbf{BFI-10} for personality traits, since prior work link personality to technology use.
+    \item \textbf{Brief self-control scale BSCS} - especially important for JoDo, because our competition design should theoritically benefit lower self-control users most.
+    \item \textbf{Short-Self-Regulation-Questionair (SSRQ)}
+    \item \textbf{PANAS-SF} for baseline positive and negative effects.
+    \item Basic Demographics: age, gender, device type, self-reported daily screen time.
+\end{enumerate}
+\textbf{Entry Interview (30-45 minutes, via vedio call)}
+\newline
+Ask about: 
+\begin{enumerate}
+    \item Their current smartphone habits and pain points.
+    \item Prior experience with any digital well-being tool(e.g. Forest, Appblock, StayFree, Minimalist launcher, etc.)
+    \item Their understanding of what "digital well-being" means to them (This is important because WellScreen showed that the digital well-being definitions evolve, so it will give us some baseline to compare.)
+    \item Initial reaction to \textit{JoDo} after a breif demo - do they find competition framing exiting or anxiety-inducing?
+\end{enumerate}
+\subsubsection{Phase 2: 2-Week Deployment}
+\textbf{What to track Automatically (JoDo already does this) : }
+\begin{enumerate}
+    \item Daily screen time.
+    \item Unlock count.
+    \item App launch count.
+    \item Points scored per day.
+    \item Leader-board rank (daily/weekly)
+    \item Wether the user interacted with \textit{Lock Now} voluntarily or not.
+\end{enumerate}
+
+\textbf{Daily/Weekly Micro-survey (Needs to be implemented with either Notification or Google form)}
+\begin{enumerate}
+    \item How satisfied were you with your phone use today? (1–7)
+    \item Did you feel in control of your phone use today? (1–7)
+    \item How stressed did you feel today? (1–7)
+    \item Did the leaderboard/competition motivate you to use your phone less today? (1–7)
+    \item Did you feel the rewards were fair/meaningful? (1–7)
+    \item Did you voluntarily lock your phone today? (Yes/No)
+    \item Since JoDo intervenes at the entry point (lock screen friction, app drawer transparency), We can ask participants to note on any given day whether they noticed the friction or found themselves reconsidering opening an app
+\end{enumerate}
+\subsubsection{Phase 3: Exit Survey \& Interview (Day 15)
+}
+\textbf{Exit Survey: }
+\begin{enumerate}
+    \item Repeat PANAS-SF, BSCS, SSRQ (to detect changes, note trait measures are unlikely to shift, but affect should)
+    \item \textbf{System Usability Scale (SUS)} - same as \textit{WellScreen}
+    \item \textbf{Intervention Appropriateness Measure (IAM)} - how fitting did JoDo feel in their life?
+    \item Additional Items specific to JoDo:
+    \begin{itemize}
+        \item Did the competition feel motivating or stressful?
+        \item Did the rewards feel meaningful or hollow or over time?
+        \item Did you ever disable or ignore the lock screen friction? why?
+    \end{itemize}
+\end{enumerate}
+\textbf{Exit Interview (30 - 45 mins)}
+\begin{enumerate}
+    \item How did their experience of competition evolved over the two weeks? (earlier enthusiasm vs late engagement)
+    \item Did social comparison on leader-board feel supportive or discouraging?
+    \item Did their definition of "digital well-being" change? (compare to entry time)
+    \item What would make them using JoDo long term?
+    \item Did they ever feel JoDo was unfair - e.g. getting penalized for actual productivity use?
+\end{enumerate}
+\subsection{Participants \& Recruitement}
+Following WellScreen approach closely: 
+\begin{enumerate}
+    \item Target \textbf{N = 20 - 25} college students (aim for 20+ completion).
+\item Recruit through IITB subreddits, department mailing list, whatsApp/telegram college group.
+\item \textbf{Inclusion Criteria:} Android users, 18+ age, use their smartphone every day.
+\item \textbf{Compensation:} Distribute daily and weekly rewards after exit interview, give drop-outs low price rewards if they won any.
+\end{enumerate}
+\subsection{Analysis Plan: }
+\subsubsection{Quantitative: }
+\begin{enumerate}
+    \item Paired t-tests comparing entry vs. exit PANAS, BSCS, SSRQ scores. (with cohen's d effect size)
+    \item Mixed effect regression: do daily points/ranks predicts daily satisfaction, self-control or stress? Do lower screen time days relates with higher positive affect?
+    \item Track engagement decay: does daily survey completion or Lock Now usage drops after week 1 or firebase daily active user drops after week 1? This directly answers JoDo's key concern, Sustained motivation.
+\end{enumerate}
+\subsubsection{Qualitative: }
+\begin{enumerate}
+    \item Reflexive thematic analysis on interview transcripts. (same method as WellScreen)
+    \item Code for: motivation dynamics, competitive pressure, perceived fairness of rewards, habitual vs intentional use.
+\end{enumerate}
+\subsection{Study Timeline Summary
+}
+\begin{table}[h]
+\centering
+\caption{Study Timeline Summary}
+\label{tab:study-timeline}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Day} & \textbf{Activity} \\
+\hline
+Day 0 & Entry survey + interview + JoDo onboarding \\
+\hline
+Days 1--14 & Daily micro-survey + automatic logging \\
+\hline
+Day 7 & Optional mid-point check-in (10 min pulse survey) \\
+\hline
+Day 15 & Exit survey + interview \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Logistics for user study}
+\begin{enumerate}
+    \item Created On-boarding form which includes consent and Entry survey questions: \href{https://forms.gle/3uZ9fVCiFv3HCYja7}{link}.
+    \item Created ethical committee proposal: file name : ethical\_commitee\_proposal.tex
+\end{enumerate}
+
+\section{May 25 2026  - May 28 2026}
+{\bf No. of Hours: 20}
+\subsection{Experience Sampling Method}
+ESM is a research method developed by psychologist \textbf{Mihaly Csikszentmihalyl} in the 1970s where participants are prompted to report their thoughts, feelings, and behaviors \textbf{in the moment or close to it}, rather than retrospectively. The code idea is simple but powerful:
+\newline
+\textit{Ask people what they are experiencing now, not what they remember experiencing.}
+\newline
+This matters because human memory is reconstructive and biased - if you ask someone at the end of the day how stressed they felt, they will likely anchor on the most intense moment or the most recent one, not their average experience.ESM bypasses this by catching people in real time.
+\subsection{The Three Core Types of ESM}
+\subsubsection{Signal-Contingent (Random)}
+prompts are sent at \textbf{random intervals} throughout the day. The participants has no way to anticipate them.
+\begin{itemize}
+   \item Best for: capturing naturalistic, unbiased snapshots of mood and behavior
+   \item Example: 5 random prompts btw 8am and 10pm
+   \item Weakness: can interrupt participants at inconvenient times
+\end{itemize}
+\subsubsection{Interval-Contingent (Fixed Schedule)}
+Prompts are sent at \textbf{Fixed, regular interval} - e.g. every 2 hours, or once every morning and evening.
+\begin{itemize}
+    \item Best for: tracking change over time at consistent measurement points
+    \item Example: one prompt at 9am and 9pm every day
+    \item Weakness: participants can anticipate and "prepare" their answers
+\end{itemize}
+\subsubsection{Event-Contingent (Triggered)}
+Prompts are sent \textbf{when a specific event occurs} - either detected automatically or self-reported by participants.
+\begin{itemize}
+    \item Best for: studying specific behavior in context
+    \item Example: a prompt triggered every time the participants unlocks their phone, or opens Instagram
+    \item Weakness: relies on accurate event detection or hones self-reporting
+\end{itemize}
+\subsection{Which Type Fits JoDo Best}
+For JoDo, we can use a \textbf{combination of event-contingent and interval-contingent ESM}
+
+\textbf{Event-contingent}: Since JoDo is a launcher, it sits at the entry point of every phone interaction. We cab trigger a micro-ESN prompt at specific moments:
+\begin{itemize}
+    \item When participants hits a screen time threshold (e.g. crosses 50 \% of their daily goal)
+    \item When the participant voluntarily taps "Lock Now"
+    \item when the participants opens a specific app category (e.g. social media) more than N times in a day.
+\end{itemize}
+
+\textbf{Interval-contingent:} One fixed promt at every evening.
+
+\subsection{Key Principles of Good ESM Design}
+\subsubsection{Bravity is Non-Negotiable}
+Each ESM prompt should take \textbf{no more than 1 -2 minutes} to complete. The moment it feels like burden, compliance drops sharply. Aim for 3-5 items per prompt maximum for in app trigger, and no more than 7-8 for end-of-day survey.
+\subsubsection{Response Burden Tracking}
+We should track and report how long participants actually take to complete each ESM prompt. This is standard in ESM studies and helps to argue that our method was not overly burdensome.
+
+\subsubsection{Compliance Rate}
+A good ESM study reports the percentage of prompted surveys that were actually completed.
+
+\subsubsection{Timing Validity}
+ESM data is only valid if participants repond \textbf{close to the time of the prompt}. We should record the timestamp of when the prompt was sent and when it was completed, and set a response window - e.g. if not completed within 2 hours, the prompt expires. This prevents participants from batch-completing multiple surveys the next moring from memory, which defeats the purpose entirely.
+\subsection{Question Design for ESM}
+ESM questions should be:
+\begin{enumerate}
+    \item \textbf{Present-tense or very recent past} - "Right now, how do you feel?" not "How have you been feeling?"
+    \item \textbf{Single-construct per item} - do not combine two ideas in one question.
+    \item \textbf{Validated scales adapted for momentary assessment} - ther PANAS for example has a momemtary version where we can ask about feeling right now instead of "over the past week"
+\end{enumerate}
+
+
+\subsection{How ESM Fits into JoDo's study specifically}
+\textbf{Morning Prompt (Interval-contingent) 8:00 AM, 2 minutes}
+Sent every morning as a brief intention - setting moment:
+\begin{enumerate}
+    \item How is your phone use goal for today? (open text, optional)
+    \item How motivated do you feel to use your phone mindfully today? (1 - 7)
+    \item How are you feeling right now? (PANAS momentary -select from the word list)
+\end{enumerate}
+
+
+\textbf{In-App Triggger Prompt (Event-Contingent) - triggered by threshold crossing, 1 minutes}
+Sent when participants crosses 50 \% of their daily screen time goal:
+\begin{enumerate}
+    \item You have used your phone for X minutes today. Does this feel intentional or habitual? (Intentional/Habitual/Mixed)
+    \item Do you want to keep going or take a break? (Keep going/ Take a break / Lock Now)
+\end{enumerate}
+
+\textbf{Evening Prompt (Interval-Contigent) 9:00PM, 5-7 minutes}
+Our existing daily survey.
+
+
+\textbf{Quick Overview of Measurement Scales planing to use for JoDo's user study: }
+\subsection{Big Five Inventory - BFI-10}
+The BFI - 10 is a shortened version of the Big Five Inventory developed by \textbf{Soto \& John (2017)}. It measures the five core dimenstions of human personality using just 10 items - two per trait - making it practical for studies where personality is covariated rather than the primary focus.
+
+
+\textbf{The Five Traits it measutes}
+\begin{enumerate}
+    \item \textbf{Extraversion} - the tendency to be outgoing,sociable, energetic vs. reserved and solitary. In digital well-being research, extraverts tends to use social media more and may respond differently to social competition features like JoDo's leaderboard.
+    \item \textbf{Agreeableness} - the tendency to be cooperative, trusting, and empathetic. Highly agreeable people may be more sensitive to social comparision on leaderboards.
+    \item \textbf{Consientiousness} - the tendency to be organized, disciplined, and goal-directed. This is particularly relevant to JoDo because conscientious people are generally better at self-regulation and may need less intervention.
+    \item \textbf{Neuroticism} - the tendency toward emotional instability, anxiety, and negative affect. In \textit{WellScreen}, neuroticism was significantly associated with social app E-A gaps. For JoDo, highly neurotic participants may be more vulnerable to stress from losing on the leaderboard.
+    \item \textbf{Openess} - the tendency to be imaginative, curious, and open to new experiences. Nat predict willigness to engage with a novel tool like JoDo.
+\end{enumerate}
+
+
+\textbf{How it is Scored}
+Each trait is measured by two items on 5-point Likert scale (1 = Disagree strongly, 5 = Agree strongly). One item per trait is reverse-scored. The two items for each trait are averaged to give a score between 1 and 5.
+
+
+\textbf{Why it is in Our Study}
+
+
+Following \textit{WellScreen}, BFI-10 serves as a \textbf{trait-level covariate} in our regression models. We are not trying to change personlilty - we are controlling for it so that personality differences do not affect our main finding about JoDo's effect on wellbeing and behavior.
+
+\textbf{Sample Items}
+\begin{itemize}
+    \item "I see myself as someone who is reserved" (Extraversion, reverse-scored)
+    \item "I see myself as someone who does a thorough job" (Conscientousness)
+\end{itemize}
+
+
+\subsection{Brief Self-Contrl Scale - BSCS}
+\textbf{What it is}
+
+The BSCS was developed by \textbf{Tangney, Baumeister \& Boone (2004)} and is one of the most widely used measures of trait self-control in psychology and HCI. It measures a person's general capacity to override impulses, resist temptation, and regulate behaviour in line with  long-term goals.
+
+\textbf{What it Measures}
+
+The scale captures self-control as a \textbf{stable personality-like trait} - not a momentary state. It assesses five facets:
+\begin{itemize}
+    \item \textbf{Impulse control} - resisting urges and temptations
+    \textbf{Healthy habits} - maintaining  good routines
+    \textbf{Work ethic} - performing reliably and consistently
+    \item \textbf{Reliability} -  following through on commitments
+    \item \textbf{Ethical behavior} - avoding actions one knows are wrong
+\end{itemize}
+
+
+\textbf{How it is Scored}
+The standard BSCS has 13 items on a 5-point scale (1 = Not at all like me, 5 = Very much like me) . Several items are reverse-scored. All items are summed or averaged to produce a total score - higher scores indicate greater self-control.
+
+\textbf{Why it is in Our Study}
+BSCS was  the \textbf{single strongest predictor} in \textit{Wellscreen's} regression model - participants with higher sielf-control had smaller estimation - actual gaps and better calibrated awareness of their usage.
+
+\textbf{Sample Items}
+\begin{itemize}
+    \item "I am good at resisting temptation"
+    \item "I have trouble concentrating"
+    \item "I do certain things that are bad for me, if they are fun"
+\end{itemize}
+
+\subsection{Short Self-Regulation Questionaire - SSRQ}
+\textbf{What it is}
+
+The SSRQ was developed by \textbf{Carey, Neal \& Collins (2004)} as a shortened version of the original Self-Regulation Questionaire by Miller \& Brown. While BSCS measures the capacity to control impulses, SSRQ measures the process of self-regualtion - specifically how well some one set goals, monitor progress, and adjusts behavior.
+
+\textbf{What it Measures}
+SSRQ captures self-regulation as an \textbf{active behavioral process}  with several components: 
+\begin{enumerate}
+    \item \textbf{Goal Setting} - wether the person sets clear goals for themselves
+    \item \textbf{Self-monitoring} - wether the person tracks their own behavior against goals
+    \item \textbf{Decision-making} - wether the person evaluates options before acting
+    \item \textbf{Goal revision} - wether the person adjusts goals when they are not working
+    \item \textbf{Self-evaluation} - wether the person reflects on their progress
+\end{enumerate}
+
+\textbf{How it is Scored}
+The full SSRQ has 31 items byt studies commonly use a shortened adapted version. Items are rated on a 5-point scale (1 = Not t all true, 5 = Completely true). Higher scores indicate stronger self-regulatory ability.
+
+\textbf{The Difference Between BSCS and SSRQ}
+
+    \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+      \hline
+         What it captures & 
+         Trait impulse control & Goal management process \\
+         \hline
+         Nature & Relatively fixed disposition & More behavioral and learnable
+        \\
+        \hline
+        Questions it answer & Can this person resist temptation? & Does this person actively manage their behavior toward goals?
+        \\
+        \hline
+        Relevance to JoDo & predicts who needs JoDo most &7 Predicts who will engage with JoDo's Reflection feature
+        \\
+        \hline
+   \end{tabularx}
+
+   
+In practice, someone can have low BSCS (poor impulse control) but high SSRQ (good at setting and tracking goals) - they know what they want to do but struggle to resist temptation in the moment. JoDo's design should theoretically help both types but in different ways.
+
+\textbf{Why it is in our Study}
+SSRQ captures wether participants are already self-monitoring their digital use - which directly relates to JoDo's awareness features (app drawer transparency, lock screen usage summary). Participants with high SSRQ may already be doing what JoDo scafflods, making them less likely to find the tool novel or useful. This mirrors \textit{WellScreen's} finding that high self-control participants in Quadrants 1 were lukewarm about continues use.
+
+\textbf{Sample Items (adapted for digital use)}
+\begin{enumerate}
+    \item "I set goals for myself regarding my phone use"
+    \item "I keep track of how much time I spent on my phone"
+    \item "When I fail to meet my goals, I figure out what went wrong"
+\end{enumerate}
+
+\subsection{Positive and Negative Affect Schedule - Short Form (PANAS-SF)}
+\textbf{What is is}
+The PANAS was originally developed by \textbf{Watson,Clark \& Tellegen (1998)} and is one of the most widely used mood measurement instrument instrumentsw in psychology: The short form (PANAS-SF) was validated  by \textbf{Mackinnon et al. (1999)} and used 10 items - 5 measuring positive affect and 5 measuring negative affect.
+
+
+\textbf{What it Measures}
+PANAS-SF measures \textbf{affect} - a person's current emotional state - along two independent dimensions.
+\textbf{Positive Affect (PA)} captures the extent to which a person feels enthusiastic, active, and alert. High PA reflects high energy and pleasurable engagement. Low PA reflects sadness and lethargy - it is not the same as feeling bad, but rather the absense of feeling good.
+
+\textbf{Negative Affect (NA)} captures the extent to which a person feels depressed, upset, and unpleasant emotions. High NA reflects subjetive distress. Low NA reflects calmness and serenity.
+
+Crucially, PA and NA are independent dimensions, not opposites. A person can score high on both (feeling excited but not anxious), low on both (feeling calm but flat), or any combination. This is why PANAS reports two separate scores rather than a single well-being score.
+
+\subsection{The Two Version - Trait vs. State}
+PANAS can be administered in two ways depending on the time instruction given: 
+
+
+\textbf{Trait version: } "How do you feel in general?" or "Over the past few weeks.." - captures stable emotional tendencies. Used at entry and exit surveys in our study.
+
+\textbf{State version (momentary)} "How do you feel right now?" or "At this moment.." - captures current emotional state. This is the ESM version, ideal for in-app morning prompt.
+
+\textbf{How it is Scored}
+Each of the 10 items is rated on a 5-point scale (1 = Very slightly or not at all, 5 = Extremely). Positive affect items are summed for a PA score (range 5 - 25) and negative affect items are summed for an NA score (range 5- 25). Higher PA = better wellbeing. Lower NA = better wellb-being.
+
+\textbf{The 10 Items}
+
+\textbf{Positive Affect:}Active,Determined, Inspired, Alert, Attentive
+
+\textbf{Negative Affect:}Upset,Hostile, Ashamed, Nervous, Afraid
+
+\subsection{System Usability Scale - SUS}
+\textbf{What it is}
+
+The SUS was developed by \textbf{John Brooke (1996)} at Digital Equipment Corporation and has become the  most widely used standardized usability questionaire in HCI research. Despite being nearly 30 year old, it remains the standard because of its simplicity, relaibility,and the large body of normative data available for comparison. 
+
+\textbf{What it Measures}
+
+SUS measures the \textbf{perceived usability} of a system - how easy,learnable, and consistent participants find it. It does not measuee task performance or efficiency directly; it measures the user's subjective sense of how usable the system is.
+
+\textbf{How is Scored}
+
+SUS has 10 items on a 5-point Likert scale (1 = Strongly disagree, 5 = Strongly agree).Items alternate between positive and negative phrasing.Scroing involves:
+\begin{enumerate}
+    \item For odd-numbered items (positive): subtract 1 from the response.
+    \item For even-numbered items (negative) : subtract the response from 5
+    \item Sum all converted scores and multiply by 2.5
+    \item This gives a final score between 0 to 100
+\end{enumerate}
+
+\textbf{interpreting SUS Scores}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c}
+       \textbf{Score Range}  
+         &  \textbf{Interpretation}
+         \\
+         \hline
+         85-100 & Excellent
+         \\
+         \hline
+         71 - 84 & Good (above average)
+         \\
+         \hline
+         68 & Industry average
+         \\
+         \hline
+         51 - 67 & OK (below average)
+         \\
+         \hline
+         Below 50 & Poor / unacceptable
+    \end{tabular}
+    \caption{SUS score interpretation}
+    \label{tab:placeholder}
+\end{table}
+
+\textbf{The 10 Items}
+\begin{itemize}
+    \item I think that I would like to use this system frequently
+    \item I found the system unnecessarily complex.
+    \item I thought the system was easy to use.
+    \item I think that I would need the support of a technical person to be able to use the system.
+    \item I found the various functions in this system were well integrated.
+    \item I thought that there was too much inconsistency in this system
+    \item I would imagine that most people would learn to use this system very quickly
+    \item I found the system very cumbersome to use
+    \item I felt very confident using the system
+    \item I needed to learn a lot of things before I could get going with this system
+\end{itemize}
+
+\subsection{Intervention Appropriateness Measure (IAM)}
+
+\textbf{What it is}
+
+The IAM was developed by \textbf{Weiner et al. (2017)} as part of a suite implementation outcome measures. It is specifically designed to measure wether an intervention feels like a \textbf{good fit} for the context in which it is being used - separate from wether it works or is usable.
+
+
+\textbf{What it Measures}
+
+IAM captures \textbf{perceived appropriateness} - the perception that a given intervention is suitable, fitting, and applicable in a given context or setting, This is distinct from: 
+\begin{enumerate}
+    \item \textbf{Usability (SUS):} wether the system is easy to use
+    \item \textbf{Efficacy:} - wether the system actually changes behavior
+    \item \textbf{Acceptability} - whether the system is welcome or palatable
+\end{enumerate}
+
+Appropriateness specifically asks: does this intervention make sense for this situation and for me?
+
+\textbf{How it is Scored}
+IAM has 4 items rated on 5-point scale (1 = Completely disagree, 5 = Completely agree).
+Scores are summed for a total between 4 and 20. Higher scores indicate greater perceived appropriateness.
+
+
+\textbf{The 4 Items}
+\begin{enumerate}
+    \item JoDo seems fitting for promoting mindful smartphone use
+    \item JoDo seems suitable for helping me manage my phone habits
+    \item JoDo seems applicable to improving my digital well-being.
+    \item JoDo seems like a good match for addressing my phone use concern.
+\end{enumerate}
+
+\subsection{How All Six Scales Work Together in User Study}
+
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X
+                              |>{\raggedright\arraybackslash}X
+                              |>{\raggedright\arraybackslash}X
+                              |>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Scale} & \textbf{Type} & \textbf{Role in Study} & \textbf{Administered} \\
+\hline
+BFI-10 & Trait covariate & Controls for personality differences in regression models & Entry only \\
+\hline
+BSCS & Trait covariate + predictor & Identifies who benefits the most from JoDo; Predicts the E-A gap & Entry + Exit \\
+\hline
+SSRQ & Trait covariate + predictor & Captures existing self-monitoring behavior & Entry + Exit \\
+\hline
+PANAS-SF & Primary outcome & Measures well-being changes before and after JoDo & Entry + Exit + ESM \\
+\hline
+SUS & Usability outcome & Evaluates JoDo's perceived ease of use & Exit Only \\
+\hline
+IAM & Appropriateness & Evaluates whether JoDo feels like the right kind of tool & Exit Only \\
+\hline
+\end{tabularx}
+\clearpage
 \bibliographystyle{apalike}
+\bibliography{reference}
+
+
 \end{document}
