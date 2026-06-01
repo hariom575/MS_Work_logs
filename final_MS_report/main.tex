@@ -11,6 +11,7 @@
 \usepackage{amsmath}
 \usepackage{enumitem}
 \usepackage{longtable}
+\usepackage{natbib}
 
 \setlength{\parskip}{0.8ex}
 \renewcommand{\baselinestretch}{1.1}
@@ -59,7 +60,7 @@ I would like to express my sincere gratitude to my thesis advisor, \textbf{Prof.
 % Abstract
 %--------------------------------------
 
-\begin{abstract}
+\chapter*{Abstract}
 Modern smartphones have become indispensable, yet their constant connectivity and persuasive design often undermine self-control, leading to habitual checking, distraction, and reduced focus. Existing digital-wellbeing tools mainly rely on restrictive controls such as app limits or passive screen-time dashboards. These approaches frequently fail to sustain engagement or encourage meaningful behavioral change.
 
 \textbf{JoDo (Joy of Digital cOntrol)} addresses this gap through a reward-driven, autonomy-supportive approach to mindful smartphone use. The system combines a minimalist launcher, intentional app-access flow, daily reward tiers, and a peer leaderboard. By transforming routine interactions into opportunities for positive feedback, JoDo encourages users to self-regulate without coercion.
@@ -78,7 +79,7 @@ The BPS-2 phase focused Mostly on pilot study and improvement on existing featur
 Preliminary observations from the pilot study indicate improved awareness of screen-time patterns and strong user motivation to maintain higher reward tiers.  
 The planned BPS-3 phase will include a formal user study—conducted to quantitatively assess behavioral outcomes and long-term participation.
 
-\end{abstract}
+
 
 \newpage
 \tableofcontents
@@ -88,9 +89,32 @@ The planned BPS-3 phase will include a formal user study—conducted to quantita
 \newpage
 \chapter{Introduction}
 \section{Background and Motivation}
-The number of internet users reached 5.56 billions in 2024, representing 67.9 \% of the global population, with the average daily internet usage growing to 6 hours 38 minutes \citep{datareportal2024}. Digital Devices now enable continuous interaction anytime and anywhere; however constant connectivity often generate discomfort or a sense of loss when disconnected - a phenomenon described as \textit{technological unconsciousness}. 
+The number of internet users reached 5.56 billions in 2024, representing 67.9 \% of the global population, with the average daily internet usage growing to 6 hours 38 minutes \citep{datareportal2024digital}. Digital Devices now enable continuous interaction anytime and anywhere; however constant connectivity often generate discomfort or a sense of loss when disconnected - a phenomenon described as \textit{technological unconsciousness}. 
 
-Hoehe and Thibaut (2020) \citep{HoeheThibaut2020} emphasized that individuals must be intentional, creative and mindful in their technology use to enhance relationships and productivity.
+Hoehe and Thibaut (2020) \citep{hoehe2020going} emphasized that individuals must be intentional, creative and mindful in their technology use to enhance relationships and productivity;
+otherwise,technology risks eroding rather than supporting quality of life. Technology itself is value neutral - it can be beneficial or harmful depending on how it is applied. When technology intended to improve life is used without restraint, it can ultimately reduce quality of life.
+
+Major technology firms have begun acknowledging this: Google's Digital Well-being suite and Apple's Screen Time both frame digital balance as a design priority, emphasizing user awareness and self-regulation, However, these tools typically target hedonic outcomes - maximizing pleasure and minimizing discomfort - rather than eudemonic outcomes involving meaning and self-realization \citep{hutmacher2022personalization} . Moreover, empirical studies reveal inconsistent effects of such built-in tools on well-being.
+
+\section{Problem Statement}
+Existing digital-well-being tools suffer from three key limitations:
+\begin{enumerate}
+    \item They are passive monitors that do not introduce meaningful friction into habitual phone use.
+    \item They lack social and competitive motivation to sustain behavior change.
+    \item Their reward models do not connect digital restraint to tangible real-world value.
+\end{enumerate}
+\section{Project Objectives}
+The objectives of the BPS2 project are:
+\begin{enumerate}
+    \item Design, develop, and iteratively improve JoDo, a custom Android launcher that embeds digital well-being interventions intoo core phone usage loop.
+    \item Deploy JoDo on the Google Play Store and recruit participants for a pilot study.
+    \item Evaluate effectiveness through quantitative and qualitative pilot study methods.
+    \item Harden the backend infrastructure with security and rate-limiting measures.
+    \item Plan and prepare for a full 2 weeks user study.
+\end{enumerate}
+\section{Report Organisation}
+Chapter 2 reviews the relevant literature on digital well-being. Chapter 3 describe the system architecture and design. Chapter 4 covers iterative UI development. Chapter 5 presents the pilot study designs, execution, and results. Chapter 6 describes the backend and security work. Chapter 7 covers Play Store deployment and technical improvements. Chapter 8 outlines te planned user study. Chapter 9 concludes and describe future work.
+\newpage
 \bibliography{reference}
 \bibliographystyle{apalike}
 \end{document}
